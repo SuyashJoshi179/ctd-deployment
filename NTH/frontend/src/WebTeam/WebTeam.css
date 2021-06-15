@@ -1,0 +1,54 @@
+.web-team{
+    margin-bottom: 5.5rem;
+}
+
+.web-team .close-button{
+    float :right;
+    margin-top: 15px;
+    margin-right: 20px;
+    border-radius: 100%;
+}
+.web-team .close-button:hover , .close-button:focus{
+    background-color: rgb(255, 255, 255);
+    transform: translateY(-5px);
+    box-shadow:0 0.5em 1em -0.4em rgb(216, 216, 216);
+}
+
+.web-team .team-member img{
+ width: 250px;
+ border-radius: 2px;
+ 
+}
+
+.web-team .team-member{
+    margin: 3rem auto 0;
+    text-align: center;
+    background-color: white;
+    width: 260px;
+    border: 5px solid white;
+    border-radius: 4px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+
+    
+}
+
+
+.web-team .team-member:hover img{
+    transform: scale(1.02);
+  opacity: 80%;
+}
+
+.web-team .team-member .fab{
+    color: white;
+    background-color: rgb(65, 65, 65);
+    border-radius: 100%;
+    padding: 12px 13px;
+    font-size: 1.2rem;
+    margin: 5px auto 0;
+}
+
+.web-team .team-member .fab:hover{
+    background-color: #0077B5;
+    transition: 0.4s;
+    transform: rotateZ(360deg);
+}

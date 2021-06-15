@@ -1,0 +1,48 @@
+body{
+    background: rgb(24, 24, 24);
+    cursor: default;
+}
+
+::-webkit-scrollbar{
+    width: 6px;
+}
+::-webkit-scrollbar-track{
+    width: 5px;
+    background-color: rgb(56, 56, 56);
+}
+::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: rgb(41, 41, 41);
+}
+
+::selection {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; 
+  }
+
+
+  .leaderboard{
+    font-size: 130%;
+    margin: 25px;
+    text-align: center;
+}
+
+.leaderboard h3{
+    margin-bottom: 15px;
+}
+
+.leaderboard .username{
+    text-align: center;
+    display: inline-block;
+    margin: 0% 2.5% 0 0;
+}
+.leaderboard .level{
+    text-align: center;
+    display: inline-block;
+    margin: 0% 0 0 2.5%;
+
+}

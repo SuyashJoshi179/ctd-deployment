@@ -1,0 +1,43 @@
+.leaderboard{
+    color: white;
+    
+}
+
+.leaderboard .top{
+    text-align: left;
+    margin: 2% auto 4%;
+    background: rgb(226,172,111);
+background: linear-gradient(90deg, rgba(226,172,111,1) 35%, rgba(213,145,66,1) 86%, rgba(207,135,54,1) 100%);
+    padding: 1%;
+    border-radius: 5px;
+    width: 45%;
+
+}
+
+.leaderboard .other-players{
+    text-align: left;
+    width: 45%;
+    margin: 2px auto;
+
+
+}
+@media screen and (max-width:1300px) {
+    .leaderboard .other-players{
+        width: 60%;
+    }
+    .leaderboard.top{
+        width: 60%;
+    }
+}
+
+
+
+
+
+
+/* .leaderboard .other-players .position{
+    text-align: center;
+}
+.leaderboard .other-players .level{
+    text-align: center;
+} */

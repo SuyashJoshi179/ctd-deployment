@@ -1,0 +1,53 @@
+.login-page {
+    width: 400px;  
+    margin: 2% auto ;  
+}
+
+.login-page img{
+    display: block;
+    margin: auto;
+}
+@media screen and (max-width :400px ){
+    .login-page{
+        width: 90%;
+    }
+}
+
+.login-page .login-form-input{
+    padding: 3%;
+    font-size: 120%;
+}
+
+
+
+.login-page .login-button{
+    text-align: center;
+    font-size: 150%;
+
+}
+.login-page button{
+    background-color: #E9B171;
+    border-style: none;
+    color: white;
+    margin-top: 1.5%;
+    padding: 6px 15px;
+    border-radius: 5px;
+}
+
+
+.instructions{
+    margin: 15% 10% ;
+    color: #E9B171;
+}
+
+.instructions-content{
+    margin: 2% 7%; 
+}
+@media screen and (max-width : 480px) {
+    .instructions{
+        margin: 15% 4% 5%;
+    }
+    .instructions-content{
+        margin: 1% 0 1% 2%; 
+    }
+}
