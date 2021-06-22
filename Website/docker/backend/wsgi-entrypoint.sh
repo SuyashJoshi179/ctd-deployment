@@ -13,5 +13,5 @@ done
 
 #./manage.py collectstatic --noinput
 
-gunicorn ctd_website.wsgi --bind 0.0.0.0:8000 --workers 2 --threads 4
+gunicorn ctd_website.wsgi --bind 0.0.0.0:8000 --workers 1 --threads 4
 #./manage.py runserver

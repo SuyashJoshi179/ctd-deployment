@@ -79,8 +79,8 @@ const RegisterLogin1 = () => {
     console.log(registerFormData);
     console.log(profileFormData);
 
-    axios
-      .post("http://127.0.0.1:8000/register/", {
+    axiosInstance
+      .post("/register/", {
         username: registerFormData.username,
         password: registerFormData.password,
         first_name: registerFormData.first_name,
