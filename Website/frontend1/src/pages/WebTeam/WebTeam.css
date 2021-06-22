@@ -1,0 +1,53 @@
+.web-team {
+  margin-bottom: 3rem;
+}
+
+.web-team .close-button {
+  float: right;
+  margin-top: 5px;
+  margin-right: 20px;
+  border-radius: 100%;
+  transform: scale(1.15);
+}
+.web-team .close-button:hover {
+  background-color: rgb(219, 219, 219);
+  color: #474747;
+  transform: scale(1);
+}
+
+.web-team .team-member img {
+  width: 270px;
+  border-radius: 2px;
+}
+
+.web-team .team-member {
+  margin: 3rem auto 0;
+  text-align: center;
+  background-color: white;
+  width: 280px;
+  border: 5px solid white;
+  border-radius: 4px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.web-team .team-member h2{
+  font-size: 1.75rem !important;
+}
+.web-team .team-member:hover img {
+  transform: scale(1.02);
+}
+
+.web-team .team-member .fab {
+  color: white;
+  background-color: rgb(65, 65, 65);
+  border-radius: 100%;
+  padding: 12px 13px;
+  font-size: 1.2rem;
+  margin: 5px auto 0;
+}
+
+.web-team .team-member .fab:hover {
+  background-color: #0077b5;
+  transition: 0.4s;
+  transform: rotateZ(360deg);
+}

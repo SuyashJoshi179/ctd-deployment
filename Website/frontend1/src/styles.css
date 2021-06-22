@@ -1,0 +1,213 @@
+body {
+  /* background: radial-gradient(circle, rgb(17, 17, 17), rgb(27, 27, 27), rgb(37, 37, 37)); */
+  background: #15191e !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  width: 5px;
+  background-color: rgb(56, 56, 56);
+}
+::-webkit-scrollbar-thumb {
+  width: 5px;
+  background-color: rgb(29, 29, 29);
+}
+
+.aboutUs {
+  /* background-color: whitesmoke; */
+  /* background: #0f0c29; */
+  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); */
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #24243e, #302b63, #0f0c29); */
+  /* background: #0c0032; */
+  /* background: linear-gradient(to right, #0c0032, #120149, #13014e); */
+  background: transparent;
+  color: white;
+  padding-bottom: 0px;
+  /* overflow-y: scroll !important; */
+  overflow-x: hidden;
+  height: 120vh !important;
+  /* background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+  color: rgb(255, 255, 255); */
+}
+
+::selection {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.heading-wrapper {
+  padding-left: 20px;
+  border-left: 5px solid #fff;
+}
+.headingContactUs {
+  font-size: 80px;
+}
+.profileImg {
+  position: relative;
+  top: 15px;
+}
+.card-title {
+  font-size: 25px !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.5px;
+  color: white;
+}
+.card-text1 {
+  font-size: 18px !important;
+  color: black !important;
+  text-decoration: underline !important;
+}
+.card-contact {
+  color: white;
+  font-size: 20px !important;
+  font-weight: 400;
+  text-decoration: none !important;
+}
+.custom-card-1 {
+  border-radius: 4px;
+  border-color: transparent;
+  background: #fff;
+  background-color: inherit;
+  /* box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05); */
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+}
+.custom-card-1:hover {
+  transform: scale(1.05);
+  /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06); */
+}
+.custom-card-cont {
+  background-color: rgb(0, 139, 93);
+  padding-top: 10px;
+  border-radius: 4px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+}
+.custom-card-cont:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.headingText1 {
+  font-size: 50px;
+  justify-content: center;
+}
+.carousel-heading {
+  font-size: 40px;
+}
+.carousel-text {
+  background-color: inherit;
+  /* padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px; */
+}
+.carousel-caption {
+  /* top: 30% !important; */
+  justify-content: center;
+  align-items: center;
+  right: 5% !important;
+  left: 5% !important;
+  top: 5% !important;
+}
+.carousel-para {
+  padding: 48px;
+}
+
+.google-maps {
+  border: 1px solid #dcdcdc;
+  /* border-radius: 20px; */
+  filter: invert(90%);
+}
+.about-content {
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* @media only screen and (max-width: 2560px) {
+  .carousel-body {
+    height: 700px;
+  }
+} */
+
+/* @media only screen and (max-width: 1440px) {
+  .carousel-body {
+    height: 700px;
+  }
+} */
+/* @media only screen and (max-width: 1024px) {
+  .carousel-body {
+    height: 700px;
+  }
+} */
+/* @media only screen and (max-width: 768px) {
+  .carousel-body {
+    height: 720px;
+  }
+  .width {
+    margin-left: 26px;
+    margin-right: 10px;
+  }
+
+  .carousel-para {
+    overflow-y: auto;
+    padding: 20px;
+  }
+  .carousel-text-inner {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    height: 100%;
+  }
+  .col-inner {
+    height: 100%;
+  }
+  .carousel-heading {
+    font-size: 34px !important;
+    margin-top: 20px;
+  }
+  
+  .justify-res {
+    margin-left: 18vw;
+  }
+
+  .circle {
+    height: 150px;
+    width: 150px;
+  }
+  .initials {
+    font-size: 60px;
+  }
+  .margin-res:not(last-child) {
+    margin-bottom: 50px;
+  }
+  .margin-bot {
+    margin-top: 0;
+  }
+} */
+
+/* @media only screen and (max-width: 425px) {
+  .carousel-body {
+    height: 900px;
+  }
+  .carousel-text {
+    padding: 5px !important;
+  }
+} */

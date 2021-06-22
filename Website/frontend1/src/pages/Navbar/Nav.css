@@ -1,0 +1,54 @@
+.nav-bar {
+  background-color: transparent;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px !important;
+}
+
+.nav-bar .m-auto a {
+  text-decoration: none;
+  color: white !important;
+  padding: 0.5% 3% !important;
+  margin: 1% 6% !important;
+  font-size: 170% !important;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-bar .login button {
+    margin: 1% 5%;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .nav-bar .m-auto a {
+    padding: 2% 0% !important;
+    margin: 2% 0%;
+  }
+}
+
+.nav-bar .m-auto a {
+  background: linear-gradient(to top, rgb(248, 248, 248) 50%, transparent 50%);
+  background-size: 100% 200%;
+  background-position: top left;
+  transition: all 0.5s ease-out;
+}
+
+.nav-bar .m-auto a:hover {
+  color: rgb(26, 26, 26) !important;
+  background-position: bottom left;
+}
+
+.login button {
+  border: 2px solid #45a29e;
+  background-color: #45a29e;
+  text-decoration: none;
+  color: white;
+  transition: 0.5s ease-in-out;
+}
+.login button:hover,
+button:active {
+  background-color: #326d6a;
+  text-decoration: none;
+  color: white;
+  border: 2px solid #326d6a;
+}

@@ -1,0 +1,90 @@
+.nameContainer {
+  flex-direction: column;
+}
+
+.rowDir {
+  flex-direction: column;
+}
+
+.pr-container {
+  /* background-color: whitesmoke; */
+  /* background: #0f0c29; */
+  /* fallback for old browsers */
+  /* background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29); */
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: linear-gradient(to right, #24243e, #302b63, #0f0c29); */
+
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  color: #fff;
+}
+
+.card {
+  background-color: #000 !important;
+  box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 1);
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background: rgb(37, 217, 209);
+  background: radial-gradient(
+    circle,
+    rgba(37, 217, 209, 1) 0%,
+    rgba(41, 120, 117, 1) 100%
+  );
+  position: relative;
+}
+
+.initials {
+  font-size: 80px;
+  color: #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.personalWrapper {
+  flex-direction: column;
+}
+
+.iconWrapper {
+  font-size: 25px;
+}
+
+.event-card {
+  border-radius: 30px !important;
+  border: 2px solid #fff !important;
+  background-color: #000 !important;
+}
+
+.margin-bot {
+  margin-top: 30px;
+}
+eventIconWrapper,
+.eventNameWrapper,
+.eventDeta1ilsWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.eventIcon1 {
+  height: 125px !important;
+  width: 125px !important;
+  /* border-radius: 50%; */
+}
+
+.mtt-5 {
+  margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  .mtt-5 {
+    margin-top: 0;
+  }
+  .mt-res {
+    margin-bottom: 5rem;
+  }
+}

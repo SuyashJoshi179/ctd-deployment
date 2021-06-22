@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "alien-bold";
+  src: url("../fonts/alienleaguebold.ttf");
+}
+.text-scramble {
+  color: white;
+  font-family: "alien-bold", sans-serif !important;
+}
