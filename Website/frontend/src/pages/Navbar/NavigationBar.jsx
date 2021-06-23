@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 import "./Nav.css";
 import { isLogin, logout } from "../../components/utils/index";
 import { HashLink } from "react-router-hash-link";
-import { useHistory } from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 
 const NavigationBar = () => {
   const history = useHistory();
 
   const handleLogout = () => {
     logout();
-    history.push('/');
-  }
+    history.push("/");
+  };
 
   if (isLogin()) {
     return (
@@ -39,16 +39,14 @@ const NavigationBar = () => {
             <Link className="na-link" to="ContactUs">
               Contact
             </Link>
-            {/* <Link className="na-link" to="my-profile"> */}
-              <Dropdown className="na-dropdown">
-                <Dropdown.Toggle id="dropdown-basic">My name</Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
-                  <Dropdown.Item onClick={ handleLogout }>Logout</Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            {/* </Link> */}
           </Nav>
+          <Dropdown className="na-dropdown">
+            <Dropdown.Toggle id="dropdown-basic">My name</Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
+              <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Navbar.Collapse>
       </Navbar>
     );
@@ -76,9 +74,6 @@ const NavigationBar = () => {
           <Link className="na-link" to="/ContactUs">
             Contact
           </Link>
-          {/* <Link className="na-link" to="/my-profile">
-            Profile
-          </Link> */}
         </Nav>
         <Link className="na-link login" to="/login">
           <Button size="lg" variant="link">Login</Button>
