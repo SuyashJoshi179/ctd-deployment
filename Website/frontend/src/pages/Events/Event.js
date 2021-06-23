@@ -3,24 +3,18 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axiosInstance from "../../axios";
 import DetailsModal from "./DetailsModal";
-import { isLogin } from "../../components/utils/index";
 
 const Event = (props) => {
   const history = useHistory();
   const [modalShow, setModalShow] = useState(false);
 
   const handleSubmit = (e) => {
-
-    if(!isLogin()) {
-      window.location.pathname = '/login';
-    }
-
     e.preventDefault();
     console.log(props.id);
 
     axiosInstance
       .post("/place_order/", {
-        event_id_fk: props.id,
+        eventID: props.id,
       })
       .then((res) => {
         console.log(res.data.detail);
