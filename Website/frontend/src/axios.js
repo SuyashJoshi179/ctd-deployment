@@ -2,6 +2,9 @@ import axios from 'axios';
 
 const baseURL = window.location.origin + '/apiv1';
 
+axios.defaults.xsrfCookieName = 'csrftoken';
+axios.defaults.xsrfHeaderName = 'X-CSRFToken';
+
 const axiosInstance = axios.create({
     baseURL: baseURL,
     timeout: 50000,
@@ -10,7 +13,7 @@ const axiosInstance = axios.create({
 			? 'JWT ' + localStorage.getItem('access_token')
 			: null,
 		'Content-Type': 'application/json',
-		accept: 'application/json',
+		accept: 'application/json'
 	},
 });
 
