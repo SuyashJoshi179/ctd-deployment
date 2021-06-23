@@ -58,7 +58,7 @@ const Event = (props) => {
           />
           <div>
             <Button className="register-btn" onClick={()=> window.open("http://nth.pictieee.in/", "_blank")}>
-              Visit
+              Register
             </Button>
           </div>
         </div>
