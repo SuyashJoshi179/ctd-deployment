@@ -78,6 +78,7 @@ const NavigationBar = () => {
         <Link className="na-link login" to="/login">
           <Button size="lg" variant="link">Login</Button>
         </Link>
+        
       </Navbar.Collapse>
     </Navbar>
   );
