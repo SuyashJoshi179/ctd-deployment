@@ -8,6 +8,7 @@ const EventCard2 = (props) => {
   //   const handleView = (e) => {
   //     alert(e);
   //   };
+  console.log(props.eventCode);
   const [visible, setVisible] = useState(false);
   return (
     <div className="container1">

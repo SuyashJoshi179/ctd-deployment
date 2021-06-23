@@ -83,10 +83,10 @@ const Profile = () => {
           </div>
           <div className="mt-5">
             <div data-aos="fade-up" data-aos-duration="1000" className="row">
-              <div className="col-12 col-md-4 d-flex justify-content-center mt-res">
-                {Object.keys(appState.profile.events).map((index, key) => (
+              <div className="col-12 col-md-4 d-flex justify-content-center mt-res mr-4">
+                {Object.keys(appState.profile.events).map((key, index) => (
                   <EventCard2
-                    eventCode={appState.profile.events[key]}
+                    eventCode={appState.profile.events[key.toString()]}
                     icon={
                       appState.profile.events[key] === "NCC"
                         ? NCCIcon

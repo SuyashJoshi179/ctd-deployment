@@ -5,6 +5,7 @@ import axiosInstance from "../axios";
 import axios from "axios";
 import { login } from "./utils";
 import "../assets/css/carouselAnimation.css";
+import Dropdown from "react-bootstrap/Dropdown";
 
 const RegisterLogin1 = () => {
   //   const loginBtn = document.getElementById('login');
@@ -22,6 +23,7 @@ const RegisterLogin1 = () => {
     reg_no: "",
     country_code: "+91",
     phone_no: "",
+    seniorstr: "",
     senior: false,
     email: "",
   });
@@ -76,7 +78,22 @@ const RegisterLogin1 = () => {
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    console.log(registerFormData);
+    console.log(profileFormData);
+    if (profileFormData.seniorstr !== "Senior" && profileFormData.seniorstr !== "Junior") {
+      return alert ("Please enter the Level field correctly");
+    }
+    else if (profileFormData.senior === 'Senior') {
+      updateProfileFormData({
+        ...profileFormData,
+        senior: true
+      })
+    } else {
+      updateProfileFormData({
+        ...profileFormData,
+        senior: false
+      })
+    }
+
     console.log(profileFormData);
 
     axiosInstance
@@ -204,8 +221,10 @@ const RegisterLogin1 = () => {
               <input
                 type="text"
                 className="input m-2"
-                name=""
+                name="seniorstr"
+                id="seniorstr"
                 placeholder="Category (Junior or Senior)"
+                onChange={handleProfileChange}
               />
               <input
                 type="password"
