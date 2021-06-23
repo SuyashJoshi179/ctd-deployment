@@ -41,7 +41,7 @@ const NavigationBar = () => {
             </Link>
           </Nav>
           <Dropdown className="na-dropdown">
-            <Dropdown.Toggle id="dropdown-basic">My name</Dropdown.Toggle>
+            <Dropdown.Toggle id="dropdown-basic">My Profile</Dropdown.Toggle>
             <Dropdown.Menu>
               <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
               <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
