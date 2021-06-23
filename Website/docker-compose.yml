@@ -10,7 +10,7 @@ services:
             - 80:80
         volumes:
             - static_volume:/app/backend/Website/django_static
-            - ./docker/nginx/production:/etc/nginx/conf.d
+            - ./docker/nginx/development:/etc/nginx/conf.d
         depends_on: 
             - backend
     backend:
