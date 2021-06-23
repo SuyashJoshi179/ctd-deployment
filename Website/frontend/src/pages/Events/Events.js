@@ -47,7 +47,7 @@ const Events = () => {
             />
           </Col>
           <Col lg={3} md={6} sm={12}>
-            <Event info={nccBasicInfo} icon={NTH} eventname="NTH" />
+            <Event id={3} info={nccBasicInfo} icon={NTH} eventname="NTH" />
           </Col>
         </Row>
       </Container>
