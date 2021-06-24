@@ -27,7 +27,7 @@ const RegisterLogin1 = () => {
     country_code: "+91",
     phone_no: "",
     seniorstr: "",
-    senior: "Senior",
+    senior: null,
     email: "",
   });
 
@@ -59,6 +59,25 @@ const RegisterLogin1 = () => {
     });
   };
 
+  const handleCategory = (e) => {
+    updateProfileFormData({
+      ...profileFormData,
+      seniorstr: e.value.trim()
+    })
+    if (e.value === "Senior") {
+      updateProfileFormData({
+        ...profileFormData,
+        senior: true
+      })
+    } else {
+      updateProfileFormData({
+        ...profileFormData,
+        senior: false
+      })
+    }
+    console.log(profileFormData)
+  }
+
   const handleRegisterChange = (e) => {
     updateRegisterFormData({
       ...registerFormData,
@@ -82,22 +101,6 @@ const RegisterLogin1 = () => {
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
     console.log(profileFormData);
-    if (
-      profileFormData.seniorstr !== "Senior" &&
-      profileFormData.seniorstr !== "Junior"
-    ) {
-      return alert("Please enter the Level field correctly");
-    } else if (profileFormData.seniorstr === "Senior") {
-      updateProfileFormData({
-        ...profileFormData,
-        senior: true,
-      });
-    } else {
-      updateProfileFormData({
-        ...profileFormData,
-        senior: false,
-      });
-    }
 
     console.log(profileFormData);
 
@@ -226,9 +229,9 @@ const RegisterLogin1 = () => {
               <Dropdown
                 className="dropdown-input"
                 options={options}
-                name="senior"
-                id="senior"
-                onChange={handleProfileChange}
+                name="seniorstr"
+                id="seniorstr"
+                onChange={handleCategory}
                 value={defaultOption}
                 placeholder="Category"
               />
