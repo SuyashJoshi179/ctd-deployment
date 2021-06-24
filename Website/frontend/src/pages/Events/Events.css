@@ -225,6 +225,7 @@
 
 .details-modal .tab-content {
   padding: 0 3% 2.5% 0;
+  text-align: justify;
 }
 
 @media screen and (max-width: 575px) {
