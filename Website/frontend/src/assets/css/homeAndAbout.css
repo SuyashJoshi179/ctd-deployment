@@ -3,7 +3,7 @@
   scrollbar-width: none;
 }
 .container-lower {
-  padding: 50px !important;
+  padding: 50px;
 }
 .section-home {
   height: 90vh;
@@ -36,14 +36,14 @@
 .about-content {
   background-color: transparent !important;
   color: white;
-  font-size: 22px !important;
+  font-size: 22px;
 }
 .section-about {
   margin-top: 4%;
 }
 
-.home-page{
-  height:102vh
+.home-page {
+  height: 102vh;
 }
 
 .home-page .ctd-image {
@@ -54,7 +54,7 @@
   width: 500px;
   margin: 0;
 }
-.home-page .ctd-image img:hover{
+.home-page .ctd-image img:hover {
   transform: scale(1.01);
 }
 
@@ -74,8 +74,15 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  #CTD-heading {
+    justify-content: center !important;
+    padding-left: 20px;
+  }
+  .container-lower {
+    padding-bottom: 15px;
+  }
   .carousel-body {
-    height: 720px;
+    height: 700px;
   }
   .width {
     margin-left: 26px;
@@ -85,6 +92,7 @@
   .carousel-para {
     overflow-y: auto;
     padding: 20px;
+    font-size: 18px !important;
   }
   .carousel-text-inner {
     display: flex;
@@ -99,13 +107,19 @@
     font-size: 34px !important;
     margin-top: 20px;
   }
+  .about-content {
+    font-size: 18px !important;
+  }
 }
 @media only screen and (max-width: 425px) {
   .carousel-body {
-    height: 900px;
+    height: 650px;
   }
   .col-inner {
     height: 100%;
+  }
+  .about-content {
+    font-size: 16px !important;
   }
 
   .carousel-text-inner {
@@ -117,15 +131,20 @@
   .carousel-para {
     overflow-y: auto;
     padding: 20px;
+    font-size: 16px !important;
   }
   .container-lower {
     padding-right: 15px !important;
     padding-left: 15px !important;
   }
+  #CTD-heading {
+    justify-content: center !important;
+    padding-left: 10px;
+  }
 }
 @media only screen and (max-width: 375px) {
   .carousel-body {
-    height: 1200px;
+    height: 700px;
   }
 }
 

@@ -5,14 +5,17 @@ import "../assets/css/homeAndAbout.css";
 import "../assets/css/carouselAnimation.css";
 import ctdlogo from "../assets/img/ctd.png";
 import TextScramble from "../components/TextScramble";
-import Navbar from './Navbar/NavigationBar'
-import Footer from './Footer/Footer'
+import Navbar from "./Navbar/NavigationBar";
+import Footer from "./Footer/Footer";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
 
 class Home1 extends React.Component {
   constructor() {
     super();
     this.vantaRef = React.createRef();
+    this.vantaRefIEEE = React.createRef();
+    this.vantaRefPISB = React.createRef();
+    this.vantaRefPING = React.createRef();
   }
   componentDidMount() {
     this.vantaEffect = WAVES({
@@ -35,33 +38,39 @@ class Home1 extends React.Component {
   render() {
     return (
       <div className="home-page">
-        
         <div ref={this.vantaRef}>
           <Navbar></Navbar>
           <div
             data-aos="fade-up"
             data-aos-duration="1000"
             className="section-home d-flex justify-content-center align-items-center ctd-image"
-        
           >
             <img src={ctdlogo} alt="ctd-logo" />
           </div>
-          
+
           {/* <HeadingAnimation3 /> */}
-          
         </div>
         {/* SECTION-ABOUTUS */}
         <div className="section-about" id="section-aboutCTD">
           <Container className="container-lower">
             <Row className="" data-aos="fade-up" data-aos-duration="1000">
               {/* <HeadingAnimation /> */}
-              <Row className="d-flex justify-content-start">
+              <Row
+                className="d-flex justify-content-start no-gutters"
+                id="CTD-heading"
+              >
                 {/* <h1>Credenz Tech Days</h1> */}
                 <div className="heading-wrapper">
                   <TextScramble text={"Credenz Tech Dayz"} />
                 </div>
               </Row>
-              <Row className="d-flex justify-content-center mt-5">
+              <Row
+                className="d-flex justify-content-center mt-5"
+                style={{ margin: "auto" }}
+              >
+                <div className="display-4 my-5" style={{ color: "#fff" }}>
+                  About Us
+                </div>
                 <p
                   className="lead text-justify p-2 about-content"
                   style={{ fontWeight: 400, width: "85%" }}
@@ -139,7 +148,10 @@ class Home1 extends React.Component {
                       className="d-flex justify-content-center align-items-center"
                       style={{ height: "100%" }}
                     >
-                      <div className="carousel-text gradient-border" id="PISB">
+                      <div
+                        className="carousel-text gradient-border d-flex justify-content-center"
+                        id="PISB"
+                      >
                         <Row className="row-inner">
                           <Col className="d-flex align-items-center col-inner">
                             <div className="carousel-text-inner">
