@@ -3,6 +3,7 @@ import WAVES from "vanta/dist/vanta.waves.min";
 import "../assets/css/Home1.css";
 import "../assets/css/homeAndAbout.css";
 import "../assets/css/carouselAnimation.css";
+import "../assets/css/scrambleText.css";
 import ctdlogo from "../assets/img/ctd.png";
 import TextScramble from "../components/TextScramble";
 import Navbar from "./Navbar/NavigationBar";
@@ -68,9 +69,6 @@ class Home1 extends React.Component {
                 className="d-flex justify-content-center mt-5"
                 style={{ margin: "auto" }}
               >
-                <div className="display-4 my-5" style={{ color: "#fff" }}>
-                  About Us
-                </div>
                 <p
                   className="lead text-justify p-2 about-content"
                   style={{ fontWeight: 400, width: "85%" }}
@@ -97,6 +95,17 @@ class Home1 extends React.Component {
             </Row>
           </Container>
           {/* CAROUSEL */}
+          <Container className="container-lower">
+            <Row
+              className="d-flex justify-content-start no-gutters"
+              id="CTD-heading"
+            >
+              {/* <h1>Credenz Tech Days</h1> */}
+              <div className="heading-wrapper">
+                <TextScramble text={"About Us"} />
+              </div>
+            </Row>
+          </Container>
           <Container fluid>
             <Row className="d-flex justify-content-center align-items-center">
               <Carousel

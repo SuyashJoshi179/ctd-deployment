@@ -3,7 +3,7 @@ import "../assets/css/scrambleText.css";
 class TextScramble extends React.Component {
   constructor(props) {
     super(props);
-    this.chars = "!<>-_\\/[]{}—=+*^?#________";
+    this.chars = "!<>-_\\/[]{}—=+*^?#___";
     this.update = this.update.bind(this);
   }
 
@@ -16,8 +16,8 @@ class TextScramble extends React.Component {
     for (let i = 0; i < length; i++) {
       const from = oldText[i] || "";
       const to = newText[i] || "";
-      const start = Math.floor(Math.random() * 40);
-      const end = start + Math.floor(Math.random() * 40);
+      const start = Math.floor(Math.random() * 60);
+      const end = start + Math.floor(Math.random() * 60);
       this.queue.push({
         from,
         to,
@@ -43,7 +43,7 @@ class TextScramble extends React.Component {
         complete++;
         output += to;
       } else if (this.frame >= start) {
-        if (!char || Math.random() < 0.28) {
+        if (!char || Math.random() < 0.2) {
           char = this.randomChar();
           this.queue[i].char = char;
         }
@@ -71,7 +71,8 @@ class TextScramble extends React.Component {
   componentDidMount() {
     const el = document.querySelector(".text-scramble");
     const fx = new TextScramble(el);
-    let flag = true;
+    let flag1 = true;
+    let flag2 = true;
     function next() {
       //       console.log(el.innerHTML);
       fx.setText(el.innerHTML).then(() => {});
@@ -79,12 +80,17 @@ class TextScramble extends React.Component {
     next();
     window.addEventListener("scroll", (e) => {
       e.preventDefault();
-      if (window.scrollY > 890 && flag) {
+      if (window.scrollY > 300 && flag1) {
         next();
-        flag = false;
+        flag1 = false;
       }
-      if (window.scrollY <= 325) {
-        flag = true;
+      if (window.scrollY >= 900 && flag2) {
+        next();
+        flag2 = false;
+      }
+      if (window.scrollY === 0) {
+        flag1 = true;
+        flag2 = true;
       }
     });
   }

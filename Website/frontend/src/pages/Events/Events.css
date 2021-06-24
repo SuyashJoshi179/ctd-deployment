@@ -162,6 +162,10 @@
   transform: scale(1.05) !important;
 }
 
+.event-img-border {
+  border: 15px solid #29a19c;
+}
+
 @media (max-width: 768px) {
   .container1 .card1 {
     width: 260px;
@@ -183,41 +187,37 @@
   margin: 4% 0 4% 15%;
 }
 
-
-.modal-content{
+.modal-content {
   background-color: #212730 !important;
-  
 }
-.details-modal .details-modal-header{
+.details-modal .details-modal-header {
   color: white;
 }
-.details-modal .details-modal-header button{
+.details-modal .details-modal-header button {
   color: white;
 }
 
-.details-modal .details-modal-details{
-  margin: 0 ;
+.details-modal .details-modal-details {
+  margin: 0;
   padding-bottom: 2%;
   color: white;
 }
 .details-modal .tabs {
   padding: 0 1% 0 8% !important;
 }
-.details-modal .tabs .tab{
-  background-color: rgb(41,161,156);
+.details-modal .tabs .tab {
+  background-color: rgb(41, 161, 156);
   color: white;
   margin: 4% 0;
   border-radius: 4px;
 }
 
-.details-modal .tabs .tab:hover,.details-modal .tabs .tab:focus{
+.details-modal .tabs .tab:hover,
+.details-modal .tabs .tab:focus {
   background-color: rgb(28, 110, 108);
   color: white;
   margin: 4% 0;
 }
-
-
-
 
 .details-modal img {
   width: 200px;
