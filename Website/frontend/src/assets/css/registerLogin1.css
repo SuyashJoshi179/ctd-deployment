@@ -273,6 +273,16 @@
   -webkit-transition: all 0.3s ease;
 }
 
+.Dropdown-control {
+  background-color: #212730 !important;
+  color: #45a29e !important;
+  border: 0 !important;
+  border-bottom: 1px solid rgba(69, 162, 157, 0.479) !important;
+  font-size: 18px;
+  padding: 8px 52px 8px 20px;
+  margin-left: 5px;
+}
+
 @media (max-width: 768px) {
   .form-structor .login .center {
     width: 80%;

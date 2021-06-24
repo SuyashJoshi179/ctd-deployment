@@ -5,9 +5,12 @@ import axiosInstance from "../axios";
 import axios from "axios";
 import { login } from "./utils";
 import "../assets/css/carouselAnimation.css";
-import Dropdown from "react-bootstrap/Dropdown";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 const RegisterLogin1 = () => {
+  const options = ["Senior", "Junior"];
+  const defaultOption = options[0];
   //   const loginBtn = document.getElementById('login');
   //   const signupBtn = document.getElementById('signup');
   const history = useHistory();
@@ -24,7 +27,7 @@ const RegisterLogin1 = () => {
     country_code: "+91",
     phone_no: "",
     seniorstr: "",
-    senior: true,
+    senior: "Senior",
     email: "",
   });
 
@@ -79,19 +82,21 @@ const RegisterLogin1 = () => {
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
     console.log(profileFormData);
-    if (profileFormData.seniorstr !== "Senior" && profileFormData.seniorstr !== "Junior") {
-      return alert ("Please enter the Level field correctly");
-    }
-    else if (profileFormData.seniorstr === "Senior") {
+    if (
+      profileFormData.seniorstr !== "Senior" &&
+      profileFormData.seniorstr !== "Junior"
+    ) {
+      return alert("Please enter the Level field correctly");
+    } else if (profileFormData.seniorstr === "Senior") {
       updateProfileFormData({
         ...profileFormData,
-        senior: true
-      })
+        senior: true,
+      });
     } else {
       updateProfileFormData({
         ...profileFormData,
-        senior: false
-      })
+        senior: false,
+      });
     }
 
     console.log(profileFormData);
@@ -218,13 +223,14 @@ const RegisterLogin1 = () => {
                 placeholder="MIS ID (C2K1234567)"
                 onChange={handleProfileChange}
               />
-              <input
-                type="text"
-                className="input m-2"
-                name="seniorstr"
-                id="seniorstr"
-                placeholder="Category (Junior or Senior)"
+              <Dropdown
+                className="dropdown-input"
+                options={options}
+                name="senior"
+                id="senior"
                 onChange={handleProfileChange}
+                value={defaultOption}
+                placeholder="Category"
               />
               <input
                 type="password"

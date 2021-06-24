@@ -88,9 +88,9 @@ const Profile = () => {
                   <EventCard2
                     eventCode={appState.profile.events[key.toString()]}
                     icon={
-                      appState.profile.events[key] === "NCC"
+                      key === "NCC"
                         ? NCCIcon
-                        : appState.profile.events[key] === "RC"
+                        : key === "RC"
                         ? RCIcon
                         : InquizitiveIcon
                     }
