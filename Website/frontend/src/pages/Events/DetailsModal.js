@@ -50,7 +50,7 @@ const DetailsModal = (props) => {
                 on to our website and be a Sherlock for a day!
               </Tab.Pane>
               <Tab.Pane className="tab-content" eventKey="third">
-                Karan Lakhwani : 8329049174
+                Karan Lakhwani : 8329049174 <br />
                 Karan Lakhwani : 8329049174
               </Tab.Pane>
             </Tab.Content>
