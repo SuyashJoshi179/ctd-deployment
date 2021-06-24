@@ -24,7 +24,7 @@ const RegisterLogin1 = () => {
     country_code: "+91",
     phone_no: "",
     seniorstr: "",
-    senior: false,
+    senior: true,
     email: "",
   });
 
@@ -82,7 +82,7 @@ const RegisterLogin1 = () => {
     if (profileFormData.seniorstr !== "Senior" && profileFormData.seniorstr !== "Junior") {
       return alert ("Please enter the Level field correctly");
     }
-    else if (profileFormData.senior === 'Senior') {
+    else if (profileFormData.seniorstr === "Senior") {
       updateProfileFormData({
         ...profileFormData,
         senior: true
