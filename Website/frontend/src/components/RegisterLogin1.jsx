@@ -5,8 +5,12 @@ import axiosInstance from "../axios";
 import axios from "axios";
 import { login } from "./utils";
 import "../assets/css/carouselAnimation.css";
+import Dropdown from "react-dropdown";
+import "react-dropdown/style.css";
 
 const RegisterLogin1 = () => {
+  const options = ["Senior", "Junior"];
+  const defaultOption = options[0];
   //   const loginBtn = document.getElementById('login');
   //   const signupBtn = document.getElementById('signup');
   const history = useHistory();
@@ -22,7 +26,8 @@ const RegisterLogin1 = () => {
     reg_no: "",
     country_code: "+91",
     phone_no: "",
-    senior: false,
+    seniorstr: "",
+    senior: null,
     email: "",
   });
 
@@ -54,6 +59,25 @@ const RegisterLogin1 = () => {
     });
   };
 
+  const handleCategory = (e) => {
+    updateProfileFormData({
+      ...profileFormData,
+      seniorstr: e.value.trim()
+    })
+    if (e.value === "Senior") {
+      updateProfileFormData({
+        ...profileFormData,
+        senior: true
+      })
+    } else {
+      updateProfileFormData({
+        ...profileFormData,
+        senior: false
+      })
+    }
+    console.log(profileFormData)
+  }
+
   const handleRegisterChange = (e) => {
     updateRegisterFormData({
       ...registerFormData,
@@ -76,7 +100,8 @@ const RegisterLogin1 = () => {
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    console.log(registerFormData);
+    console.log(profileFormData);
+
     console.log(profileFormData);
 
     axiosInstance
@@ -201,11 +226,14 @@ const RegisterLogin1 = () => {
                 placeholder="MIS ID (C2K1234567)"
                 onChange={handleProfileChange}
               />
-              <input
-                type="text"
-                className="input m-2"
-                name=""
-                placeholder="Category (Junior or Senior)"
+              <Dropdown
+                className="dropdown-input"
+                options={options}
+                name="seniorstr"
+                id="seniorstr"
+                onChange={handleCategory}
+                value={defaultOption}
+                placeholder="Category"
               />
               <input
                 type="password"
