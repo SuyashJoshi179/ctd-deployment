@@ -1,8 +1,8 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav, Button, Dropdown } from "react-bootstrap";
 import CTDlogo from "../../assets/img/ctd.png";
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 import "./Nav.css";
 import { isLogin, logout } from "../../components/utils/index";
 import { HashLink } from "react-router-hash-link";
@@ -10,6 +10,17 @@ import { useHistory } from "react-router-dom";
 
 const NavigationBar = () => {
   const history = useHistory();
+  const [visible, setVisible] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setVisible(true);
+    } else {
+      setVisible(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
 
   const handleLogout = () => {
     logout();
@@ -19,7 +30,11 @@ const NavigationBar = () => {
 
   if (isLogin()) {
     return (
-      <Navbar className="nav-bar" collapseOnSelect expand="xl">
+      <Navbar
+        className={visible ? "active nav-bar sticky-top" : "nav-bar sticky-top"}
+        collapseOnSelect
+        expand="xl"
+      >
         <Navbar.Brand>
           <Link to="/">
             <img alt="CTDLOGO" src={CTDlogo} className="logo" width="100px" />
@@ -28,7 +43,7 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto">
-            <Link className="na-link" to="/">
+            <Link className="na-link" activeClassName="nav-selected" to="/">
               Home
             </Link>
             <HashLink className="na-link" to="/About/#section-aboutCTD">
@@ -54,7 +69,11 @@ const NavigationBar = () => {
   }
 
   return (
-    <Navbar className="nav-bar" collapseOnSelect expand="xl">
+    <Navbar
+      className={visible ? "active nav-bar sticky-top" : "nav-bar sticky-top"}
+      collapseOnSelect
+      expand="xl"
+    >
       <Navbar.Brand>
         <Link to="/">
           <img alt="CTDLOGO" src={CTDlogo} className="logo" width="100px" />
@@ -63,7 +82,7 @@ const NavigationBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="m-auto">
-          <Link className="na-link" to="/">
+          <Link className="na-link" activeClassName="nav-selected" to="/">
             Home
           </Link>
           <HashLink className="na-link" to="/About/#section-aboutCTD">
@@ -77,7 +96,9 @@ const NavigationBar = () => {
           </Link>
         </Nav>
         <Link className="na-link login" to="/login">
-          <Button size="lg" variant="link">Login</Button>
+          <Button size="lg" variant="link">
+            Login
+          </Button>
         </Link>
       </Navbar.Collapse>
     </Navbar>

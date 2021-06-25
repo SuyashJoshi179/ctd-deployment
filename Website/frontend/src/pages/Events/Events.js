@@ -42,12 +42,17 @@ const Events = () => {
             <Event
               info={nthBasicInfo}
               icon={Inquizitive}
-              eventname="Inquizitive"
+              eventname="InQUIZitive"
               id="4"
             />
           </Col>
           <Col lg={3} md={6} sm={12}>
-            <Event id={3} info={nccBasicInfo} icon={NTH} eventname="NTH" />
+            <Event
+              id={3}
+              info={nccBasicInfo}
+              icon={NTH}
+              eventname="Network Treasure Hunt"
+            />
           </Col>
         </Row>
       </Container>

@@ -4,6 +4,17 @@
   font-size: 14px !important;
 }
 
+.nav-selected {
+  font-weight: bold;
+  color: #45a29e !important;
+  padding-bottom: 2px;
+  border-bottom: 1px solid #45a29e;
+}
+
+.active {
+  background-color: #15191e !important;
+}
+
 .nav-bar .m-auto a {
   text-decoration: none;
   color: white !important;
@@ -13,7 +24,6 @@
   position: relative;
 }
 
-
 .nav-bar .m-auto a {
   background: linear-gradient(to top, rgb(248, 248, 248) 50%, transparent 50%);
   background-size: 100% 200%;
@@ -22,8 +32,7 @@
 }
 
 .nav-bar .m-auto a:hover {
-  color: rgb(26, 26, 26) !important;
-  background-position: bottom left;
+  color: #45a29e !important;
 }
 
 .login button {
@@ -41,22 +50,18 @@ button:active {
   border: 2px solid #326d6a;
 }
 
-
-.btn-primary{
+.btn-primary {
   background-color: #45a29e !important;
   border-color: #45a29e !important;
   padding: 7.5px 15px !important;
   font-size: 1.25rem !important;
 }
 
-
-
-
 @media screen and (max-width: 1200px) {
   .nav-bar .login button {
     margin: 1% 5%;
   }
-  .btn-primary{
+  .btn-primary {
     margin: 1% 5%;
   }
 }

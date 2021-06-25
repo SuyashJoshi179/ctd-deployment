@@ -10,12 +10,12 @@ const Footer = () => {
           <Col lg={4} md={12} sm={12}>
             <p className="footer-text">© PICT IEEE Student Branch</p>
           </Col>
-          <Col lg={4} md={12} sm={12}>
+          <Col className="footer-res" lg={4} md={12} sm={12}>
             <p className="web-team-link footer-text">
               Developed with ♥ by PISB <Link to="/team">Web Team</Link>
             </p>
           </Col>
-          <Col lg={4} md={12} sm={12}>
+          <Col className="footer-res" lg={4} md={12} sm={12}>
             <a
               href="https://www.instagram.com/pisbcredenz/"
               target="_blank"

@@ -79,13 +79,11 @@
 }
 
 .container1 .card1:hover .contentBx {
-  height: 250px !important;
+  height: 250px;
 }
 
 .container1 .card1 .contentBx h3 {
   position: relative;
-  font-weight: 600;
-  letter-spacing: 1px;
   color: #fff;
   margin: 0;
 }

@@ -21,7 +21,7 @@
 }
 
 .web-team .team-member {
-  margin: 3rem auto 0;
+  margin: 3rem 0;
   text-align: center;
   background-color: white;
   width: 280px;
@@ -30,7 +30,7 @@
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.web-team .team-member h2{
+.web-team .team-member h2 {
   font-size: 1.75rem !important;
 }
 .web-team .team-member:hover img {
