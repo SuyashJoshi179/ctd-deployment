@@ -85,13 +85,23 @@ const NavigationBar = () => {
           <Link className="na-link" activeClassName="nav-selected" to="/">
             Home
           </Link>
-          <HashLink className="na-link" to="/About/#section-aboutCTD">
+          <HashLink exacr className="na-link" to="/About/#section-aboutCTD">
             About
           </HashLink>
-          <Link className="na-link" to="/events">
+          <Link
+            exact
+            className="na-link"
+            to="/events"
+            activeClassName="nav-selected"
+          >
             Events
           </Link>
-          <Link className="na-link" to="/ContactUs">
+          <Link
+            exact
+            className="na-link"
+            to="/ContactUs"
+            activeClassName="nav-selected"
+          >
             Contact
           </Link>
         </Nav>

@@ -243,7 +243,8 @@
 }
 .form-structor .login .center .submit-btn:hover {
   transition: all 0.3s ease;
-  background-color: #4e4c4c;
+  /* background-color: #4e4c4c; */
+  background-color: rgb(29, 29, 29);
 }
 .form-structor .login.slide-up {
   top: 90%;
@@ -283,6 +284,19 @@
   margin-left: 5px;
 }
 
+.Dropdown-menu,
+.Dropdown-option {
+  background-color: #45a29e !important;
+  color: #212730 !important;
+  border: 0px !important;
+}
+.Dropdown-option {
+  transition: 0.4s;
+}
+.Dropdown-option:hover {
+  background-color: #212730 !important;
+  color: #45a29e !important;
+}
 @media (max-width: 768px) {
   .form-structor .login .center {
     width: 80%;

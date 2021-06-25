@@ -62,21 +62,21 @@ const RegisterLogin1 = () => {
   const handleCategory = (e) => {
     updateProfileFormData({
       ...profileFormData,
-      seniorstr: e.value.trim()
-    })
+      seniorstr: e.value.trim(),
+    });
     if (e.value === "Senior") {
       updateProfileFormData({
         ...profileFormData,
-        senior: true
-      })
+        senior: true,
+      });
     } else {
       updateProfileFormData({
         ...profileFormData,
-        senior: false
-      })
+        senior: false,
+      });
     }
-    console.log(profileFormData)
-  }
+    console.log(profileFormData);
+  };
 
   const handleRegisterChange = (e) => {
     updateRegisterFormData({
@@ -180,7 +180,8 @@ const RegisterLogin1 = () => {
             ref={signupBtn}
             onClick={(e) => signupButton(e)}
           >
-            <span>or</span>Sign up
+            {/* <span>or</span> */}
+            Sign up
           </h2>
           <div className="d-flex justify-content-center align-items-center colDir">
             <div className="form-holder">

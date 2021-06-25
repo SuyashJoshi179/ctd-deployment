@@ -1,6 +1,7 @@
 .gradient-border {
   position: relative;
   background: black;
+  /* background: #29a19c; */
   border-radius: 3px;
   padding-left: 15px;
   padding-right: 15px;
@@ -12,32 +13,35 @@
   background: rgba(0, 0, 0, 1);
 }
 .row-inner {
-  background-color: rgba(0, 0, 0, 0.68); /*Black background with opacity*/
   height: 100%;
   width: auto;
 }
-#IEEE {
-  background: url("../img/PISB-bg-1.jpg");
+#IEEE,
+#PISB,
+#PING {
+  /* background: url("../img/PISB-bg-1.jpg"); */
   height: 500px;
   background-size: 100% 500px;
   background-repeat: no-repeat;
   background-position: center;
+  background-color: rgb(34, 40, 49);
+  /* background: #212730; */
 }
-#PISB {
+/* #PISB {
   background: url("../img/IEEE-bg-3.jpg");
   background-size: cover;
   background-size: 100% 500px;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
-}
-#PING {
+} */
+/* #PING {
   background: url("../img/ping1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 500px;
-}
+} */
 .gradient-border:after {
   content: "";
   position: absolute;
@@ -47,11 +51,10 @@
   width: calc(100% + 3px * 2);
   background: linear-gradient(
     60deg,
-    #f79533,
+    /* #f79533,
     #f37055,
     #ef4e7b,
-    #a166ab,
-    #5073b8,
+    #a166ab, */ #5073b8,
     #1098ad,
     #07b39b,
     #6fba82

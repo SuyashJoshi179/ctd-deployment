@@ -44,8 +44,15 @@ const DetailsModal = (props) => {
                 is your chance to put your logic and reasoning to test. So, log
                 on to our website and be a Sherlock for a day!
               </Tab.Pane>
-              <Tab.Pane className="tab-content" eventKey="second">Bitch</Tab.Pane>
-              <Tab.Pane className="tab-content" eventKey="third">Bitch</Tab.Pane>
+              <Tab.Pane className="tab-content" eventKey="second">
+              This
+                is your chance to put your logic and reasoning to test. So, log
+                on to our website and be a Sherlock for a day!
+              </Tab.Pane>
+              <Tab.Pane className="tab-content" eventKey="third">
+                Karan Lakhwani : 8329049174 <br />
+                Karan Lakhwani : 8329049174
+              </Tab.Pane>
             </Tab.Content>
           </Col>
         </Row>

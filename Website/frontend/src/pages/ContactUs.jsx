@@ -3,11 +3,10 @@ import { Col, Container, Row } from "react-bootstrap";
 import "../styles.css";
 import "../assets/css/ContactUs.css";
 import ContactCard1 from "../components/ContactCard1";
-import TextScramble from "../components/TextScramble";
-import Atharva from '../assets/img/atharva1.jpeg'
-import Tanvi from '../assets/img/tanvi.jpg'
-import Shivendu from '../assets/img/shivendu.jpeg'
-
+import Atharva from "../assets/img/atharva1.jpeg";
+import Tanvi from "../assets/img/tanvi.jpg";
+import Shivendu from "../assets/img/shivendu.jpeg";
+import ScramblingText from "../components/ScramblingText";
 
 const ContactUs = () => {
   return (
@@ -22,7 +21,10 @@ const ContactUs = () => {
             className="h1 heading-wrapper"
             style={{ color: "#fff", fontWeight: 500 }}
           >
-            <TextScramble text="Contact Us" />
+            <ScramblingText
+              scrambleText={"Contact Us"}
+              mainContainer={"heading-wrapper"}
+            />
           </p>
         </Row>
         <Row

@@ -6,6 +6,8 @@ import NCC from "./icons/NCC.png";
 import RC from "./icons/RC.png";
 import NTH from "./icons/nth-logo.png";
 import { Container, Row, Col } from "react-bootstrap";
+import "../../assets/css/scrambleText.css";
+import "../../styles.css";
 
 const Events = () => {
   const nccBasicInfo =
@@ -55,7 +57,38 @@ const Events = () => {
             />
           </Col>
         </Row>
-      </Container>
+      </Container>{" "}
+      */}
+      {/* <div className='heading-aboutUs display-3 mb-5 text-center'>Events</div> */}
+      <Row className="no-gutters">
+        <Col lg={3} md={6} sm={12}>
+          <Event
+            info={nccBasicInfo}
+            icon={RC}
+            eventname="Reverse Coding"
+            id="1"
+          />
+        </Col>
+        <Col lg={3} md={6} sm={12}>
+          <Event
+            info={nccBasicInfo}
+            icon={NCC}
+            eventname="National Coding Contest"
+            id="2"
+          />
+        </Col>
+        <Col lg={3} md={6} sm={12}>
+          <Event
+            info={nthBasicInfo}
+            icon={Inquizitive}
+            eventname="Inquizitive"
+            id="4"
+          />
+        </Col>
+        <Col lg={3} md={6} sm={12}>
+          <Event id={3} info={nccBasicInfo} icon={NTH} eventname="NTH" />
+        </Col>
+      </Row>
     </div>
   );
 };

@@ -3,6 +3,20 @@
   font-family: "Montserrat", sans-serif;
   font-size: 14px !important;
 }
+.nav-selected {
+  background: linear-gradient(
+    to top,
+    rgb(248, 248, 248) 50%,
+    transparent 50%
+  ) !important;
+  background-size: 100% 200% !important;
+  background-position: bottom left !important;
+  color: black !important;
+}
+
+.nav-bar button {
+  background-color: white;
+}
 
 .nav-selected {
   font-weight: bold;
@@ -17,7 +31,7 @@
 
 .nav-bar .m-auto a {
   text-decoration: none;
-  color: white !important;
+  color: white;
   padding: 0.5% 3% !important;
   margin: 1% 6% !important;
   font-size: 170% !important;

@@ -74,7 +74,11 @@ const Event = (props) => {
     <div className="container1  d-flex justify-content-center mt-res">
       <div className="card1">
         <div className="imgBx">
-          <img alt={props.eventname} src={props.icon} />
+          <img
+            alt={props.eventname}
+            src={props.icon}
+            className="event-img-border"
+          />
         </div>
         <div className="contentBx">
           <h3>{props.eventname}</h3>
