@@ -9,7 +9,7 @@ import NCCIcon from "../pages/Events/icons/NCC.png";
 import RCIcon from "../pages/Events/icons/RC.png";
 import ScramblingText from "../components/ScramblingText";
 const Profile = () => {
-  const NCCEvent = "National Coding Contest";
+  const NCCEvent = "National Computing Contest";
   const RCEvent = "Reverse Coding";
   const InquizitiveEvent = "InQUIZitive";
 
