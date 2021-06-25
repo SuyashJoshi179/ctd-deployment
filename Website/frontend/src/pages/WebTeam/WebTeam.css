@@ -51,3 +51,39 @@
   transition: 0.4s;
   transform: rotateZ(360deg);
 }
+
+.center1 {
+  display: flex !important;
+  justify-content: flex-end !important;
+  align-items: flex-end !important;
+}
+
+.center2 {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.center3 {
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+}
+
+@media screen and (max-width: 768px) {
+  .center1 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .center2 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .center3 {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+}
