@@ -17,6 +17,7 @@ const EventCard2 = (props) => {
           <img alt="Event LOGO" src={props.icon} />
         </div>
         <div className="contentBx">
+          <h3>{props.eventname}</h3>
           <div className="mt-3 mb-4">
             <Button
               className="details-btn-profile"

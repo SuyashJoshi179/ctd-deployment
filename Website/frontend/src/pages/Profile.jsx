@@ -9,6 +9,10 @@ import NCCIcon from "../pages/Events/icons/NCC.png";
 import RCIcon from "../pages/Events/icons/RC.png";
 import ScramblingText from "../components/ScramblingText";
 const Profile = () => {
+  const NCCEvent = "National Coding Contest";
+  const RCEvent = "Reverse Coding";
+  const InquizitiveEvent = "InQUIZitive";
+
   const [appState, setAppState] = useState({
     loading: true,
     profile: null,
@@ -95,6 +99,13 @@ const Profile = () => {
                         : key.toString() === "RC"
                         ? RCIcon
                         : InquizitiveIcon
+                    }
+                    eventname={
+                      key.toString() === "NCC"
+                        ? NCCEvent
+                        : key.toString() === "RC"
+                        ? RCEvent
+                        : InquizitiveEvent
                     }
                   />
                 </div>
