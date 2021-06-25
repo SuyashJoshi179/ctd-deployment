@@ -56,13 +56,15 @@ const NavigationBar = () => {
               Contact
             </Link>
           </Nav>
-          <Dropdown className="na-dropdown">
-            <Dropdown.Toggle id="dropdown-basic">My Profile</Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
-              <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown>
+          <Nav className="margin-auto">
+            <Dropdown className="na-dropdown">
+              <Dropdown.Toggle id="dropdown-basic">My Profile</Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
+                <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     );
@@ -105,11 +107,13 @@ const NavigationBar = () => {
             Contact
           </Link>
         </Nav>
-        <Link className="na-link login" to="/login">
-          <Button size="lg" variant="link">
-            Login
-          </Button>
-        </Link>
+        <Nav className="margin-auto">
+          <Link className="na-link login" to="/login">
+            <Button size="lg" variant="link">
+              Login
+            </Button>
+          </Link>
+        </Nav>
       </Navbar.Collapse>
     </Navbar>
   );

@@ -78,11 +78,20 @@ button:active {
   .btn-primary {
     margin: 1% 5%;
   }
+  .margin-auto {
+    margin-left: 40px;
+  }
 }
 
 @media screen and (max-width: 990px) {
   .nav-bar .m-auto a {
     padding: 2% 0% !important;
     margin: 2% 0%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .margin-auto {
+    margin-left: 0px;
   }
 }
