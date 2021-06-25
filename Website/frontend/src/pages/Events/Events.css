@@ -189,7 +189,7 @@
 .details-modal .tabs .tab {
   background-color: rgb(41, 161, 156);
   color: white;
-  margin: 4% 0;
+  margin-bottom: 40%;
   border-radius: 4px;
 }
 
@@ -197,7 +197,6 @@
 .details-modal .tabs .tab:focus {
   background-color: rgb(28, 110, 108);
   color: white;
-  margin: 4% 0;
 }
 
 .details-modal img {
@@ -207,6 +206,7 @@
 .details-modal .tab-content {
   padding: 0 3% 2.5% 0;
   text-align: justify;
+  background-color: #212730 !important;
 }
 
 @media screen and (max-width: 575px) {
