@@ -57,7 +57,7 @@ const Events = () => {
           <Event
             info={nccBasicInfo}
             icon={NCC}
-            eventname="National Coding Contest"
+            eventname="National Computing Contest"
             id={2}
           />
         </Col>
