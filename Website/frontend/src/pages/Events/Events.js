@@ -6,7 +6,6 @@ import NCC from "./icons/NCC.png";
 import RC from "./icons/RC.png";
 import NTH from "./icons/nth-logo.png";
 import { Container, Row, Col } from "react-bootstrap";
-import TextScramble from "../../components/TextScramble";
 import "../../assets/css/scrambleText.css";
 import "../../styles.css";
 

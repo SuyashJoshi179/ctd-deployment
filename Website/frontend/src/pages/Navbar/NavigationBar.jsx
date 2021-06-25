@@ -2,7 +2,7 @@
 import React from "react";
 import { Navbar, Nav, Button, Dropdown } from "react-bootstrap";
 import CTDlogo from "../../assets/img/ctd.png";
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 import "./Nav.css";
 import { isLogin, logout } from "../../components/utils/index";
 import { HashLink } from "react-router-hash-link";
@@ -28,7 +28,7 @@ const NavigationBar = () => {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto">
-            <Link className="na-link" to="/">
+            <Link className="na-link" activeClassName="nav-selected" to="/">
               Home
             </Link>
             <HashLink className="na-link" to="/About/#section-aboutCTD">
@@ -63,21 +63,33 @@ const NavigationBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="m-auto">
-          <Link className="na-link" to="/">
+          <Link exact className="na-link" to="/" activeClassName="nav-selected">
             Home
           </Link>
-          <HashLink className="na-link" to="/About/#section-aboutCTD">
+          <HashLink exacr className="na-link" to="/About/#section-aboutCTD">
             About
           </HashLink>
-          <Link className="na-link" to="/events">
+          <Link
+            exact
+            className="na-link"
+            to="/events"
+            activeClassName="nav-selected"
+          >
             Events
           </Link>
-          <Link className="na-link" to="/ContactUs">
+          <Link
+            exact
+            className="na-link"
+            to="/ContactUs"
+            activeClassName="nav-selected"
+          >
             Contact
           </Link>
         </Nav>
-        <Link className="na-link login" to="/login">
-          <Button size="lg" variant="link">Login</Button>
+        <Link exact className="na-link login" to="/login">
+          <Button size="lg" variant="link">
+            Login
+          </Button>
         </Link>
       </Navbar.Collapse>
     </Navbar>

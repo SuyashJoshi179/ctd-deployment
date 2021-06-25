@@ -5,10 +5,10 @@ import "../assets/css/homeAndAbout.css";
 import "../assets/css/carouselAnimation.css";
 import "../assets/css/scrambleText.css";
 import ctdlogo from "../assets/img/ctd.png";
-import TextScramble from "../components/TextScramble";
 import Navbar from "./Navbar/NavigationBar";
 import Footer from "./Footer/Footer";
 import { Container, Row, Col, Carousel } from "react-bootstrap";
+import ScramblingText from "../components/ScramblingText";
 
 class Home1 extends React.Component {
   constructor() {
@@ -61,8 +61,11 @@ class Home1 extends React.Component {
                 id="CTD-heading"
               >
                 {/* <h1>Credenz Tech Days</h1> */}
-                <div className="heading-wrapper">
-                  <TextScramble text={"Credenz Tech Dayz"} />
+                <div className="heading-wrapper CTD-heading-wrapper">
+                  <ScramblingText
+                    scrambleText={"Credenz Tech Dayz"}
+                    mainContainer="CTD-heading-wrapper"
+                  />
                 </div>
               </Row>
               <Row
@@ -101,8 +104,11 @@ class Home1 extends React.Component {
               id="CTD-heading"
             >
               {/* <h1>Credenz Tech Days</h1> */}
-              <div className="heading-wrapper">
-                <TextScramble text={"About Us"} />
+              <div className="heading-wrapper aboutUs-wrapper">
+                <ScramblingText
+                  scrambleText={"About Us"}
+                  mainContainer={"aboutUs-wrapper"}
+                />
               </div>
             </Row>
           </Container>

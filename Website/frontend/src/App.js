@@ -15,37 +15,36 @@ function App() {
   return (
     <Router>
       <Switch>
-        <PublicRoute exact path="/"  >
+        <PublicRoute exact path="/">
           <Home1></Home1>
         </PublicRoute>
         <PublicRoute exact path="/About" component={Home1} />
-        <PublicRoute exact path="/login" component={RegisterLogin1} >
+        <PublicRoute exact path="/login" component={RegisterLogin1}>
           <Navbar></Navbar>
           <RegisterLogin1></RegisterLogin1>
           <Footer></Footer>
         </PublicRoute>
-        <PublicRoute path="/my-profile" >
+        <PublicRoute exact path="/my-profile">
           <Navbar></Navbar>
           <Profile></Profile>
           <Footer></Footer>
         </PublicRoute>
-        <PublicRoute path="/ContactUs" >
+        <PublicRoute exact path="/ContactUs">
           <Navbar></Navbar>
           <ContactUs></ContactUs>
           <Footer></Footer>
         </PublicRoute>
-        <PublicRoute path="/team" >
+        <PublicRoute exact path="/team">
           <Navbar></Navbar>
           <Webteam></Webteam>
           <Footer></Footer>
         </PublicRoute>
-        <PublicRoute path="/events" >
+        <PublicRoute exact path="/events">
           <Navbar></Navbar>
           <Events></Events>
           <Footer></Footer>
         </PublicRoute>
       </Switch>
-      
     </Router>
   );
 }
