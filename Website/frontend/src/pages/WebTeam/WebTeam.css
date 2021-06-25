@@ -23,9 +23,9 @@
 .web-team .team-member {
   margin: 3rem 0;
   text-align: center;
-  background-color: white;
+  background-color: #29a19c;
   width: 280px;
-  border: 5px solid white;
+  border: 5px solid #29a19c;
   border-radius: 4px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
@@ -39,7 +39,7 @@
 
 .web-team .team-member .fab {
   color: white;
-  background-color: rgb(65, 65, 65);
+  background-color: #212730;
   border-radius: 100%;
   padding: 12px 13px;
   font-size: 1.2rem;
