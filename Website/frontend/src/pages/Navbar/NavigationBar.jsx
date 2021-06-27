@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState } from "react";
+import React from "react";
 import { Navbar, Nav, Button, Dropdown } from "react-bootstrap";
 import CTDlogo from "../../assets/img/ctd.png";
 import { NavLink as Link } from "react-router-dom";
@@ -7,16 +7,17 @@ import "./Nav.css";
 import { isLogin, logout } from "../../components/utils/index";
 import { HashLink } from "react-router-hash-link";
 import { useHistory } from "react-router-dom";
+import { useState } from "react";
 
 const NavigationBar = () => {
   const history = useHistory();
   const [visible, setVisible] = useState(false);
 
   const changeBackground = () => {
-    if (window.scrollY >= 80) {
-      setVisible(true);
-    } else {
+    if (window.scrollY < 80) {
       setVisible(false);
+    } else {
+      setVisible(true);
     }
   };
 
@@ -31,7 +32,9 @@ const NavigationBar = () => {
   if (isLogin()) {
     return (
       <Navbar
-        className={visible ? "active nav-bar sticky-top" : "nav-bar sticky-top"}
+        className={
+          visible ? "active-nav nav-bar sticky-top" : "nav-bar sticky-top"
+        }
         collapseOnSelect
         expand="xl"
       >
@@ -56,15 +59,13 @@ const NavigationBar = () => {
               Contact
             </Link>
           </Nav>
-          <Nav className="margin-auto">
-            <Dropdown className="na-dropdown">
-              <Dropdown.Toggle id="dropdown-basic">My Profile</Dropdown.Toggle>
-              <Dropdown.Menu>
-                <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
-                <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </Nav>
+          <Dropdown className="na-dropdown">
+            <Dropdown.Toggle id="dropdown-basic">My Profile</Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
+              <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Navbar.Collapse>
       </Navbar>
     );
@@ -72,7 +73,9 @@ const NavigationBar = () => {
 
   return (
     <Navbar
-      className={visible ? "active nav-bar sticky-top" : "nav-bar sticky-top"}
+      className={
+        visible ? "active-nav nav-bar sticky-top" : "nav-bar sticky-top"
+      }
       collapseOnSelect
       expand="xl"
     >
@@ -84,7 +87,7 @@ const NavigationBar = () => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="m-auto">
-          <Link className="na-link" activeClassName="nav-selected" to="/">
+          <Link exact className="na-link" to="/" activeClassName="nav-selected">
             Home
           </Link>
           <HashLink exacr className="na-link" to="/About/#section-aboutCTD">
@@ -108,7 +111,7 @@ const NavigationBar = () => {
           </Link>
         </Nav>
         <Nav className="margin-auto">
-          <Link className="na-link login" to="/login">
+          <Link exact className="na-link login" to="/login">
             <Button size="lg" variant="link">
               Login
             </Button>

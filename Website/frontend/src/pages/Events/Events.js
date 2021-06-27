@@ -33,17 +33,19 @@ const Events = () => {
         </Row>
       </Container> */}
       {/* <div className='heading-aboutUs display-3 mb-5 text-center'>Events</div> */}
-      <Row className="ml-5 mb-5 d-flex justify-content-start">
-        <p
-          className="h1 heading-wrapper"
-          style={{ color: "#fff", fontWeight: 500 }}
-        >
-          <ScramblingText
-            scrambleText={"Events"}
-            mainContainer={"heading-wrapper"}
-          />
-        </p>
-      </Row>
+      <Container className="container-upper-Events">
+        <Row className="ml-5 mb-5 d-flex justify-content-start">
+          <p
+            className="h1 heading-wrapper"
+            style={{ color: "#fff", fontWeight: 500 }}
+          >
+            <ScramblingText
+              scrambleText={"Events"}
+              mainContainer={"heading-wrapper"}
+            />
+          </p>
+        </Row>
+      </Container>
       <Row className="no-gutters">
         <Col lg={3} md={6} sm={12}>
           <Event
@@ -57,7 +59,7 @@ const Events = () => {
           <Event
             info={nccBasicInfo}
             icon={NCC}
-            eventname="National Computing Contest"
+            eventname="National Coding Contest"
             id={2}
           />
         </Col>

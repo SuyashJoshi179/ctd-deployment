@@ -9,7 +9,7 @@ const DetailsModal = (props) => {
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
-      <Modal.Header className='details-modal-header' closeButton>
+      <Modal.Header className="details-modal-header text-center" closeButton>
         <h3>{props.eventname}</h3>
       </Modal.Header>
       <Tab.Container
@@ -17,20 +17,28 @@ const DetailsModal = (props) => {
         id="left-tabs-example"
         defaultActiveKey="first"
       >
-        <Row className='details-modal-details'>
+        <Row className="details-modal-details">
           <Col sm={3}>
-            <Nav className="flex-column tabs">
-              <Nav.Item>
-                <Nav.Link className='tab' eventKey="first">Info</Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link className='tab' eventKey="second">Rules</Nav.Link>
-              </Nav.Item>
+            <Tab.Content>
+              <Nav className="d-flex flex-column tabs justify-content-center align-items-start ">
+                <div className="btn-block">
+                  <Nav.Link className="tab text-center" eventKey="first">
+                    Info
+                  </Nav.Link>
+                </div>
+                <div className="btn-block">
+                  <Nav.Link className="tab text-center" eventKey="second">
+                    Rules
+                  </Nav.Link>
+                </div>
 
-              <Nav.Item>
-                <Nav.Link className='tab' eventKey="third">Contact</Nav.Link>
-              </Nav.Item>
-            </Nav>
+                <div className="btn-block">
+                  <Nav.Link className="tab text-center" eventKey="third">
+                    Contact
+                  </Nav.Link>
+                </div>
+              </Nav>
+            </Tab.Content>
           </Col>
           <Col sm={8}>
             <Tab.Content>
@@ -45,13 +53,10 @@ const DetailsModal = (props) => {
                 on to our website and be a Sherlock for a day!
               </Tab.Pane>
               <Tab.Pane className="tab-content" eventKey="second">
-              This
-                is your chance to put your logic and reasoning to test. So, log
-                on to our website and be a Sherlock for a day!
+                Bitch
               </Tab.Pane>
               <Tab.Pane className="tab-content" eventKey="third">
-                Karan Lakhwani : 8329049174 <br />
-                Karan Lakhwani : 8329049174
+                Bitch
               </Tab.Pane>
             </Tab.Content>
           </Col>

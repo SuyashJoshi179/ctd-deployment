@@ -9,6 +9,7 @@ const Event = (props) => {
   const history = useHistory();
   const [modalShow, setModalShow] = useState(false);
 
+  // eslint-disable-next-line no-unused-vars
   const handleNTH = () => {
     window.location.href = "www.nth.pictieee.in";
   };
@@ -38,11 +39,14 @@ const Event = (props) => {
       <div className="container1  d-flex justify-content-center mt-res">
         <div className="card1">
           <div className="imgBx">
-            <img alt={props.eventname} src={props.icon} />
+            <img
+              alt={props.eventname}
+              src={props.icon}
+              className="event-img-border"
+            />
           </div>
-          <div className="contentBx">
+          <div className="my-3 contentBx">
             <h3>{props.eventname}</h3>
-
             <Button
               className="mt-3 mb-3 pl-4 pr-4 details-btn"
               onClick={() => setModalShow(true)}

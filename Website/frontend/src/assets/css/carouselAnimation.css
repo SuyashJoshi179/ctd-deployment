@@ -13,35 +13,42 @@
   background: rgba(0, 0, 0, 1);
 }
 .row-inner {
+  background-color: rgba(0, 0, 0, 0.68); /*Black background with opacity*/
   height: 100%;
   width: auto;
 }
-#IEEE,
-#PISB,
-#PING {
-  /* background: url("../img/PISB-bg-1.jpg"); */
+#IEEE {
+  background: url("../img/PISB-bg-1.jpg");
+  /* background: url("../img/IEEE-bg-4.jfif"); */
+  background-size: cover;
+  /* background-position: center; */
   height: 500px;
-  background-size: 100% 500px;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: rgb(34, 40, 49);
+  object-position: center;
+  object-fit: cover;
+  /* background-size: 100% 500px; */
+  /* background-repeat: no-repeat; */
+  /* background-color: rgb(34, 40, 49); */
   /* background: #212730; */
 }
-/* #PISB {
+#PISB {
   background: url("../img/IEEE-bg-3.jpg");
   background-size: cover;
-  background-size: 100% 500px;
-  background-repeat: no-repeat;
   background-position: center;
   height: 500px;
-} */
-/* #PING {
-  background: url("../img/ping1.png");
+  object-fit: cover;
+  object-position: center;
+  /* background-size: 100% 500px; */
+  /* background-repeat: no-repeat; */
+}
+#PING {
+  background: url("../img/ping-bg-1.jpeg");
   background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  /* background-repeat: no-repeat; */
+  /* background-position: center; */
   height: 500px;
-} */
+  object-fit: cover;
+  object-position: center;
+}
 .gradient-border:after {
   content: "";
   position: absolute;

@@ -2,31 +2,23 @@
   background-color: transparent;
   font-family: "Montserrat", sans-serif;
   font-size: 14px !important;
-}
-.nav-selected {
-  background: linear-gradient(
-    to top,
-    rgb(248, 248, 248) 50%,
-    transparent 50%
-  ) !important;
-  background-size: 100% 200% !important;
-  background-position: bottom left !important;
-  color: black !important;
-}
-
-.nav-bar button {
-  background-color: white;
+  height: auto;
+  transition: 0.3s ease-in;
 }
 
 .nav-selected {
   font-weight: bold;
   color: #45a29e !important;
-  padding-bottom: 2px;
+  padding-bottom: 2px !important;
   border-bottom: 1px solid #45a29e;
 }
 
-.active {
+.active-nav {
   background-color: #15191e !important;
+}
+
+.nav-bar button {
+  background-color: white;
 }
 
 .nav-bar .m-auto a {
