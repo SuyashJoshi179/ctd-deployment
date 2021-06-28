@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let DjangoServerUrl = "http://127.0.0.1:8000/apiv1/"; // Server URL
+let DjangoServerUrl = window.location.origin + "/apiv1"; // Server URL
 
 
 let DjangoServer = axios.create({               // instance

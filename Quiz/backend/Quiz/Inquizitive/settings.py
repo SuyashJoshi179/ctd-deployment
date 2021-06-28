@@ -25,8 +25,7 @@ SECRET_KEY = 'hy=c_@dgqv=-cj&2lo6z6$ha+g#jw2&vinl47irk-iwzn+^nuh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
-
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', '52.152.171.217', 'quiz.ctd.pictiee.in', 'www.quiz.ctd.pictieee.in', '*']
 
 # Application definition
 
