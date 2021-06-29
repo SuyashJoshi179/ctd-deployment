@@ -8,6 +8,8 @@ import InquizitiveIcon from "../pages/Events/icons/inquizitive.png";
 import NCCIcon from "../pages/Events/icons/NCC.png";
 import RCIcon from "../pages/Events/icons/RC.png";
 import ScramblingText from "../components/ScramblingText";
+import Preloader from "../components/Preloader";
+
 const Profile = () => {
   const NCCEvent = "National Computing Contest";
   const RCEvent = "Reverse Coding";
@@ -27,7 +29,7 @@ const Profile = () => {
     });
   }, [setAppState]);
 
-  if (appState.loading) return <p>Loading Profile Data</p>;
+  if (appState.loading) return <Preloader />;
   return (
     <div className="pr-container body-ContactUs">
       <div className="container">
