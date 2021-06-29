@@ -2,7 +2,7 @@ import "./Hunt.css";
 import Login from "../Login/Login";
 
 const HuntTemp = () => {
-  var countDownDate = new Date("May 15, 2021 13:24:00").getTime();
+  var countDownDate = new Date("June 9, 2021 13:24:00").getTime();
 
   var x = setInterval(() => {
     var now = new Date().getTime();
