@@ -58,6 +58,7 @@ const Event = (props) => {
               eventname={props.eventname}
               logo={props.icon}
               show={modalShow}
+              info={props.info}
               onHide={() => setModalShow(false)}
             />
             <div>
@@ -98,6 +99,7 @@ const Event = (props) => {
             eventname={props.eventname}
             logo={props.icon}
             show={modalShow}
+            info={props.info}
             onHide={() => setModalShow(false)}
           />
           <div>

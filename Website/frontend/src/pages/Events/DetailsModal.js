@@ -1,16 +1,16 @@
 import { Modal, Row, Col, Tab, Nav } from "react-bootstrap";
 
-const DetailsModal = (props) => {
+const DetailsModal = ({ info, eventname, logo, ...restProps }) => {
   return (
     <Modal
-      {...props}
+      {...restProps}
       size="md"
       className="details-modal"
       aria-labelledby="contained-modal-title-vcenter"
       centered
     >
       <Modal.Header className="details-modal-header text-center" closeButton>
-        <h3>{props.eventname}</h3>
+        <h3>{eventname}</h3>
       </Modal.Header>
       <Tab.Container
         className="tabs p-4"
@@ -43,20 +43,19 @@ const DetailsModal = (props) => {
           <Col sm={8}>
             <Tab.Content>
               <Tab.Pane className="tab-content" eventKey="first">
-                Network Treasure Hunt is an online treasure hunt where
-                participants follow a trail of clues, surfing a range of
-                websites to decipher the puzzles. Tread carefully along your
-                way, solving a series of strategic clues, watching out for the
-                concealed misdirection. Decrypt the clues, enjoy the hunt and
-                race your way to the finish to win some exciting goodies! This
-                is your chance to put your logic and reasoning to test. So, log
-                on to our website and be a Sherlock for a day!
+                {info.info}
               </Tab.Pane>
               <Tab.Pane className="tab-content" eventKey="second">
-                Bitch
+                {info.rules.map((rule, id) => (
+                  <p style={{ marginBottom: "0px" }}>
+                    {id + 1}: {rule}
+                  </p>
+                ))}
               </Tab.Pane>
               <Tab.Pane className="tab-content" eventKey="third">
-                Bitch
+                {info.contacts.map((contact) => (
+                  <p style={{ marginBottom: "0px" }}>{contact}</p>
+                ))}
               </Tab.Pane>
             </Tab.Content>
           </Col>
