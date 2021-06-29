@@ -16,9 +16,9 @@ const Logout = () => {
   };
     return (
   <div>
-        <Button variant="default" className="mybtn" onClick={handleShow} style={{marginLeft: "1rem", color:"#e6eaee", backgroundColor:"#0069D9"}}>
+        <button className='logout-button' onClick={handleShow}>
           Logout
-        </Button>
+        </button>
         <Modal
           show={show}
           onHide={handleClose}

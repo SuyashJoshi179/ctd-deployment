@@ -1,6 +1,5 @@
 body{
     background: rgb(24, 24, 24);
-    cursor: default;
 }
 
 ::-webkit-scrollbar{
@@ -15,14 +14,7 @@ body{
     background-color: rgb(41, 41, 41);
 }
 
-::selection {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; 
-  }
+
 
 
   .leaderboard{

@@ -1,17 +1,22 @@
-import {Navbar, Button} from 'react-bootstrap'
-import CTDlogo from './ctd.png'
-import './Question.css'
-import  Logout from '../logout/logout'
+import {  Navbar } from "react-bootstrap";
+import CTDlogo from "./ctd.png";
+import "./Question.css";
+import Logout from "../logout/logout";
 
 const QuestionNav = () => {
   return (
-    <Navbar  expand="lg">
+    <Navbar className="nav-bar-question-page" expand="lg">
       <Navbar.Brand href="/">
-          <img src={CTDlogo} width='130px'/>
+        <img src={CTDlogo} width="110px" alt="PISB-logo" />
       </Navbar.Brand>
-      <Button><Logout /></Button>
+
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Logout />
+      </Navbar.Collapse>
     </Navbar>
   );
 };
 
 export default QuestionNav;
+

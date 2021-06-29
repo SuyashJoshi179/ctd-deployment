@@ -14,6 +14,10 @@ const RegisterForm = () => {
         })
     }
     function handleSubmit(e){
+
+
+
+
         e.preventDefault();
         let pass = document.getElementById('password').value ;
         let confirmPassword = document.getElementById('formBasicConfirmPassword').value;
@@ -37,26 +41,26 @@ const RegisterForm = () => {
         <div>
             <Form>
               <Form.Group controlId="fullname">
-                <Form.Control name="fullname" onChange={handleChange} required type="text" placeholder="Name" />
+                <Form.Control name="fullname" required onChange={handleChange} required type="text" placeholder="Name" />
               </Form.Group>
               <Form.Group controlId="username">
-                <Form.Control name="username" onChange={handleChange} required type="text" placeholder="Username" />
+                <Form.Control name="username" required onChange={handleChange} required type="text" placeholder="Username" />
               </Form.Group>
               <Form.Group controlId="mobile_number">
-                <Form.Control name="mobile_number" onChange={handleChange} required type="text" placeholder="Mobile Number" />
+                <Form.Control name="mobile_number" pattern="[0123456789][0-9]{7, 14}" required onChange={handleChange} required type="text" placeholder="Mobile Number" />
               </Form.Group>
               <Form.Group controlId="college">
-                <Form.Control name="college" onChange={handleChange} required type="text" placeholder="College" />
+                <Form.Control name="college" required onChange={handleChange} required type="text" placeholder="College" />
               </Form.Group>
               <Form.Group controlId="email">
-                <Form.Control name="email" onChange={handleChange} required type="email" placeholder="Email" />
+                <Form.Control name="email" required onChange={handleChange} required type="email" placeholder="Email" />
               </Form.Group>
 
               <Form.Group controlId="password">
-                <Form.Control name="password" onChange={handleChange} required type="password" placeholder="Password" />
+                <Form.Control name="password" required onChange={handleChange} required type="password" placeholder="Password" />
               </Form.Group>
               <Form.Group controlId="formBasicConfirmPassword">
-                <Form.Control required type="password" placeholder="Confirm Password" />
+                <Form.Control type="password" required placeholder="Confirm Password" />
               </Form.Group>
               {/* {handleSubmit && <p id='pass-not-match'></p>} */}
               {/* <Form.Group controlId="submit">

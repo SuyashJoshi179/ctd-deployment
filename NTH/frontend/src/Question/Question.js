@@ -1,8 +1,7 @@
 import "./Question.css";
 import Question1 from './Questions/Question1'
 import Question2 from './Questions/Question2'
-import Question3 from './Questions/Question3'
-import IronMan from "./iron-man.jpg";
+import Question3 from './Questions/Question3';
 import Question4 from "./Questions/Question4";
 
 

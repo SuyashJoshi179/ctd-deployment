@@ -3,6 +3,11 @@
     color: white;
 }
 
+.question-page .nav-bar-question-page{
+    position: sticky;
+    top:0;
+}
+
 .question-page h4{
     width: 90%;
     margin: 1% auto 5%;

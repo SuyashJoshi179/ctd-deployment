@@ -5,12 +5,15 @@ const ContactCard = (props) => {
       <div className='card-name'>
         <h4>{props.name}</h4>
         <h5>
-          <a href="">
-          <i class="fab fa-linkedin"></i>
+          
+          {/* <br /> */}
+          {/* &nbsp;&nbsp;&nbsp;&nbsp; */}
+          <a href="tel:+918329049174">
+            <i class="fas fa-phone-alt"></i> +91 83290 49174
           </a>
-          &nbsp;&nbsp;&nbsp;&nbsp;
+          <br />
           <a href="">
-            <i class="fas fa-phone-alt"></i>
+          <i class="fab fa-linkedin "></i>
           </a>
         </h5>
       </div>

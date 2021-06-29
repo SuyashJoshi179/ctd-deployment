@@ -12,11 +12,11 @@ const Footer = () => {
         <Container fluid>
           <Row>
             <Col lg={4} md={12} sm={12}>
-              <p>© PICT IEEE Student Branch</p>
+              <p>Network Treasure Hunt</p>
             </Col>
             <Col lg={4} md={12} sm={12}>
               <p className="web-team-link">
-                Developed with ♥ by PISB &nbsp; <a href="/team">Web Team</a>
+                Developed with ♥ by PISB <a href="/team">Web Team</a>
               </p>
             </Col>
             <Col lg={4} md={12} sm={12}>

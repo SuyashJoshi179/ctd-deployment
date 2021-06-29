@@ -1,9 +1,17 @@
-.modal-content{
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.16), 0 6px 20px 0 rgba(0, 0, 0, 0.2); */
-    /* background-image: linear-gradient(to top right, #be8039 0%, #e6eaee 100%); */
-    /* color: white; */
-    
-    }
-     .modal-footer{
-        border: none  !important
-    }
+
+.modal-footer{
+    border: none  !important
+}
+
+.logout-button{
+    position: absolute; 
+    right: 0;
+    top: 20px;
+    border: none;
+    color: white;
+    background-color: #E9B171;
+    font-size: 1.15rem;
+    border-radius: 5px;
+    padding: 0.5%;
+    margin-right: 2%;
+}

@@ -2,7 +2,10 @@ import TeamMemberCard from "./TeamMemberCard";
 import Jay from "./Images/Jay.jpg";
 import "./WebTeam.css";
 import { Link } from "react-router-dom";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row} from "react-bootstrap";
+import Karan from './Images/Karan.jpg'
+import More from './Images/more34.jpeg'
+import Atharva from './Images/naphade.jpeg'
 
 const WebTeam = () => {
   return (
@@ -10,11 +13,11 @@ const WebTeam = () => {
       <Link to="/" >
         <Button className='close-button' variant='light' size='lg' >X</Button>
       </Link>
-      <br/><br/><br/>
       <Container>
         <Row>
-          <TeamMemberCard image={Jay} />
-          <TeamMemberCard image={Jay} />
+          <TeamMemberCard linkedin='https://www.linkedin.com/in/atharva-naphade-540236148/' name='Atharva Naphade' image={Atharva} />
+          <TeamMemberCard linkedin='https://www.linkedin.com/in/karan-lakhwani' name='Karan Lakhwani' image={Karan} />
+          <TeamMemberCard linkedin='https://www.linkedin.com/in/suyashmore789/' name='Suyash More' image={More} />
         </Row>
       </Container>
     </div>
