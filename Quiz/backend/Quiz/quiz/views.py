@@ -28,10 +28,14 @@ class LoginAPI(KnoxLoginView):
         serializer = AuthTokenSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         user = serializer.validated_data['user']
-        profile = profile_model(user=user)
-        profile.save()
-        login(request, user)
-        return super(LoginAPI, self).post(request, format=None)
+        profile = profile_model.objects.filter(user=user).first()
+        if profile == None:
+            profile = profile_model(user=user)
+            profile.save()
+            login(request, user)
+            return super(LoginAPI, self).post(request, format=None)
+        else:
+            return Response({'attempted': 1})
 
 
 class Profile(mixins.ListModelMixin, generics.GenericAPIView):
