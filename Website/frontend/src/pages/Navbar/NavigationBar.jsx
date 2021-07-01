@@ -36,33 +36,32 @@ const NavigationBar = () => {
           visible ? "active-nav nav-bar sticky-top" : "nav-bar sticky-top"
         }
         collapseOnSelect
-        expand="xl"
-      >
+        expand='xl'>
         <Navbar.Brand>
-          <Link to="/">
-            <img alt="CTDLOGO" src={CTDlogo} className="logo" width="100px" />
+          <Link to='/'>
+            <img alt='CTDLOGO' src={CTDlogo} className='logo' width='100px' />
           </Link>
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="m-auto">
-            <Link className="na-link" activeClassName="nav-selected" to="/">
+        <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+        <Navbar.Collapse id='responsive-navbar-nav'>
+          <Nav className='m-auto'>
+            <Link className='na-link' activeClassName='nav-selected' to='/'>
               Home
             </Link>
-            <HashLink className="na-link" to="/About/#section-aboutCTD">
+            <HashLink className='na-link' to='/About/#section-aboutCTD'>
               About
             </HashLink>
-            <Link className="na-link" to="/events">
+            <Link className='na-link' to='/events'>
               Events
             </Link>
-            <Link className="na-link" to="ContactUs">
+            <Link className='na-link' to='ContactUs'>
               Contact
             </Link>
           </Nav>
-          <Dropdown className="na-dropdown">
-            <Dropdown.Toggle id="dropdown-basic">My Profile</Dropdown.Toggle>
+          <Dropdown className='na-dropdown'>
+            <Dropdown.Toggle id='dropdown-basic'>My Profile</Dropdown.Toggle>
             <Dropdown.Menu>
-              <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
+              <Dropdown.Item href='/my-profile'>My Profile</Dropdown.Item>
               <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
@@ -77,42 +76,39 @@ const NavigationBar = () => {
         visible ? "active-nav nav-bar sticky-top" : "nav-bar sticky-top"
       }
       collapseOnSelect
-      expand="xl"
-    >
+      expand='xl'>
       <Navbar.Brand>
-        <Link to="/">
-          <img alt="CTDLOGO" src={CTDlogo} className="logo" width="100px" />
+        <Link to='/'>
+          <img alt='CTDLOGO' src={CTDlogo} className='logo' width='100px' />
         </Link>
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="m-auto">
-          <Link exact className="na-link" to="/" activeClassName="nav-selected">
+      <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+      <Navbar.Collapse id='responsive-navbar-nav'>
+        <Nav className='m-auto'>
+          <Link exact className='na-link' to='/' activeClassName='nav-selected'>
             Home
           </Link>
-          <HashLink exacr className="na-link" to="/About/#section-aboutCTD">
+          <HashLink className='na-link' to='/About/#section-aboutCTD'>
             About
           </HashLink>
           <Link
             exact
-            className="na-link"
-            to="/events"
-            activeClassName="nav-selected"
-          >
+            className='na-link'
+            to='/events'
+            activeClassName='nav-selected'>
             Events
           </Link>
           <Link
             exact
-            className="na-link"
-            to="/ContactUs"
-            activeClassName="nav-selected"
-          >
+            className='na-link'
+            to='/ContactUs'
+            activeClassName='nav-selected'>
             Contact
           </Link>
         </Nav>
-        <Nav className="margin-auto">
-          <Link exact className="na-link login" to="/login">
-            <Button size="lg" variant="link">
+        <Nav className='margin-auto'>
+          <Link exact className='na-link login' to='/login'>
+            <Button size='lg' variant='link'>
               Login
             </Button>
           </Link>

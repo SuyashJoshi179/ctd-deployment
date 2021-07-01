@@ -11,18 +11,17 @@ const EventCard2 = (props) => {
   console.log(props.eventCode);
   const [visible, setVisible] = useState(false);
   return (
-    <div className="container1">
-      <div className="card1">
-        <div className="imgBx">
-          <img alt="Event LOGO" src={props.icon} />
+    <div className='container1'>
+      <div className='card1'>
+        <div className='imgBx'>
+          <img alt='Event LOGO' src={props.icon} />
         </div>
-        <div className="contentBx">
+        <div className='contentBx'>
           <h3>{props.eventname}</h3>
-          <div className="mt-3 mb-4">
+          <div className='mt-3 mb-4'>
             <Button
-              className="details-btn-profile"
-              onClick={() => setVisible(true)}
-            >
+              className='details-btn-profile'
+              onClick={() => setVisible(true)}>
               View
             </Button>
             <ProfileModal

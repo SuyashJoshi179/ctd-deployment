@@ -63,7 +63,7 @@ const Events = () => {
   };
 
   return (
-    <div className="container-fluid body-ContactUs events">
+    <div className='container-fluid body-ContactUs events'>
       {/* <Container>
         <Row className="mb-5 d-flex justify-content-start no-gutters">
           <p
@@ -75,28 +75,27 @@ const Events = () => {
         </Row>
       </Container> */}
       {/* <div className='heading-aboutUs display-3 mb-5 text-center'>Events</div> */}
-      <Container className="container-upper-Events">
-        <Row className="ml-5 mb-5 d-flex justify-content-start">
-          <p
-            className="h1 heading-wrapper"
-            style={{ color: "#fff", fontWeight: 500 }}
-          >
+      <Container className='container-upper-Events'>
+        <Row className='ml-5 mb-5 d-flex justify-content-start'>
+          <div
+            className='h1 heading-wrapper'
+            style={{ color: "#fff", fontWeight: 500 }}>
             <ScramblingText
               scrambleText={"Events"}
               mainContainer={"heading-wrapper"}
             />
-          </p>
+          </div>
         </Row>
       </Container>
-      <Row className="no-gutters">
+      <Row className='no-gutters'>
         <Col lg={3} md={6} sm={12}>
-          <Event info={dataRC} icon={RC} eventname="Reverse Coding" id={1} />
+          <Event info={dataRC} icon={RC} eventname='Reverse Coding' id={1} />
         </Col>
         <Col lg={3} md={6} sm={12}>
           <Event
             info={dataNCC}
             icon={NCC}
-            eventname="National Computation Contest"
+            eventname='National Coding Contest'
             id={2}
           />
         </Col>
@@ -104,7 +103,7 @@ const Events = () => {
           <Event
             info={dataQuiz}
             icon={Inquizitive}
-            eventname="InQUIZitive"
+            eventname='InQUIZitive'
             id={4}
           />
         </Col>
@@ -113,7 +112,7 @@ const Events = () => {
             id={3}
             info={dataNTH}
             icon={NTH}
-            eventname="Network Treasure Hunt"
+            eventname='Network Treasure Hunt'
           />
         </Col>
       </Row>
