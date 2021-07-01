@@ -2,13 +2,17 @@ import { Navbar, Nav } from "react-bootstrap";
 import pisblogo from "./pisb-logo.png";
 import ctdlogo from "./ctd.png";
 import Logout from "../logout/logout"
-import { Link, useLocation, useHistory } from "react-router-dom";
+import { NavLink, useLocation, useHistory } from "react-router-dom";
 import {isLogin} from '../utils/index';
 import "../App.css";
 
 const NavbarComp = () => {
   const history = useHistory();
   const location = useLocation();
+
+
+
+
 
   if (!location.pathname.match("/question")) {
     return (
@@ -24,38 +28,38 @@ const NavbarComp = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
-            <a className="mr-3 ml-3 mt-2 mb-2 na-link" id="home" href="/">
+            <NavLink exact activeClassName="active" className="mr-3 ml-3 mt-2 mb-2 na-link" id="home" to="/">
               Home
-            </a>
+            </NavLink>
 
-            <a
+            <NavLink activeClassName="active"
               className="mr-3 ml-3 mt-2 mb-2 na-link"
               id="register"
-              href="/register"
+              to="/register"
             >
               Register
-            </a>
-            <a className="mr-3 ml-3 mt-2 mb-2 na-link" id="about" href="/about">
+            </NavLink>
+            <NavLink activeClassName="active" className="mr-3 ml-3 mt-2 mb-2 na-link" id="about" to="/about">
               About
-            </a>
-            <a
+            </NavLink>
+            <NavLink activeClassName="active"
               className="mr-3 ml-3 mt-2 mb-2 na-link"
               id="contact"
-              href="/contact"
+              to="/contact"
             >
               Contact
-            </a>
-            <a href="/leaderboard" className="mr-3 ml-3 mt-2 mb-2 na-link">
+            </NavLink>
+            <NavLink activeClassName="active" to="/leaderboard" className="mr-3 ml-3 mt-2 mb-2 na-link">
               Leaderboard
-            </a>
+            </NavLink>
           </Nav>
-          <Link to=
+          <NavLink to=
           {
             isLogin()?"question/put_your_answer_here":"hunt/"
           }
           >
             <button className="mr-3 ml-2 mt-2 mb-2 hunt-button">Hunt</button>
-          </Link>
+          </NavLink>
           <Navbar.Brand className='pisb-logo' href="https://www.pictieee.in/">
             <img src={pisblogo} width="110px" alt="PISB-logo" />
           </Navbar.Brand>

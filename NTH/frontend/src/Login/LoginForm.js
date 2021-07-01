@@ -45,7 +45,7 @@ const LoginForm = () => {
         <div className='field'>
         <label>Username</label>
         <br />
-        <i class="fas fa-user"></i>
+        {/* <i class="fas fa-user"></i> */}
         <input
           id="username"
           name="username"
@@ -75,6 +75,10 @@ const LoginForm = () => {
             </button>
           </Link>
         </div>
+        <p className='register'>Or Register using 
+          <br />
+          <Link to='/register'>Register</Link>
+        </p>
       </div>
     </div>
   );

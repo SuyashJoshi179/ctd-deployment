@@ -9,11 +9,7 @@ const QuestionNav = () => {
       <Navbar.Brand href="/">
         <img src={CTDlogo} width="110px" alt="PISB-logo" />
       </Navbar.Brand>
-
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
-        <Logout />
-      </Navbar.Collapse>
+      {/* <Logout /> */}
     </Navbar>
   );
 };
