@@ -1,0 +1,92 @@
+*
+	{border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;}
+\:root{
+	--bg: #e3e4e8;
+	--fg: #17181c;
+	font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1280 - 320));
+}
+body{
+	background: var(--bg);
+	color: var(--fg);
+	display: grid;
+	font: 1em/1.5 sans-serif;
+	place-items: center;
+	height: 100vh;
+}
+$plSize: 12em;
+$plHalf: $plSize / 2;
+$dots: 12;
+$angle: 360deg / $dots;
+$dotDiam: $plHalf / $dots;
+$dotRad: $dotDiam / 2;
+
+.pl{
+	position: relative;
+	width: $plSize;
+	height: $plSize;
+	&__dot{
+		background: currentColor;
+		position: absolute;
+		top: calc(50% - #{$dotDiam});
+		left: calc(50% - #{$dotRad});;
+		width: $dotDiam;
+		height: $dotDiam;
+		transform-origin: 50% 100%;
+		@for $d from 1 through $dots{
+			&:nth-child(#{$d}){
+				animation: dot#{$d} 8s linear infinite;
+				transform: rotate($angle * ($d - 1)) translateY(-$plHalf + $dotDiam)  ;
+      }
+    }
+}
+
+
+}
+/* Dark theme */
+@media (prefers-color-scheme: dark){
+	\:root{
+		--bg: #17181c;
+		--fg: #e3e4e8;}
+}
+/* Animations */
+@for $d from 1 through $dots{
+	$afterFirstDot: $d > 1;
+	$beforeLastDot: $d < $dots;
+	$rotate: $angle * ($d - 1);
+	$angleA: $rotate;
+	$angleB: $angleA + $angle;
+	$angleC: 360deg;
+	$angleD: $angleC + ($angleC - $rotate - $angle);
+	$transYA: -$plHalf + $dotDiam;
+	$transYB: -$plHalf * (($d - 1) / $dots);
+
+	@keyframes dot#{$d}{
+		// start
+		@if $afterFirstDot
+			0% #{($d - 1) / $dots * 50%}
+				transform: rotate($angleA) translateY($transYA);
+		@else
+			0%
+				transform: rotate($angleA) translateY($transYA);
+		// middle
+		@if $beforeLastDot
+			#{$d / $dots * 50%}
+				transform: rotate($angleB) translateY($transYB);
+		50%
+			transform: rotate($angleC) translateY($transYB);
+		@if $beforeLastDot
+			#{100% - ($d / $dots * 50%)}
+				transform: rotate($angleD) translateY($transYB);
+		// end
+		@if $afterFirstDot
+			#{100% - (($d - 1) / $dots * 50%)}, 100%
+				transform: rotate($angleD) translateY($transYA);
+		@else
+			100%
+				transform: rotate($angleD) translateY($transYA);
+}
+
+}

@@ -129,7 +129,8 @@ const RegisterLogin1 = () => {
         if (err.response.data.username) {
           alert(err.response.data.username);
         } else if (err.response.data.profile) {
-          alert("A Profile with those details already exists");
+          // alert("A Profile with those details already exists or the entered details are not entered in correct format. Please check if \n \n Phone number is of 10 digits. \n \n");
+          console.log(err.response.data);
         }
         console.log(err.response);
       });
