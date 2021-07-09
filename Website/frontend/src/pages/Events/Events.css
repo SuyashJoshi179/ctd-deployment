@@ -305,3 +305,29 @@
     margin: 3% auto 4%;
   }
 }
+
+
+
+
+
+
+
+
+.registration-modal h4{
+  color: white;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.registration-modal button{
+  width: 80px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #29a19c;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 3px;
+  font-size: 120%;
+}

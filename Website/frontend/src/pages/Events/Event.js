@@ -3,12 +3,20 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axiosInstance from "../../axios";
 import DetailsModal from "./DetailsModal";
+import RegisteredModal from "./RegisteredModal";
 import { isLogin } from "../../components/utils/index";
 
 const Event = (props) => {
   const history = useHistory();
   const [modalShow, setModalShow] = useState(false);
   const [hover, setHover] = useState("");
+
+
+  const [show, setShow] = useState(false);
+
+  const handleShow = () => setShow(true);
+  const handleClose = () => setShow(false);
+
 
   // eslint-disable-next-line no-unused-vars
   const handleNTH = () => {
@@ -32,7 +40,11 @@ const Event = (props) => {
         alert(res.data.detail);
         history.push("/events");
         console.log(res.status);
-      });
+      }).then(()=>handleShow())
+      
+    
+
+    
   };
 
   if (props.id === 3) {
@@ -129,6 +141,8 @@ const Event = (props) => {
             <Button className='register-btn' onClick={handleSubmit}>
               Register
             </Button>
+
+            <RegisteredModal show={show} onHide={handleClose}></RegisteredModal>
           </div>
         </div>
       </div>
