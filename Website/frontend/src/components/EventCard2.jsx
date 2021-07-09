@@ -1,8 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { Button } from "react-bootstrap";
-import "../assets/css/eventcard.css";
+import "../assets/css/eventcard2.css";
 import ProfileModal from "./ProfileModal";
+import "../pages/Events/Events.css";
 
 const EventCard2 = (props) => {
   //   const handleView = (e) => {
@@ -10,18 +11,28 @@ const EventCard2 = (props) => {
   //   };
   console.log(props.eventCode);
   const [visible, setVisible] = useState(false);
+  const [hover, setHover] = useState("");
   return (
-    <div className='container1'>
-      <div className='card1'>
-        <div className='imgBx'>
-          <img alt='Event LOGO' src={props.icon} />
+    <div
+      className="container1 d-flex justify-content-center mt-res"
+      onMouseEnter={() => {
+        setHover("hover");
+      }}
+      onMouseLeave={() => {
+        setHover("");
+      }}
+    >
+      <div className={`card1 ${hover}`}>
+        <div className="imgBx">
+          <img alt="Event LOGO" src={props.icon} className="event-img-border" />
         </div>
-        <div className='contentBx'>
+        <div className="contentBx">
           <h3>{props.eventname}</h3>
-          <div className='mt-3 mb-4'>
+          <div className="mt-3 mb-4">
             <Button
-              className='details-btn-profile'
-              onClick={() => setVisible(true)}>
+              className="details-btn-profile"
+              onClick={() => setVisible(true)}
+            >
               View
             </Button>
             <ProfileModal

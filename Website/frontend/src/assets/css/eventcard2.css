@@ -1,0 +1,4 @@
+.container1 .card1.hover .contentBx {
+  /* height: 250px; */
+  transform: translateY(-80px) !important;
+}

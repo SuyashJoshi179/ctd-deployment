@@ -50,27 +50,29 @@ const Event = (props) => {
   if (props.id === 3) {
     return (
       <div
-        className='container1  d-flex justify-content-center mt-res'
+        className="container1  d-flex justify-content-center mt-res"
         onMouseEnter={() => {
           setHover("hover");
         }}
         onMouseLeave={() => {
           setHover("");
-        }}>
+        }}
+      >
         <div className={`card1 ${hover}`}>
-          <div className='imgBx'>
+          <div className="imgBx">
             <img
               alt={props.eventname}
               src={props.icon}
-              className='event-img-border'
+              className="event-img-border"
             />
           </div>
-          <div className=' contentBx'>
+          <div className=" contentBx">
             <h3>{props.eventname}</h3>
             <Button
-              className='mt-3 mb-3 pl-4 pr-4 details-btn'
+              className="mt-3 mb-3 pl-4 pr-4 details-btn"
               onClick={() => setModalShow(true)}
-              variant='outline-light'>
+              variant="outline-light"
+            >
               Details
             </Button>
             <DetailsModal
@@ -85,10 +87,9 @@ const Event = (props) => {
             />
             <div>
               <Button
-                className='register-btn'
-                onClick={() =>
-                  window.open("http://nth.pictieee.in/", "_blank")
-                }>
+                className="register-btn"
+                onClick={() => window.open("http://nth.pictieee.in/", "_blank")}
+              >
                 Register
               </Button>
             </div>
@@ -107,15 +108,16 @@ const Event = (props) => {
         }}
         onMouseLeave={() => {
           setHover("");
-        }}>
-        <div className='imgBx'>
+        }}
+      >
+        <div className="imgBx">
           <img
             alt={props.eventname}
             src={props.icon}
-            className='event-img-border'
+            className="event-img-border"
           />
         </div>
-        <div className='contentBx'>
+        <div className="contentBx">
           <h3>{props.eventname}</h3>
 
           <DetailsModal
@@ -129,16 +131,17 @@ const Event = (props) => {
             }}
           />
           <Button
-            className='mt-3 mb-3 pl-4 pr-4 details-btn'
+            className="mt-3 mb-3 pl-4 pr-4 details-btn"
             onClick={() => {
               setModalShow(true);
             }}
-            variant='outline-light'>
+            variant="outline-light"
+          >
             Details
           </Button>
 
           <div>
-            <Button className='register-btn' onClick={handleSubmit}>
+            <Button className="register-btn" onClick={handleSubmit}>
               Register
             </Button>
 
@@ -151,9 +154,3 @@ const Event = (props) => {
 };
 
 export default Event;
-
-//           <Button
-//             className="buttons"
-//             variant="outline-light"
-//             onClick={handleSubmit}
-//           >

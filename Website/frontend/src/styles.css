@@ -35,7 +35,6 @@ body {
   color: rgb(255, 255, 255); */
 }
 
-
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
@@ -203,3 +202,9 @@ body {
     padding: 5px !important;
   }
 } */
+
+@media only screen and (max-width: 768px) {
+  .mt-res {
+    margin-bottom: 5rem;
+  }
+}
