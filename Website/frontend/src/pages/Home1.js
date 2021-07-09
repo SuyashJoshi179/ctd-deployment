@@ -78,24 +78,7 @@ class Home1 extends React.Component {
                     className="lead text-justify p-2 about-content"
                     style={{ fontWeight: 400, width: "85%" }}
                   >
-                    Credenz Tech Dayz (CTD) is organized by the PICT IEEE
-                    Student Branch annually, in the even semester, to coincide
-                    with the IEEE membership drive. CTD brings with it a gusto
-                    that is portrayed in the form of seminars by esteemed
-                    industrialists. These seminars provide a platform wherein
-                    the students are exposed to the latest innovations in
-                    technology. They also get an opportunity to interact with
-                    experts from the industry, thus giving them further insights
-                    into and helping them to develop their skills in the
-                    technical field. Seminars are organized as a part of CTD
-                    ’20. The seminars on “Competitive Coding” and “Applied
-                    Machine Learning” drew deep interest from the students and
-                    were also immensely appreciated. Apart from the seminars,
-                    competitive technical events such as the National Computing
-                    Contest (NCC) and Network Treasure Hunt will be held to give
-                    CTD a technical hand. Take your wits and expertise to the
-                    next level in non technical events like Unravel and
-                    InQUIZitve.
+                  Credenz Tech Dayz is an intra-college annual techfest organized by the PICT IEEE Student Branch where the brightest minds of PICT compete in technical as well as non-technical events. Participants get a chance to test their logical aptitute and problem solving skills in events like like National Computing Contest and Reverse Coding. The Network Treasure Hunt is an online cryptic hunt that challenges you to use every tool at your disposal and piece together every bit of the puzzle. Inquisitive is a mind-boggling test to question your wits and test your general knowledge. This is a chance for the students to go beyond the traditional spheres of academics and make the most of their potential.
                   </p>
                 </Row>
               </Row>
