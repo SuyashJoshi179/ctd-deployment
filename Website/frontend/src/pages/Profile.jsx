@@ -32,7 +32,7 @@ const Profile = () => {
   if (appState.loading) return <Preloader />;
   return (
     <div className="pr-container body-ContactUs">
-      <div className="container">
+      <div className="container-fluid">
         <div
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -90,7 +90,11 @@ const Profile = () => {
             </div>
           </div>
           <div className="mt-5">
-            <div data-aos="fade-up" data-aos-duration="1000" className="row">
+            <div
+              data-aos="fade-up"
+              data-aos-duration="1000"
+              className="row no-gutters justify-content-around"
+            >
               {Object.keys(appState.profile.events).map((key, index) => (
                 <div className="col-12 col-md-4 d-flex justify-content-center mt-res ">
                   <EventCard2
