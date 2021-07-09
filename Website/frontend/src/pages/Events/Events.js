@@ -11,14 +11,7 @@ import "../../styles.css";
 import ScramblingText from "../../components/ScramblingText";
 
 const Events = () => {
-  const nccBasicInfo =
-    "NCC is a platform where you can not only sharpen your problem solving ability but also showcase your programming skills.";
-  const nthBasicInfo =
-    "NTH is an online hunt played worldwide. Follow the trails of clues and piece them together to get to the puzzle.";
-
-  const rc = {
-    info: "Integer type questions which involve complex mathematical problems which are not easy to solve without coding. A 28-minute game for a person or a team of two people. Teams or players are allowed to use any IDE or software after the game has started. You will have 3 lifelines (description will be provided in the game itself). You will have two attempts to answer a particular question. In the first attempt, the marking scheme will be +4 0. In the second attempt, the marking scheme will be changed to +2  -1.",
-  };
+  
   const dataNCC = {
     info: "The best algorithm is ten steps ahead of the second-best. So are you good enough to code the best one? National Coding Competition lets you test your coding skills with other coders. Sign Up to compete for the 'Overlord Coder' title and get a chance to experience real-world coding competition!",
     rules: [
@@ -27,7 +20,8 @@ const Events = () => {
       "- marking scheme - ",
       "The person who submits the most correct solutions will be considered WINNER.",
     ],
-    contacts: ["Atharva Naphade: 9423754562", "Atharva Kulkarni: 9860429679"],
+    contacts:[{name:'Atharva Naphade', contact:'94237 54562'},{name:'Atharva Kulkarni',contact:'98604 29679'}]
+  
   };
   const dataNTH = {
     info: "Bored with the same regular classes? Want to deep dive into the world of ciphers and puzzles? NTH got you covered! Network Treasure Hunt is an online version of a treasure hunt but with more adventure and riddles!  Put on your thinking hats and join us in the event where LOGIC is all you can think of.",
@@ -38,7 +32,7 @@ const Events = () => {
       "After the contest is concluded, the first person on the leaderboard will be declared as the winner.",
       "It is a solo contest, hence any activity with teaming up is strictly restricted.",
     ],
-    contacts: ["Atharva Naphade: 9423754562", "Atharva Kulkarni: 9860429679"],
+    contacts:[{name:'Siddharth Bora', contact:'94033 04652'},{name:'Suyash More',contact:'95950 55056'}]
   };
   const dataQuiz = {
     info: "Inquisitive takes you on a journey where you get to test your general knowledge. It gives you the gist of all disciplines of study ranging from politics to history to science! So grab up this opportunity to compete against other explorers.",
@@ -49,17 +43,17 @@ const Events = () => {
       "Participants can end the quiz any time using the 'End Test' button.",
       "Participants should not spell the answers incorrectly as they would be considered as wrong answers.",
     ],
-    contacts: ["Atharva Naphade: 9423754562", "Atharva Kulkarni: 9860429679"],
+    contacts:[{name:'Avantika Patil', contact:'85306 34832'},{name:'Rohit James',contact:'81388 55702'}]
   };
   const dataRC = {
-    info: "The best algorithm is ten steps ahead of the second-best. So are you good enough to code the best one? National Coding Competition lets you test your coding skills with other coders. Sign Up to compete for the 'Overlord Coder' title and get a chance to experience real-world coding competition!",
+    info: " A coding  competition to analyze your problem solving ability with programming knowledge along with mathematical skills. Test your ability to decode the pattern using coding, and answer it in limited chances. This will be  followed by a decipher and code round in any of the languages - C, C++, Python.",
     rules: [
       "The contest will contain 5-6 problems that need to be coded in C/C++/Python.",
       "It will be individual competition hence teaming up is strictly restricted. ",
       "- marking scheme - ",
       "The person who submits the most correct solutions will be considered WINNER.",
     ],
-    contacts: ["Atharva Naphade: 9423754562", "Atharva Kulkarni: 9860429679"],
+    contacts:[{name:'Atharva Naphade', contact:'94237 54562'},{name:'Neil Despande',contact:'88056 00298'}]
   };
 
   return (
@@ -95,7 +89,7 @@ const Events = () => {
           <Event
             info={dataNCC}
             icon={NCC}
-            eventname='National Coding Contest'
+            eventname='National Computing Contest'
             id={2}
           />
         </Col>

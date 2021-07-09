@@ -1,14 +1,15 @@
 .container1 {
     position: relative;
-    width: 60%;
+    width: 80%;
     margin: auto;
     overflow: hidden;
     bottom: 0;
+    padding: 2%;
 }
 
 .container1 .card1 {
     position: relative;
-    width: 290px;
+    width: 320px;
     height: 390px;
     background: #212730;
     border-radius: 20px;
@@ -193,6 +194,11 @@
     background-color: #212730 !important;
 }
 
+.tab-content p a{
+    text-decoration: none;
+    color: white;
+}
+
 .details-btn-profile {
     background-color: #29a19c !important;
     color: black !important;
@@ -286,7 +292,7 @@
 
 @media (max-width: 768px) {
     .container1 .card1 {
-        width: 260px;
+        width: 420px;
         margin: 3% auto 4%;
     }
 }

@@ -53,7 +53,7 @@ const Event = (props) => {
               className='event-img-border'
             />
           </div>
-          <div className='my-3 contentBx'>
+          <div className=' contentBx'>
             <h3>{props.eventname}</h3>
             <Button
               className='mt-3 mb-3 pl-4 pr-4 details-btn'
