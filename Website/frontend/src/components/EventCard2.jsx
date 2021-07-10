@@ -26,7 +26,7 @@ const EventCard2 = (props) => {
         <div className="imgBx">
           <img alt="Event LOGO" src={props.icon} className="event-img-border" />
         </div>
-        <div className="contentBx">
+        <div className="contentBx contentBx-profile">
           <h3>{props.eventname}</h3>
           <div className="mt-3 mb-4">
             <Button
