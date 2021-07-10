@@ -96,6 +96,7 @@
   }
   .container-lower {
     padding-bottom: 15px;
+    margin-left: auto !important;
   }
   .carousel-body {
     height: 720px;
@@ -152,6 +153,7 @@
   .container-lower {
     padding-right: 15px !important;
     padding-left: 15px !important;
+    margin-left: auto !important;
   }
   #CTD-heading {
     justify-content: center !important;
