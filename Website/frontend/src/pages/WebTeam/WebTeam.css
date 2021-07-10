@@ -34,9 +34,9 @@
   font-size: 1.75rem !important;
   margin-top: 0.5rem;
 }
-.web-team .team-member:hover img {
+/* .web-team .team-member:hover {
   transform: scale(1.02);
-}
+} */
 
 .web-team .team-member .fab {
   color: white;

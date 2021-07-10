@@ -38,7 +38,7 @@ const Profile = () => {
           data-aos-duration="1000"
           style={{ paddingTop: "3vw" }}
         >
-          <div className="d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-start align-items-center">
             <div
               className="mt-4 h1 heading-res heading-wrapper"
               style={{ fontWeight: "300", lineHeight: "1.2" }}
