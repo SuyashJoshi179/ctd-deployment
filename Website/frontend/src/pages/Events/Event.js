@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axiosInstance from "../../axios";
 import DetailsModal from "./DetailsModal";
@@ -44,23 +44,6 @@ const Event = (props) => {
 
   };
 
-  useEffect(()=>{
-    if(!isLogin){
-      setIsRegistered(false)
-      return;
-    }
-    if(isLogin){
-      for(let i = 1;i<=3;i++){
-        axiosInstance.post("/place_order/", {
-          event_id_fk : i
-        }).then((res)=>{
-          if(res.data.detail.substr(0,10) === 'You have a'){
-            setIsRegistered(true);
-          }
-        })
-      }
-    }
-  }, [setIsRegistered])
 
   if (props.id === 3) {
     return (
