@@ -1,5 +1,5 @@
 import { Button } from "react-bootstrap";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axiosInstance from "../../axios";
 import DetailsModal from "./DetailsModal";
@@ -10,15 +10,14 @@ const Event = (props) => {
   const history = useHistory();
   const [modalShow, setModalShow] = useState(false);
   const [hover, setHover] = useState("");
+  const [isRegistered, setIsRegistered] = useState(false);
 
-
-  const [registerMessage, setregisterMessage] = useState('')
+  const [registerMessage, setregisterMessage] = useState("");
 
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
-
 
   // eslint-disable-next-line no-unused-vars
   const handleNTH = () => {
@@ -39,11 +38,29 @@ const Event = (props) => {
       .then((res) => {
         setregisterMessage(res.data.detail);
         history.push("/events");
-      }).then(()=>handleShow())
-    
+        console.log(res.data);
+      })
+      .then(() => handleShow());
 
-    
   };
+
+  useEffect(()=>{
+    if(!isLogin){
+      setIsRegistered(false)
+      return;
+    }
+    if(isLogin){
+      for(let i = 1;i<=3;i++){
+        axiosInstance.post("/place_order/", {
+          event_id_fk : i
+        }).then((res)=>{
+          if(res.data.detail.substr(0,10) === 'You have a'){
+            setIsRegistered(true);
+          }
+        })
+      }
+    }
+  }, [setIsRegistered])
 
   if (props.id === 3) {
     return (
@@ -137,14 +154,19 @@ const Event = (props) => {
           >
             Details
           </Button>
+          {!isRegistered && (
+            <div>
+              <Button className="register-btn" onClick={handleSubmit}>
+                Register
+              </Button>
 
-          <div>
-            <Button className="register-btn" onClick={handleSubmit}>
-              Register
-            </Button>
-
-            <RegisteredModal registerMessage={registerMessage} show={show} onHide={handleClose}></RegisteredModal>
-          </div>
+              <RegisteredModal
+                registerMessage={registerMessage}
+                show={show}
+                onHide={handleClose}
+              ></RegisteredModal>
+            </div>
+          )}
         </div>
       </div>
     </div>

@@ -1,27 +1,46 @@
 import React, { useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../assets/css/registerLogin1.css";
-import axiosInstance from "../axios";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
 import axios from "axios";
+import axiosInstance from "../axios";
 import { login } from "./utils";
 import "../assets/css/carouselAnimation.css";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
 import ErrorModal from "./ErrorModal";
 
-
+const schema = yup.object().shape({
+  username: yup.string().required("Username is required"),
+  first_name: yup.string().required("Name is required"),
+  email: yup.string().email().required("Email is required"),
+  phone_no: yup.string().min(10).max(10).required("Contact is required"),
+  reg_no: yup
+    .string()
+    .matches(/^[CEI]+[0-9]+K\d\d\d\d\d\d\d\d$/, "Incorrect MIS ID entered")
+    .required(),
+  password: yup.string().min(6).max(20).required("Password is required"),
+  newPassword: yup
+    .string()
+    .oneOf([yup.ref("password"), null], "Passwords must match"),
+});
 
 const RegisterLogin1 = () => {
-
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const [signupError, setsignupError] = useState('')
-
-
-
+  const [signupError, setsignupError] = useState("");
 
   const options = ["Senior", "Junior"];
   const defaultOption = options[0];
@@ -65,7 +84,6 @@ const RegisterLogin1 = () => {
   };
 
   const handleProfileChange = (e) => {
-    
     updateProfileFormData({
       ...profileFormData,
       [e.target.name]: e.target.value.trim(),
@@ -111,7 +129,7 @@ const RegisterLogin1 = () => {
   };
 
   const handleRegisterSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     axiosInstance
       .post("/register/", {
@@ -128,12 +146,30 @@ const RegisterLogin1 = () => {
         },
       })
       .then((res) => {
-        if (res.status === 201){
-          
-            setsignupError('Account created successfully!')
+        setsignupError("Account created successfully!");
+        handleShow();
+      })
+      .catch((err) => {
+        if (err.response.data.username) {
+          setsignupError(err.response.data.username);
 
-              handleShow();
-          
+          handleShow();
+        } else if (err.response.data.password) {
+          setsignupError(err.response.data.password);
+          handleShow();
+        } else if (err.response.data.profile) {
+          const error = err.response.data.profile;
+
+          if (error.reg_no) {
+            setsignupError(error.reg_no[0]);
+            handleShow();
+          } else if (error.phone_no) {
+            setsignupError(error.phone_no[0]);
+            handleShow();
+          } else if (error.email) {
+            setsignupError(error.email[0]);
+            handleShow();
+          }
         }
       })
       
@@ -172,7 +208,6 @@ const RegisterLogin1 = () => {
     });
   };
 
-
   return (
     <div className="body-form">
       <div className="form-structor">
@@ -189,47 +224,52 @@ const RegisterLogin1 = () => {
           <div className="d-flex justify-content-center align-items-center colDir">
             <div className="form-holder">
               <input
-                type="text"
+                {...register("username")}
                 className="input m-2"
                 name="username"
                 id="username"
                 placeholder="Username"
                 onChange={handleRegisterChange}
               />
+              <p className="error-text">{errors.username?.message}</p>
               <input
-                type="text"
+                {...register("first_name")}
                 className="input m-2"
                 name="first_name"
                 id="first_name"
                 placeholder="Name"
                 onChange={handleRegisterChange}
               />
+              <p className="error-text">{errors.first_name?.message}</p>
               <input
-                type="email"
+                {...register("email")}
                 className="input m-2"
                 name="email"
                 id="email"
                 placeholder="Email"
                 onChange={handleProfileChange}
               />
+              <p className="error-text">{errors.email?.message}</p>
               <input
-                type="text"
+                {...register("phone_no")}
                 className="input m-2"
                 name="phone_no"
                 id="phone_no"
                 placeholder="Contact"
                 onChange={handleProfileChange}
               />
+              <p className="error-text">{errors.phone_no?.message}</p>
             </div>
             <div className="form-holder">
               <input
-                type="text"
+                {...register("reg_no")}
                 className="input m-2"
                 name="reg_no"
                 id="reg_no"
                 placeholder="MIS ID (C2K19106304)"
                 onChange={handleProfileChange}
               />
+              <p className="error-text">{errors.reg_no?.message}</p>
               <Dropdown
                 className="dropdown-input"
                 options={options}
@@ -240,6 +280,7 @@ const RegisterLogin1 = () => {
                 placeholder="Category"
               />
               <input
+                {...register("password")}
                 type="password"
                 name="password"
                 id="password"
@@ -247,17 +288,29 @@ const RegisterLogin1 = () => {
                 placeholder="Password"
                 onChange={handleRegisterChange}
               />
+              <p className="error-text">{errors.password?.message}</p>
               <input
+                {...register("newPassword")}
                 type="password"
+                name="newPassword"
+                id="newPassword"
                 className="input m-2"
                 placeholder="Confirm Password"
               />
+              <p className="error-text">{errors.newPassword?.message}</p>
             </div>
           </div>
-          <button className="submit-btn" onClick={handleRegisterSubmit}>
+          <button
+            className="submit-btn"
+            onClick={handleSubmit(handleRegisterSubmit)}
+          >
             Sign up
           </button>
-          <ErrorModal signupError={signupError} show={show} handleClose={handleClose}></ErrorModal>
+          <ErrorModal
+            signupError={signupError}
+            show={show}
+            handleClose={handleClose}
+          ></ErrorModal>
         </div>
         <div className="login slide-up">
           <div className="center">
@@ -288,7 +341,10 @@ const RegisterLogin1 = () => {
                 onChange={handleChange}
               />
             </div>
-            <button className="submit-btn" onClick={handleLoginSubmit}>
+            <button
+              className="submit-btn"
+              onClick={handleLoginSubmit}
+            >
               Login
             </button>
           </div>
