@@ -34,9 +34,9 @@
   font-size: 1.75rem !important;
   margin-top: 0.5rem;
 }
-.web-team .team-member:hover img {
+/* .web-team .team-member:hover {
   transform: scale(1.02);
-}
+} */
 
 .web-team .team-member .fab {
   color: white;
@@ -45,10 +45,12 @@
   padding: 12px 13px;
   font-size: 1.2rem;
   margin: 5px auto 0;
+  transition: 0.4s ease-out;
 }
 
 .web-team .team-member .fab:hover {
-  background-color: #0077b5;
+  background-color: white;
+  color: black;
   transition: 0.4s;
   transform: rotateZ(360deg);
 }

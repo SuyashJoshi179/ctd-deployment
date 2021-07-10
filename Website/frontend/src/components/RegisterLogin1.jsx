@@ -44,8 +44,6 @@ const RegisterLogin1 = () => {
 
   const options = ["Senior", "Junior"];
   const defaultOption = options[0];
-  //   const loginBtn = document.getElementById('login');
-  //   const signupBtn = document.getElementById('signup');
   const history = useHistory();
   const signupBtn = useRef(null);
   const loginBtn = useRef(null);
@@ -148,10 +146,8 @@ const RegisterLogin1 = () => {
         },
       })
       .then((res) => {
-        if (res.status === 201) {
-          setsignupError("Account created successfully!");
-          handleShow();
-        }
+        setsignupError("Account created successfully!");
+        handleShow();
       })
       .catch((err) => {
         if (err.response.data.username) {

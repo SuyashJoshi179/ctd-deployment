@@ -6,6 +6,7 @@ import Footer from "./pages/Footer/Footer";
 import Webteam from "./pages/WebTeam/WebTeam";
 import Events from "./pages/Events/Events";
 import Home1 from "./pages/Home1";
+import AboutUs from "./pages/AboutUs";
 import "./styles.css";
 import RegisterLogin1 from "./components/RegisterLogin1";
 import PublicRoute from "./components/utils/PublicRoute";
@@ -18,7 +19,11 @@ function App() {
         <PublicRoute exact path="/">
           <Home1></Home1>
         </PublicRoute>
-        <PublicRoute exact path="/About" component={Home1} />
+        <PublicRoute exact path="/About"  >
+        <Navbar></Navbar>
+        <AboutUs></AboutUs>
+        <Footer></Footer>
+        </PublicRoute>
         <PublicRoute exact path="/login" component={RegisterLogin1}>
           <Navbar></Navbar>
           <RegisterLogin1></RegisterLogin1>
@@ -45,6 +50,8 @@ function App() {
           <Footer></Footer>
         </PublicRoute>
       </Switch>
+      
+      
     </Router>
   );
 }

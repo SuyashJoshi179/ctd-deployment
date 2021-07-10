@@ -12,7 +12,7 @@ const DetailsModal = ({ info, eventname, logo, ...restProps }) => {
         <h3>{eventname}</h3>
       </Modal.Header>
       <Tab.Container
-        className='tabs p-4'
+        className='tabs p-4 '
         id='left-tabs-example'
         defaultActiveKey='first'>
         <Row className='details-modal-details'>
@@ -38,7 +38,7 @@ const DetailsModal = ({ info, eventname, logo, ...restProps }) => {
               </Nav>
             </Tab.Content>
           </Col>
-          <Col sm={8}>
+          <Col sm={9} className='mb-3 p-2'>
             <Tab.Content>
               <Tab.Pane className='tab-content' eventKey='first'>
                 {info.info}

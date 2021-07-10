@@ -1,5 +1,4 @@
 import TeamMemberCard from "./TeamMemberCard";
-// import Jay from "./Images/Jay.jpg";
 import Karan from "./Images/karan.jpeg";
 import Atharva from "./Images/naphade.jpeg";
 import Neil from "./Images/neil.jpeg";
@@ -9,17 +8,21 @@ import Fateema from "./Images/fateema.jpeg";
 import Omkar from "./Images/omkar.jpeg";
 import Shreya from "./Images/shreya.jpeg";
 import "./WebTeam.css";
-import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import { Button, Row, Col, Container } from "react-bootstrap";
 
 const WebTeam = () => {
+
+  let history = useHistory();
+  const goToPreviousPath = () => {
+      history.goBack()
+  }
+
   return (
     <div className="web-team">
-      <Link to="/">
-        <Button className="close-button" variant="light">
-          X
-        </Button>
-      </Link>
+    <Button onClick={goToPreviousPath} className="close-button" variant="light">
+    X
+  </Button>
       <br />
       <br />
       <Container fluid>
