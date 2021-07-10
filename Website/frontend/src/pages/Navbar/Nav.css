@@ -64,6 +64,18 @@ button:active {
   font-size: 1.25rem !important;
 }
 
+.na-dropdown .dropdown-item:hover{
+  color: white;
+  background-color: #45a29e;
+}
+
+
+.na-dropdown .drop-menu{
+  background-color: #45a29e;
+  color: white;
+}
+
+
 @media screen and (max-width: 1200px) {
   .nav-bar .login button {
     margin: 1% 5%;

@@ -65,9 +65,10 @@ const NavigationBar = () => {
           </Nav>
           <Dropdown className="na-dropdown">
             <Dropdown.Toggle id="dropdown-basic">My Profile</Dropdown.Toggle>
-            <Dropdown.Menu>
-              <Dropdown.Item href="/my-profile">My Profile</Dropdown.Item>
-              <Dropdown.Item onClick={handleLogout}>Logout</Dropdown.Item>
+            <Dropdown.Menu className='drop-menu'>
+              <Dropdown.Item className='dropdown-item' href="/my-profile">My Profile</Dropdown.Item>
+              
+              <Dropdown.Item className='dropdown-item' onClick={handleLogout}>Logout</Dropdown.Item>
             </Dropdown.Menu>
           </Dropdown>
         </Navbar.Collapse>
@@ -93,9 +94,9 @@ const NavigationBar = () => {
           <Link exact className="na-link" to="/" activeClassName="nav-selected">
             Home
           </Link>
-          <HashLink className="na-link" to="/About/#section-aboutCTD">
+          <Link className="na-link" activeClassName="nav-selected" to="/About">
             About
-          </HashLink>
+          </Link>
           <Link
             exact
             className="na-link"
