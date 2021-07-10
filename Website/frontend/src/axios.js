@@ -2,12 +2,13 @@ import axios from "axios";
 
 const baseURL = window.location.origin + "/apiv1";
 
+
 axios.defaults.xsrfCookieName = "csrftoken";
 axios.defaults.xsrfHeaderName = "X-CSRFToken";
 
 const axiosInstance = axios.create({
   baseURL: baseURL,
-  timeout: 50000,
+  timeout: 500000,
   headers: {
     Authorization: localStorage.getItem("access_token")
       ? "JWT " + localStorage.getItem("access_token")
@@ -26,9 +27,7 @@ axiosInstance.interceptors.response.use(
 
     if (typeof error.response === "undefined") {
       alert(
-        "A server/network error occurred. " +
-          "Looks like CORS might be the problem. " +
-          "Sorry about this - we will get it fixed shortly."
+        "Server Error"
       );
       return Promise.reject(error);
     }
@@ -74,11 +73,9 @@ axiosInstance.interceptors.response.use(
               console.log(err);
             });
         } else {
-          console.log("Refresh token is expired", tokenParts.exp, now);
           window.location.href = "/login/";
         }
       } else {
-        console.log("Refresh token not available.");
         window.location.href = "/login/";
       }
     }

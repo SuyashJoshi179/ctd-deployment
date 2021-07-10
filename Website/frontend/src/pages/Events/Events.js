@@ -17,7 +17,7 @@ const Events = () => {
     rules: [
       "The contest will contain 5-6 problems that need to be coded in C/C++/Python.",
       "It will be individual competition hence teaming up is strictly restricted. ",
-      "- marking scheme - ",
+      "Marking scheme - Junior (+100, -0), Senior (+100, -50) (First value in brackets indicate marks for correct submission and second value in brackets indicate marks for wrong submission ",
       "The person who submits the most correct solutions will be considered WINNER.",
     ],
     contacts:[{name:'Atharva Naphade', contact:'94237 54562'},{name:'Atharva Kulkarni',contact:'98604 29679'}]
@@ -50,10 +50,10 @@ const Events = () => {
     rules: [
       "The contest will contain 5-6 problems that need to be coded in C/C++/Python.",
       "It will be individual competition hence teaming up is strictly restricted. ",
-      "- marking scheme - ",
+      "Marking scheme - Junior (+100, -0), Senior (+100, -50) (First value in brackets indicate marks for correct submission and second value in brackets indicate marks for wrong submission)",
       "The person who submits the most correct solutions will be considered WINNER.",
     ],
-    contacts:[{name:'Atharva Naphade', contact:'94237 54562'},{name:'Neil Despande',contact:'88056 00298'}]
+    contacts:[{name:'Atharva Naphade', contact:'94237 54562'},{name:'Neil Deshpande',contact:'88056 00298'}]
   };
 
   return (

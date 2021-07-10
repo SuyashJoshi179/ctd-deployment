@@ -7,8 +7,22 @@ import { login } from "./utils";
 import "../assets/css/carouselAnimation.css";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import ErrorModal from "./ErrorModal";
+
+
 
 const RegisterLogin1 = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const [signupError, setsignupError] = useState('')
+
+
+
+
   const options = ["Senior", "Junior"];
   const defaultOption = options[0];
   //   const loginBtn = document.getElementById('login');
@@ -53,6 +67,7 @@ const RegisterLogin1 = () => {
   };
 
   const handleProfileChange = (e) => {
+    
     updateProfileFormData({
       ...profileFormData,
       [e.target.name]: e.target.value.trim(),
@@ -75,7 +90,6 @@ const RegisterLogin1 = () => {
         senior: false,
       });
     }
-    console.log(profileFormData);
   };
 
   const handleRegisterChange = (e) => {
@@ -100,9 +114,6 @@ const RegisterLogin1 = () => {
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    console.log(profileFormData);
-
-    console.log(profileFormData);
 
     axiosInstance
       .post("/register/", {
@@ -120,24 +131,43 @@ const RegisterLogin1 = () => {
       })
       .then((res) => {
         if (res.status === 201) {
-          alert("Account Created Successfully!");
+          setsignupError('Account created successfully!')
+          handleShow();
         }
-        console.log(res.data);
-        console.log(res.status);
       })
       .catch((err) => {
+        
         if (err.response.data.username) {
-          alert(err.response.data.username);
-        } else if (err.response.data.profile) {
-          alert("A Profile with those details already exists");
+          setsignupError(err.response.data.username)
+
+          handleShow();
         }
-        console.log(err.response);
+        else if (err.response.data.password){
+          setsignupError(err.response.data.password)
+          handleShow();
+        }
+        else if (err.response.data.profile) {
+          
+          const error = err.response.data.profile
+
+          if(error.reg_no){
+            setsignupError(error.reg_no[0])
+            handleShow();
+          }
+          else if (error.phone_no){
+            setsignupError(error.phone_no[0])
+            handleShow();
+          }
+          else if(error.email){
+            setsignupError(error.email[0])
+            handleShow();
+          }
+        }
       });
   };
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    console.log(loginFormData);
 
     axiosInstance
       .post("/api/token/", {
@@ -149,10 +179,8 @@ const RegisterLogin1 = () => {
         axiosInstance.defaults.headers["Authorization"] =
           "JWT " + localStorage.getItem("access_token");
         history.push("/");
-        console.log(res.status);
       })
       .catch((err) => {
-        console.log(err.response.data.detail);
         alert(err.response.data.detail);
       });
   };
@@ -169,6 +197,7 @@ const RegisterLogin1 = () => {
       }
     });
   };
+
 
   return (
     <div className="body-form">
@@ -224,7 +253,7 @@ const RegisterLogin1 = () => {
                 className="input m-2"
                 name="reg_no"
                 id="reg_no"
-                placeholder="MIS ID (C2K1234567)"
+                placeholder="MIS ID (C2K19106304)"
                 onChange={handleProfileChange}
               />
               <Dropdown
@@ -254,6 +283,7 @@ const RegisterLogin1 = () => {
           <button className="submit-btn" onClick={handleRegisterSubmit}>
             Sign up
           </button>
+          <ErrorModal signupError={signupError} show={show} handleClose={handleClose}></ErrorModal>
         </div>
         <div className="login slide-up">
           <div className="center">

@@ -8,6 +8,10 @@ import { isLogin, logout } from "../../components/utils/index";
 import { HashLink } from "react-router-hash-link";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
+import PISBlogo from '../../assets/img/pisb-logo.png'
+
+
+
 
 const NavigationBar = () => {
   const history = useHistory();
@@ -39,8 +43,13 @@ const NavigationBar = () => {
         expand="xl"
       >
         <Navbar.Brand>
+<<<<<<< HEAD
           <Link to="/">
             <img alt="CTDLOGO" src={CTDlogo} className="logo" width="100px" />
+=======
+          <Link to='/'>
+            <img src={PISBlogo} alt="PICT IEEE Student Branch" className='logo' width='120px'/>
+>>>>>>> 97a5592bcc2b82f46165036c6ed262fb74443001
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -80,9 +89,8 @@ const NavigationBar = () => {
       expand="xl"
     >
       <Navbar.Brand>
-        <Link to="/">
-          <img alt="CTDLOGO" src={CTDlogo} className="logo" width="100px" />
-        </Link>
+        <img src={PISBlogo} alt="PICT IEEE Student Branch" className='logo' width='120px'/>
+        
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
