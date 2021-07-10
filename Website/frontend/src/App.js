@@ -30,6 +30,7 @@ function App() {
           <Footer></Footer>
         </PublicRoute>
         <PublicRoute exact path="/my-profile">
+          <Navbar></Navbar>
           <Profile></Profile>
           <Footer></Footer>
         </PublicRoute>
