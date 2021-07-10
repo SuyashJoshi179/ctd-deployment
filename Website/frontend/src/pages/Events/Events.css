@@ -191,14 +191,18 @@
   padding: 0 3% 0 0;
   text-align: justify;
   background-color: #212730 !important;
-  height: 150px;
+  height: 200px;
   overflow-y: auto;
 }
 
+.tab-content h5{
+  margin-bottom: 1rem !important;
+}
 
-.tab-content p a {
+.tab-content h5 a {
   text-decoration: none;
   color: white;
+  
 }
 
 .details-btn-profile {
@@ -223,7 +227,7 @@
 
 .container1 .card1.hover .contentBx {
   /* height: 250px; */
-  transform: translateY(-120px);
+  transform: translateY(-135px);
 }
 
 .container1 .card1.hover .contentBx button {

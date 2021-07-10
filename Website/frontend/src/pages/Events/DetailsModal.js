@@ -52,10 +52,10 @@ const DetailsModal = ({ info, eventname, logo, ...restProps }) => {
               </Tab.Pane>
               <Tab.Pane className='tab-content' eventKey='third'>
                 {info.contacts.map((contact) => (
-                  <p key={contact.name} style={{ marginBottom: "0px" }}>
+                  <h5 key={contact.name} style={{ marginBottom: "0px" }}>
                     {contact.name}&nbsp;:&nbsp;
                     <span><a href={'tel:'+contact.contact}>+91 {contact.contact}</a></span>
-                  </p>
+                  </h5>
                 ))}
               </Tab.Pane>
             </Tab.Content>

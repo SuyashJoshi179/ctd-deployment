@@ -288,8 +288,9 @@
   font-size: 18px;
   padding: 8px 52px 8px 20px;
   margin-left: 5px;
-}
 
+  cursor: pointer !important;
+}
 
 .Dropdown-menu,
 .Dropdown-option {
