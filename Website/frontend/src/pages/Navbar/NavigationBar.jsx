@@ -53,7 +53,7 @@ const NavigationBar = () => {
             <Link className="na-link" exact activeClassName="nav-selected" to="/">
               Home
             </Link>
-            <Link className="na-link" to="/About">
+            <Link className="na-link" activeClassName="nav-selected" to="/About">
               About
             </Link>
             <Link className="na-link" activeClassName="nav-selected" to="/events">

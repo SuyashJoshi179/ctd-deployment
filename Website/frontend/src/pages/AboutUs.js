@@ -1,15 +1,27 @@
 // import styles 
 import {Row, Col, Container, Carousel} from 'react-bootstrap';
+import '../assets/css/About.css'
 
 // import components
 import ScramblingText from '../components/ScramblingText';
+
+
+import CTDlogo from '../assets/img/ctd.png'
 
 const AboutUs = () => {
     return ( 
         <div>
           {/* SECTION-ABOUTUS */}
           <div className="section-about" id="section-aboutCTD">
-          <Container className="container-lower pt-5">
+          <Container>
+          <div className="heading-wrapper CTD-heading-wrapper">
+          <ScramblingText
+            scrambleText={"Credenz Tech Dayz"}
+            mainContainer="CTD-heading-wrapper"
+          />
+        </div>
+          </Container>
+          <Container fluid className="container-lower pt-5">
             <Row className="" data-aos="fade-up" data-aos-duration="1000">
               {/* <HeadingAnimation /> */}
               <Row
@@ -17,23 +29,24 @@ const AboutUs = () => {
                 id="CTD-heading"
               >
                 {/* <h1>Credenz Tech Days</h1> */}
-                <div className="heading-wrapper CTD-heading-wrapper">
-                  <ScramblingText
-                    scrambleText={"Credenz Tech Dayz"}
-                    mainContainer="CTD-heading-wrapper"
-                  />
-                </div>
+                
               </Row>
               <Row
                 className="d-flex justify-content-center mt-5"
                 style={{ margin: "auto" }}
               >
+              <Col lg={4} sm={12} className='ctd-about-logo'>
+              <img src={CTDlogo} width='340px' alt='CTD Logo' />
+              </Col>
+                <Col lg={8} sm={12}>
                 <p
-                  className="lead text-justify p-2 about-content"
-                  style={{ fontWeight: 400, width: "85%" }}
-                >
-                Credenz Tech Dayz is an intra-college annual techfest organized by the PICT IEEE Student Branch where the brightest minds of PICT compete in technical as well as non-technical events. Participants get a chance to test their logical aptitute and problem solving skills in events like like National Computing Contest and Reverse Coding. The Network Treasure Hunt is an online cryptic hunt that challenges you to use every tool at your disposal and piece together every bit of the puzzle. Inquisitive is a mind-boggling test to question your wits and test your general knowledge. This is a chance for the students to go beyond the traditional spheres of academics and make the most of their potential.
-                </p>
+                className="lead text-justify  about-content"
+                style={{ fontWeight: 400, width: "85%" }}
+              >
+              Credenz Tech Dayz is an intra-college annual techfest organized by the PICT IEEE Student Branch where the brightest minds of PICT compete in technical as well as non-technical events. Participants get a chance to test their logical aptitute and problem solving skills in events like like National Computing Contest and Reverse Coding. The Network Treasure Hunt is an online cryptic hunt that challenges you to use every tool at your disposal and piece together every bit of the puzzle. Inquisitive is a mind-boggling test to question your wits and test your general knowledge. This is a chance for the students to go beyond the traditional spheres of academics and make the most of their potential.
+              </p>
+                </Col>
+                
               </Row>
             </Row>
           </Container>

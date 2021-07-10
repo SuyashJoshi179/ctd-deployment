@@ -128,10 +128,8 @@ const RegisterLogin1 = () => {
         },
       })
       .then((res) => {
-        if (res.status === 201) {
-          setsignupError('Account created successfully!')
+        setsignupError('Account created successfully!')
           handleShow();
-        }
       })
       .catch((err) => {
         
