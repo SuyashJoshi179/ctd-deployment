@@ -175,7 +175,7 @@ const RegisterLogin1 = () => {
   };
 
   const handleLoginSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
 
     axiosInstance
       .post("/api/token/", {
