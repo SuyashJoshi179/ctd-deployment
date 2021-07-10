@@ -35,9 +35,7 @@
   /* top: 30% !important; */
   justify-content: center;
   align-items: center;
-  right: 5% !important;
-  left: 5% !important;
-  top: 5% !important;
+  margin: 0 auto !important ;
 }
 .carousel-para {
   padding: 48px;
@@ -47,6 +45,8 @@
   background-color: transparent !important;
   color: white;
   font-size: 22px;
+  margin: 0 auto;
+  font-size: 110%;
 }
 .section-about {
   margin-top: 50px;

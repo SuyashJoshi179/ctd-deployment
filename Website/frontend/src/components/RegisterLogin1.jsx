@@ -128,38 +128,16 @@ const RegisterLogin1 = () => {
         },
       })
       .then((res) => {
-        setsignupError('Account created successfully!')
-          handleShow();
-      })
-      .catch((err) => {
-        
-        if (err.response.data.username) {
-          setsignupError(err.response.data.username)
-
-          handleShow();
-        }
-        else if (err.response.data.password){
-          setsignupError(err.response.data.password)
-          handleShow();
-        }
-        else if (err.response.data.profile) {
+        if (res.status === 201){
           
-          const error = err.response.data.profile
+            setsignupError('Account created successfully!')
 
-          if(error.reg_no){
-            setsignupError(error.reg_no[0])
-            handleShow();
-          }
-          else if (error.phone_no){
-            setsignupError(error.phone_no[0])
-            handleShow();
-          }
-          else if(error.email){
-            setsignupError(error.email[0])
-            handleShow();
-          }
+              handleShow();
+          
         }
-      });
+      })
+      
+         
   };
 
   const handleLoginSubmit = (e) => {
