@@ -18,6 +18,8 @@ const RegisterLogin1 = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [signupError, setsignupError] = useState('')
+
 
 
 
@@ -88,7 +90,6 @@ const RegisterLogin1 = () => {
         senior: false,
       });
     }
-    console.log(profileFormData);
   };
 
   const handleRegisterChange = (e) => {
@@ -113,9 +114,6 @@ const RegisterLogin1 = () => {
 
   const handleRegisterSubmit = (e) => {
     e.preventDefault();
-    console.log(profileFormData);
-
-    console.log(profileFormData);
 
     axiosInstance
       .post("/register/", {
@@ -133,28 +131,43 @@ const RegisterLogin1 = () => {
       })
       .then((res) => {
         if (res.status === 201) {
-          alert("Account Created Successfully!");
+          setsignupError('Account created successfully!')
+          handleShow();
         }
-        console.log(res.data);
-        console.log(res.status);
       })
       .catch((err) => {
+        
         if (err.response.data.username) {
-          alert(err.response.data.username);
-        } else if (err.response.data.profile) {
-          // alert("A Profile with those details already exists or the entered details are not entered in correct format. Please check if \n \n Phone number is of 10 digits. \n \n");
-          console.log(err.response.data);
+          setsignupError(err.response.data.username)
+
           handleShow();
-
-
         }
-        console.log(err.response);
+        else if (err.response.data.password){
+          setsignupError(err.response.data.password)
+          handleShow();
+        }
+        else if (err.response.data.profile) {
+          
+          const error = err.response.data.profile
+
+          if(error.reg_no){
+            setsignupError(error.reg_no[0])
+            handleShow();
+          }
+          else if (error.phone_no){
+            setsignupError(error.phone_no[0])
+            handleShow();
+          }
+          else if(error.email){
+            setsignupError(error.email[0])
+            handleShow();
+          }
+        }
       });
   };
 
   const handleLoginSubmit = (e) => {
     e.preventDefault();
-    console.log(loginFormData);
 
     axiosInstance
       .post("/api/token/", {
@@ -166,10 +179,8 @@ const RegisterLogin1 = () => {
         axiosInstance.defaults.headers["Authorization"] =
           "JWT " + localStorage.getItem("access_token");
         history.push("/");
-        console.log(res.status);
       })
       .catch((err) => {
-        console.log(err.response.data.detail);
         alert(err.response.data.detail);
       });
   };
@@ -272,7 +283,7 @@ const RegisterLogin1 = () => {
           <button className="submit-btn" onClick={handleRegisterSubmit}>
             Sign up
           </button>
-          <ErrorModal show={show} handleClose={handleChange}></ErrorModal>
+          <ErrorModal signupError={signupError} show={show} handleClose={handleClose}></ErrorModal>
         </div>
         <div className="login slide-up">
           <div className="center">

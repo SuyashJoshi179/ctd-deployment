@@ -12,16 +12,11 @@ const ScramblingText = ({ scrambleText, mainContainer }) => {
     //observer
     var observer = new IntersectionObserver(
       function (entries) {
-        // isIntersecting is true when element and viewport are overlapping
-        // isIntersecting is false when element and viewport don't overlap
-        if (entries[0].isIntersecting === true)
-          console.log("Element has just become visible in screen");
         // call scramble function with the text to be scrambled and handler.
         scramblerRef.current.scramble(text, setText);
       },
       { threshold: [0] }
     );
-    //     console.log(document.querySelector(`.${mainContainer}`));
     observer.observe(document.querySelector(`.${mainContainer}`));
   }, []);
   return <div className="display-3 text-scramble">{text}</div>;

@@ -23,9 +23,7 @@ const Profile = () => {
   useEffect(() => {
     axiosInstance.get("account_detail/").then((res) => {
       const profileData = res.data;
-      console.log(res.data);
       setAppState({ loading: false, profile: profileData });
-      console.log(res.data);
     });
   }, [setAppState]);
 

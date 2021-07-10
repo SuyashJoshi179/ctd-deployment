@@ -6,10 +6,8 @@ import ProfileModal from "./ProfileModal";
 import "../pages/Events/Events.css";
 
 const EventCard2 = (props) => {
-  //   const handleView = (e) => {
-  //     alert(e);
-  //   };
-  console.log(props.eventCode);
+
+  
   const [visible, setVisible] = useState(false);
   const [hover, setHover] = useState("");
   return (

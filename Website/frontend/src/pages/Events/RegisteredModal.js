@@ -1,13 +1,13 @@
 // import Styles
 import { Modal } from "react-bootstrap";
 
-const RegisteredModal = ({show, onHide}) => {
+const RegisteredModal = ({show, onHide, registerMessage}) => {
     return ( 
         <div>
             <Modal  className='registration-modal' show={show} onHide={onHide}>
                 <Modal.Header closeButton>
                 </Modal.Header>
-                <h4>You've registered successfully!</h4>
+                <h4>{registerMessage}</h4>
                 <button onClick={onHide}>
                     Ok
                 </button>

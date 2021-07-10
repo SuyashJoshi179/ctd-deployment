@@ -12,6 +12,8 @@ const Event = (props) => {
   const [hover, setHover] = useState("");
 
 
+  const [registerMessage, setregisterMessage] = useState('')
+
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
@@ -25,7 +27,6 @@ const Event = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(props.id);
 
     if (!isLogin()) {
       window.location.pathname = "/login";
@@ -36,10 +37,8 @@ const Event = (props) => {
         event_id_fk: props.id,
       })
       .then((res) => {
-        console.log(res.data.detail);
-        alert(res.data.detail);
+        setregisterMessage(res.data.detail);
         history.push("/events");
-        console.log(res.status);
       }).then(()=>handleShow())
     
 
@@ -144,7 +143,7 @@ const Event = (props) => {
               Register
             </Button>
 
-            <RegisteredModal show={show} onHide={handleClose}></RegisteredModal>
+            <RegisteredModal registerMessage={registerMessage} show={show} onHide={handleClose}></RegisteredModal>
           </div>
         </div>
       </div>
