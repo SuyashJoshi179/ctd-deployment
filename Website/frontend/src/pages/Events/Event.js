@@ -41,7 +41,6 @@ const Event = (props) => {
         history.push("/events");
         console.log(res.status);
       }).then(()=>handleShow())
-      
     
 
     

@@ -7,8 +7,20 @@ import { login } from "./utils";
 import "../assets/css/carouselAnimation.css";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
+import ErrorModal from "./ErrorModal";
+
+
 
 const RegisterLogin1 = () => {
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+
+
+
   const options = ["Senior", "Junior"];
   const defaultOption = options[0];
   //   const loginBtn = document.getElementById('login');
@@ -53,6 +65,7 @@ const RegisterLogin1 = () => {
   };
 
   const handleProfileChange = (e) => {
+    
     updateProfileFormData({
       ...profileFormData,
       [e.target.name]: e.target.value.trim(),
@@ -131,6 +144,9 @@ const RegisterLogin1 = () => {
         } else if (err.response.data.profile) {
           // alert("A Profile with those details already exists or the entered details are not entered in correct format. Please check if \n \n Phone number is of 10 digits. \n \n");
           console.log(err.response.data);
+          handleShow();
+
+
         }
         console.log(err.response);
       });
@@ -170,6 +186,7 @@ const RegisterLogin1 = () => {
       }
     });
   };
+
 
   return (
     <div className="body-form">
@@ -225,7 +242,7 @@ const RegisterLogin1 = () => {
                 className="input m-2"
                 name="reg_no"
                 id="reg_no"
-                placeholder="MIS ID (C2K1234567)"
+                placeholder="MIS ID (C2K19106304)"
                 onChange={handleProfileChange}
               />
               <Dropdown
@@ -255,6 +272,7 @@ const RegisterLogin1 = () => {
           <button className="submit-btn" onClick={handleRegisterSubmit}>
             Sign up
           </button>
+          <ErrorModal show={show} handleClose={handleChange}></ErrorModal>
         </div>
         <div className="login slide-up">
           <div className="center">
