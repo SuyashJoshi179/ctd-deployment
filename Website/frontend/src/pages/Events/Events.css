@@ -188,10 +188,13 @@
 }
 
 .details-modal .tab-content {
-  padding: 0 3% 2.5% 0;
+  padding: 0 3% 0 0;
   text-align: justify;
   background-color: #212730 !important;
+  height: 200px;
+  overflow-y: auto;
 }
+
 
 .tab-content p a {
   text-decoration: none;
