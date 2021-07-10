@@ -20,6 +20,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.error-text {
+  color: #45a29e;
+  text-align: left;
+  margin-left: 25px;
+}
+
 .form-structor {
   /* background-color: #222; */
   /* border-radius: 15px; */

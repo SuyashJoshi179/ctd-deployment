@@ -10,15 +10,14 @@ const Event = (props) => {
   const history = useHistory();
   const [modalShow, setModalShow] = useState(false);
   const [hover, setHover] = useState("");
+  const [isRegistered, setIsRegistered] = useState(false);
 
-
-  const [registerMessage, setregisterMessage] = useState('')
+  const [registerMessage, setregisterMessage] = useState("");
 
   const [show, setShow] = useState(false);
 
   const handleShow = () => setShow(true);
   const handleClose = () => setShow(false);
-
 
   // eslint-disable-next-line no-unused-vars
   const handleNTH = () => {
@@ -39,10 +38,12 @@ const Event = (props) => {
       .then((res) => {
         setregisterMessage(res.data.detail);
         history.push("/events");
-      }).then(()=>handleShow())
-    
+      })
+      .then(() => handleShow());
 
-    
+    if (registerMessage === "Your order has been placed") {
+      setIsRegistered(true);
+    }
   };
 
   if (props.id === 3) {
@@ -137,14 +138,19 @@ const Event = (props) => {
           >
             Details
           </Button>
+          {!isRegistered && (
+            <div>
+              <Button className="register-btn" onClick={handleSubmit}>
+                Register
+              </Button>
 
-          <div>
-            <Button className="register-btn" onClick={handleSubmit}>
-              Register
-            </Button>
-
-            <RegisteredModal registerMessage={registerMessage} show={show} onHide={handleClose}></RegisteredModal>
-          </div>
+              <RegisteredModal
+                registerMessage={registerMessage}
+                show={show}
+                onHide={handleClose}
+              ></RegisteredModal>
+            </div>
+          )}
         </div>
       </div>
     </div>
