@@ -43,28 +43,23 @@ const NavigationBar = () => {
         expand="xl"
       >
         <Navbar.Brand>
-<<<<<<< HEAD
-          <Link to="/">
-            <img alt="CTDLOGO" src={CTDlogo} className="logo" width="100px" />
-=======
-          <Link to='/'>
+          <Link  to='/'>
             <img src={PISBlogo} alt="PICT IEEE Student Branch" className='logo' width='120px'/>
->>>>>>> 97a5592bcc2b82f46165036c6ed262fb74443001
           </Link>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="m-auto">
-            <Link className="na-link" activeClassName="nav-selected" to="/">
+            <Link className="na-link" exact activeClassName="nav-selected" to="/">
               Home
             </Link>
-            <HashLink className="na-link" to="/About/#section-aboutCTD">
+            <Link className="na-link" to="/About">
               About
-            </HashLink>
-            <Link className="na-link" to="/events">
+            </Link>
+            <Link className="na-link" activeClassName="nav-selected" to="/events">
               Events
             </Link>
-            <Link className="na-link" to="ContactUs">
+            <Link className="na-link" activeClassName="nav-selected" to="ContactUs">
               Contact
             </Link>
           </Nav>

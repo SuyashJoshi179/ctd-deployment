@@ -5,7 +5,7 @@ const RegisteredModal = ({show, onHide, registerMessage}) => {
     return ( 
         <div>
             <Modal  className='registration-modal' show={show} onHide={onHide}>
-                <Modal.Header closeButton>
+                <Modal.Header >
                 </Modal.Header>
                 <h4>{registerMessage}</h4>
                 <button onClick={onHide}>
