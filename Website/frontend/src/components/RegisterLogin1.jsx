@@ -270,8 +270,8 @@ const RegisterLogin1 = () => {
                 onChange={handleProfileChange}
               />
               <p className="error-text">{errors.reg_no?.message}</p>
+              <div className="dropdown-input">
               <Dropdown
-                className="dropdown-input"
                 options={options}
                 name="seniorstr"
                 id="seniorstr"
@@ -279,6 +279,7 @@ const RegisterLogin1 = () => {
                 value={defaultOption}
                 placeholder="Category"
               />
+              </div>
               <input
                 {...register("password")}
                 type="password"

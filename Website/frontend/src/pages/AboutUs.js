@@ -13,7 +13,7 @@ const AboutUs = () => {
         <div>
           {/* SECTION-ABOUTUS */}
           <div className="section-about" id="section-aboutCTD">
-          <Container>
+          <Container className="container-lower">
           <div className="heading-wrapper CTD-heading-wrapper">
           <ScramblingText
             scrambleText={"Credenz Tech Dayz"}
@@ -22,21 +22,10 @@ const AboutUs = () => {
         </div>
           </Container>
           <Container fluid className="container-lower pt-5">
-            <Row className="" data-aos="fade-up" data-aos-duration="1000">
               {/* <HeadingAnimation /> */}
-              <Row
-                className="d-flex justify-content-start no-gutters"
-                id="CTD-heading"
-              >
-                {/* <h1>Credenz Tech Days</h1> */}
-                
-              </Row>
-              <Row
-                className="d-flex justify-content-center mt-5"
-                style={{ margin: "auto" }}
-              >
+              <Row>
               <Col lg={4} sm={12} className='ctd-about-logo'>
-              <img src={CTDlogo} width='340px' alt='CTD Logo' />
+              <img src={CTDlogo} width='300px' alt='CTD Logo' />
               </Col>
                 <Col lg={8} sm={12}>
                 <p
@@ -48,7 +37,6 @@ const AboutUs = () => {
                 </Col>
                 
               </Row>
-            </Row>
           </Container>
           {/* CAROUSEL */}
           <Container className="container-lower">

@@ -4,6 +4,7 @@
 }
 .container-lower {
   padding: 50px;
+  margin-left: 4% !important;
 }
 .section-home {
   height: 100vh;

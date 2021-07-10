@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const baseURL = window.location.origin + "/apiv1";
-const baseURL = 'https://ctd.pictieee.in/apiv1'
+const baseURL = window.location.origin + "/apiv1";
+// const baseURL = 'https://ctd.pictieee.in/apiv1'
 
 
 axios.defaults.xsrfCookieName = "csrftoken";
