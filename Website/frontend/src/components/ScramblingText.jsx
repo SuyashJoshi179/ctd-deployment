@@ -19,7 +19,7 @@ const ScramblingText = ({ scrambleText, mainContainer }) => {
     );
     observer.observe(document.querySelector(`.${mainContainer}`));
   }, []);
-  return <div className="display-3 text-scramble">{text}</div>;
+  return <div className="display-3 font-res text-scramble">{text}</div>;
 };
 
 export default ScramblingText;
