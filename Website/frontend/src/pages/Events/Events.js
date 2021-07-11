@@ -80,7 +80,7 @@ const Events = () => {
       </Container> */}
       {/* <div className='heading-aboutUs display-3 mb-5 text-center'>Events</div> */}
       <Container className="container-upper-Events">
-        <Row className="ml-5 mb-5 d-flex justify-content-start">
+        <Row className="mb-5 d-flex justify-content-start">
           <div
             className="h1 heading-wrapper"
             style={{ color: "#fff", fontWeight: 500 }}
