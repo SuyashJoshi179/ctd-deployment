@@ -13,7 +13,7 @@ import ScramblingText from "../../components/ScramblingText";
 const Events = () => {
   
   const dataNCC = {
-    info: "The best algorithm is ten steps ahead of the second-best. So are you good enough to code the best one? National Coding Competition lets you test your coding skills with other coders. Sign Up to compete for the 'Overlord Coder' title and get a chance to experience real-world coding competition!",
+    info: "The best algorithm is ten steps ahead of the second-best. So are you good enough to code the best one? National Computing Competition lets you test your coding skills with other coders. Sign Up to compete for the 'Overlord Coder' title and get a chance to experience real-world coding competition!",
     rules: [
       "The contest will contain 5-6 problems that need to be coded in C/C++/Python.",
       "It will be individual competition hence teaming up is strictly restricted. ",
@@ -46,7 +46,7 @@ const Events = () => {
     contacts:[{name:'Avantika Patil', contact:'85306 34832'},{name:'Rohit James',contact:'81388 55702'}]
   };
   const dataRC = {
-    info: " A coding  competition to analyze your problem solving ability with programming knowledge along with mathematical skills. Test your ability to decode the pattern using coding, and answer it in limited chances. This will be  followed by a decipher and code round in any of the languages - C, C++, Python.",
+    info: " A coding  competition to analyze your problem solving ability with programming knowledge along with mathematical skills. Test your ability to decode the pattern using coding, and answer it in limited chances. This will be  followed by a decipher and code round in any of the languages - C, C++, Python and Java.",
     rules: [
       "The contest will contain 5-6 problems that need to be coded in C/C++/Python.",
       "It will be individual competition hence teaming up is strictly restricted. ",
