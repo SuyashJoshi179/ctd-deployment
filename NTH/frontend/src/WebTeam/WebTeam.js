@@ -19,9 +19,7 @@ const WebTeam = () => {
     <div className="web-team">
       
         <Button onClick={goToPreviousPage} className='close-button' variant='light' size='lg' >X</Button>
-      <br />
-      <br />
-      <br />
+      
       <Container>
         <Row>
           <TeamMemberCard linkedin='https://www.linkedin.com/in/atharva-naphade-540236148/' name='Atharva Naphade' image={Atharva} />

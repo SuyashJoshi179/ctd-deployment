@@ -4,10 +4,9 @@
 }
 
 .web-team .close-button{
-    float :right;
-    margin-top: 0px;
-    margin-right: 20px;
+    position: absolute;
     border-radius: 100%;
+    right: 15px;
 }
 .web-team .close-button:hover , .close-button:focus{
     background-color: rgb(255, 255, 255);
