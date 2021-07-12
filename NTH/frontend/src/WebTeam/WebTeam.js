@@ -1,18 +1,27 @@
 import TeamMemberCard from "./TeamMemberCard";
 import Jay from "./Images/Jay.jpg";
 import "./WebTeam.css";
-import { Link } from "react-router-dom";
+import {  useHistory } from "react-router-dom";
 import { Button, Container, Row} from "react-bootstrap";
 import Karan from './Images/Karan.jpg'
 import More from './Images/more34.jpeg'
 import Atharva from './Images/naphade.jpeg'
 
 const WebTeam = () => {
+
+  const history = useHistory();
+  
+  const goToPreviousPage = () => {
+    history.goBack()  
+  }
+
   return (
     <div className="web-team">
-      <Link to="/" >
-        <Button className='close-button' variant='light' size='lg' >X</Button>
-      </Link>
+      
+        <Button onClick={goToPreviousPage} className='close-button' variant='light' size='lg' >X</Button>
+      <br />
+      <br />
+      <br />
       <Container>
         <Row>
           <TeamMemberCard linkedin='https://www.linkedin.com/in/atharva-naphade-540236148/' name='Atharva Naphade' image={Atharva} />
