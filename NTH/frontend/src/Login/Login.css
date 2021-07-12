@@ -88,13 +88,14 @@
     transition: 0.5s ease-in;
 }
 .login-page button:hover{
-    background-color: #202020;
+    background-color: #444444;
 }
 .login-page .register{
     width: 100%;
     margin-top: 10% !important;
     margin-bottom: 3% !important;
     font-size: 120%;
+    text-align: center;
 }
 
 .login-page .register a{
@@ -103,7 +104,7 @@
     /* text-decoration: solid; */
 }
 .login-page .register a:hover{
-    color: #cc6d00;
+    color: #b18758;
 }
 
 
