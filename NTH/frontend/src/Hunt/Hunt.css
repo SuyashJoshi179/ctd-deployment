@@ -1,9 +1,17 @@
+
+
 .huntTemp-page{
     color: white;
     text-align: center;
-    margin: 10% auto;
+    
 }
+.huntTemp-page h2{
+    margin: 4% auto 1.5%;
+}
+
 
 .hunt-page{
     color: white;
 }
+
+

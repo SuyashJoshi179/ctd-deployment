@@ -11,25 +11,30 @@ import Contact from "./Contact/Contact";
 import HuntTemp from "./Hunt/HuntTemp";
 import Question from "./Question/MainQuestion";
 import Question2 from "./Question/MainQuestion2";
-import LeaderBoard from './Leaderboard/LeaderBoard'
-import PublicRoute from './utils/PublicRoute';
-import PrivateRoute from './utils/PrivateRoute'; 
+import LeaderBoard from "./Leaderboard/LeaderBoard";
+import PublicRoute from "./utils/PublicRoute";
+import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
+  const eventDate = new Date("July 22, 2021 21:00:00").getTime();
   return (
     <div>
       <Router>
         <NavbarComp />
         <Switch>
-          <PublicRoute exact path="/" exact component={Home} />
+          <PublicRoute exact path="/" exact>
+            <Home eventDate={eventDate}></Home>
+          </PublicRoute>
           <PublicRoute exact path="/register" component={Register} />
           <PublicRoute exact path="/about" component={About} />
           <PublicRoute exact path="/team" component={Webteam} />
           <PublicRoute exact path="/contact" component={Contact} />
-          <PublicRoute exact path="/hunt" component={HuntTemp} />
+          <PublicRoute exact path="/hunt">
+            <HuntTemp eventDate={eventDate}></HuntTemp>
+          </PublicRoute>
           <Route exact path="/question/:user_ans" component={Question} />
           <Route exact path="/question" component={Question2} />
-          <PublicRoute exact path='/leaderboard' component = {LeaderBoard} />
+          <PublicRoute exact path="/leaderboard" component={LeaderBoard} />
         </Switch>
         <Footer />
       </Router>
