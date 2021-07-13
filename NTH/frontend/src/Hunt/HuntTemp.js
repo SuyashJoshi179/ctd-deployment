@@ -1,33 +1,62 @@
 import "./Hunt.css";
 import Login from "../Login/Login";
+import { useEffect, useState,  useRef  } from "react";
 
 const HuntTemp = () => {
-  var countDownDate = new Date("June 9, 2021 13:24:00").getTime();
+  
+  const eventDate = new Date('July 22, 2021 21:00:00').getTime();
 
-  var x = setInterval(() => {
-    var now = new Date().getTime();
 
-    var distance = countDownDate - now;
-    if (distance < 0) {
-      return;
-    }
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor(
-      (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const [sec, setSec] = useState('');
+  const [minutes, setMinutes] = useState('');
+  const [hours, setHours] = useState('');
+  const [days, setDays] = useState('');
 
-    document.getElementById("demo").innerHTML =
-      days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-  }, 1000);
+  let interval = useRef
+  
+  
+  const startTimer = () => {
+    
+
+    interval = setInterval(()=>{
+      const now = new Date().getTime();
+      const distance = eventDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      if(distance < 0){
+        clearInterval(interval.current)
+      }else{
+        setDays(days);
+        
+        setHours(hours);
+        setMinutes(minutes);
+        setSec(seconds);
+      }
+
+
+    }, 1000)
+  }
+
+
+  useEffect(()=>{
+    startTimer()
+    return(()=>{
+      clearInterval(interval.current)
+    })
+  }, [startTimer])
 
   return (
     <div>
-      {countDownDate - new Date().getTime() > 0 ? (
+      {eventDate - new Date().getTime() > 0 ? (
         <div className="huntTemp-page">
           <h2>Hunt will start after</h2>
-          <h1 id="demo"></h1>
+          <h1 id="demo">{days}d {hours}h {minutes}m {sec}s</h1>
         </div>
       ) : (
         <div className="hunt-page">
@@ -39,3 +68,5 @@ const HuntTemp = () => {
 };
 
 export default HuntTemp;
+
+
