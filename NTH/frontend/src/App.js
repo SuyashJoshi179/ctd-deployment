@@ -13,6 +13,7 @@ import Question from "./Question/MainQuestion";
 import Question2 from "./Question/MainQuestion2";
 import LeaderBoard from "./Leaderboard/LeaderBoard";
 import PublicRoute from "./utils/PublicRoute";
+import ErrorPage from "./404page/ErrorPage";
 import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route exact path="/question/:user_ans" component={Question} />
           <Route exact path="/question" component={Question2} />
           <PublicRoute exact path="/leaderboard" component={LeaderBoard} />
+          <PublicRoute path='*' component={ErrorPage}></PublicRoute>
         </Switch>
         <Footer />
       </Router>

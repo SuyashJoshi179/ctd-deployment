@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.error-page{
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    margin: 7% auto;
+    text-align: center;
+}
+
+.error-page h1{
+    color: red;
+    text-align: center;
+    font-size: 700%;
+}
+.error-page h2{
+    margin-top: 3%;
+    font-size:350%;
+}
+.error-page h3{
+    font-size: 200%;
+    margin: 4.5% 1% 1.5%;
+}

@@ -7,10 +7,20 @@
     position: absolute;
     border-radius: 100%;
     right: 15px;
+    top: 6rem;
 }
 .web-team .close-button:hover , .close-button:focus{
     background-color: rgb(255, 255, 255);
     box-shadow:0 0.5em 1em -0.4em rgb(216, 216, 216);
+}
+.web-team .team-members{
+    margin-top: 2rem;
+}
+
+@media screen and(max-width:650px) {
+    .team-members{
+        margin-top: 2rem;
+    }
 }
 
 .web-team .team-member img{
