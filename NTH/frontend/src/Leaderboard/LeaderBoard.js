@@ -52,7 +52,6 @@ const Leaderboard = () => {
   useEffect(() => {
     axiosInstance.get().then((res) => {
       setleaderBoard(res.data.result_data);
-      console.log(res.data.result_data);
     });
   }, [setleaderBoard]);
   let [first, second, third, ...newlist] = leaderboard;

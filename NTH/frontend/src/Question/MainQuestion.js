@@ -30,19 +30,16 @@ const Question = () => {
   const [data, setData] = useState(0);
   useEffect(() => {
     axiosInstance.get('getUserInfo/').then((res)=>{
-      console.log(res.data)
       setData(res.data)
     })
   },[setData])
 
 
   useEffect(() => {
-    console.log('it is working bc')
     axiosInstance.get('questions/' + user_ans).then(res => {
       if (res.data.status === 'WA') {
         history.push('/')
       }
-      console.log(res.data)
       setQuestion(res.data)
     })
   }, [setQuestion])

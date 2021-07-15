@@ -16,13 +16,14 @@ const RegisterForm = () => {
   function handleSubmit(e) {
     e.preventDefault();
     let pass = document.getElementById("password").value;
-    
     axiosInstance
       .post("/", formData)
       .then((res) => {
         if (res.status === 200) {
-          alert("You have registered Succesfully..!!");
-          window.location.pathname = "/";
+          alert(res.data.status);
+          if(res.data.registered){
+            window.location.pathname = "/";
+          }
         } else {
           alert(res.data.username[0]);
         }
@@ -32,7 +33,7 @@ const RegisterForm = () => {
       });
   }
   return (
-    <div className="register-page">
+    <form className="register-page">
       <h4>Registration Form</h4>
       <div className="field">
         <label>Name</label>
@@ -52,13 +53,13 @@ const RegisterForm = () => {
         <br />
         <input
           id="username"
-          name="fullname"
+          name="username"
           className="register-form-input"
           onChange={handleChange}
-          type="text"
+          type="username"
           placeholder="type your username"
-          required='true'
           pattern="[A-Za-z0-9]"
+          required
         />
       </div>
 
@@ -72,8 +73,8 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="text"
           placeholder="type your mobile number"
-          required='true'
-          pattern="[0123456789][0-9]{7, 14}"
+          // pattern="[0123456789][0-9]{7, 14}"
+          required
         />
       </div>
 
@@ -87,8 +88,8 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="text"
           placeholder="type your college name"
-          required='true'
-        />
+          required
+          />
       </div>
       <div className="field">
         <label>Email</label>
@@ -100,8 +101,7 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="email"
           placeholder="type your email"
-          required='true'
-          pattern='/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/'
+          required
         />
       </div>
       <div className="field">
@@ -114,14 +114,14 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="password"
           placeholder="type your password"
-          required='true'
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"
+          // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"
+          required
         />
       </div>
       <button onClick={handleSubmit} className="register-button" type="submit">
         Register
       </button>
-    </div>
+    </form>
   );
 };
 

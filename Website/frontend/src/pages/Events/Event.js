@@ -38,7 +38,6 @@ const Event = (props) => {
       .then((res) => {
         setregisterMessage(res.data.detail);
         history.push("/events");
-        console.log(res.data);
       })
       .then(() => handleShow());
 
