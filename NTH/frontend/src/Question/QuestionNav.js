@@ -9,7 +9,7 @@ const QuestionNav = () => {
       <Navbar.Brand href="/">
         <img src={CTDlogo} width="110px" alt="PISB-logo" />
       </Navbar.Brand>
-      {/* <Logout /> */}
+      <Logout />
     </Navbar>
   );
 };

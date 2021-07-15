@@ -8,6 +8,12 @@
     top:0;
 }
 
+.question-page h1{
+    color: #E9B171;
+    font-size:2rem;
+
+}
+
 .question-page h4{
     width: 90%;
     margin: 1% auto 2%;
@@ -85,3 +91,11 @@
     background: #38529A;
 
 }
+
+.fal {
+    z-index: 100;
+}
+
+.fas{
+    z-index: 100;
+ }

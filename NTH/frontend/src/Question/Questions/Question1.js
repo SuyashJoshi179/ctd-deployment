@@ -6,7 +6,7 @@ const Question1 = (props) => {
         <Container>
             <Row>
                 <Col>
-                    <img src={props.image}/>
+                    <img src={props.image} width='400px'/>
                 </Col>
             </Row>
         </Container>

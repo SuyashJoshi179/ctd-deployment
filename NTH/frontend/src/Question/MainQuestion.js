@@ -74,4 +74,4 @@ const Question = () => {
   )
 }
 
-export default Question
+export default Question;

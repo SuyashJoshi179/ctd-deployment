@@ -7,6 +7,7 @@ import HintsModal from './HintsModal'
 import UserProfileModal from './UserProfileModal'
 import axiosInstance from '../axios'
 import { useParams, useHistory } from 'react-router-dom'
+import preloader from '../preloader.gif'
 
 const Question2 = () => {
   const history = useHistory()
@@ -15,12 +16,12 @@ const Question2 = () => {
   const [modalShow2, setModalShow2] = useState(false)
   const user_ans = 'level1'
   const [question, setQuestion] = useState({
-    question: 'Sample Question?',
+    question: 'Question Loading .......',
     level: 0,
-    image1: 'localpath_to_rings',
-    image2: 'localpath_to_rings',
-    image3: 'localpath_to_rings',
-    image4: 'localpath_to_rings'
+    image1: preloader,
+    image2: preloader,
+    image3: preloader,
+    image4: preloader  
   })
 
   const [data, setData] = useState(0);
@@ -78,4 +79,4 @@ const Question2 = () => {
   )
 }
 
-export default Question2
+export default Question2;
