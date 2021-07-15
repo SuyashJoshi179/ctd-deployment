@@ -17,11 +17,11 @@ import ErrorPage from "./404page/ErrorPage";
 import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
-  const eventDate = new Date("July 22, 2021 21:00:00").getTime();
+  const eventDate = new Date("July 24, 2021 21:00:00").getTime();
   return (
     <div>
       <Router>
-        <NavbarComp />
+        <NavbarComp eventDate={eventDate} />
         <Switch>
           <PublicRoute exact path="/" exact>
             <Home eventDate={eventDate}></Home>

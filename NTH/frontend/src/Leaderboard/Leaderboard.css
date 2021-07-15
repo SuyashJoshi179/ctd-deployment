@@ -1,13 +1,96 @@
-.leaderboard{
-    margin: 4% 0 0 !important;
+.leaderboard {
+    margin: 1% 0 5rem ;
+}
+@media screen and (max-width:1140px) {
+    .leaderboard{
+        margin: 1% 0 7rem;
+    }
+}
+@media screen and (max-width:990px) {
+    .leaderboard{
+        margin: 1% 0 11rem;
+    }
+}
+.leaderboard .top #rank {
+    
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    margin: auto;
+    color: #E9B171;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    background-color: black;
+    text-align: center;
+
+}
+
+.leaderboard .top #rank .rank-text {
+    padding-top: 35px;
+}
+
+@media screen and (max-width:576px) {
+    .leaderboard .top #rank {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        margin: auto;
+        color: #E9B171;
+        font-size: 2rem;
+        font-weight: bolder;
+        background-color: black;
+        text-align: center;
+    }
+
+    .leaderboard .top #rank .rank-text {
+        padding-top: 25px;
+    }
+}
+@media screen and (max-width:390px) {
+    .leaderboard .top #rank {
+        width: 75px;
+        height: 75px;
+        border-radius: 100%;
+        margin: auto;
+        color: #E9B171;
+        font-size: 2rem;
+        font-weight: bolder;
+        background-color: black;
+        text-align: center;
+    }
+
+    .leaderboard .top #rank .rank-text {
+        padding-top: 15.5px;
+    }
+}
+
+
+
+
+.leaderboard .top .level {
+    color: white;
+    text-align: center;
+    font-size: 120%;
+}
+
+.leaderboard .top .name {
+    text-align: center;
+    color: white;
+    font-size: 140%;
+    margin-top: 1%;
+    font-weight: bold;
+
 }
 
 .leaderboard .player{
-    width: 70%;
-    background: rgb(255,118,0);
-background: linear-gradient(90deg, rgba(255,129,20,1) 21%, rgba(255,146,52,1) 55%, rgba(255,176,108,1) 95%);
-color: white;
-    border-radius: 5px;
-    margin: 2% auto;
-    padding: 2% 0;
+    width: 80%;
+    margin: 3% auto 0;
+    color: white;
+    background-color: rgb(31, 31, 31);
+    border-radius: 2rem;
+    padding: 1rem;
+    font-size: 150%;
+}
+.leaderboard .player td{
+    text-align: center;
 }

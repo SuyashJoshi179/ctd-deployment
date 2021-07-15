@@ -20,7 +20,7 @@ const Question = () => {
   const {user_ans} = useParams();
   const [question, setQuestion] = useState({
     question: 'Question Loading .......',
-    level: 69,
+    level: 0,
     image1: preloader,
     image2: preloader,
     image3: preloader,

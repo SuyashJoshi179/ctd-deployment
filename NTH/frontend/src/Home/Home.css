@@ -1,5 +1,5 @@
 .nth-home {
-    margin: 1% 0 ;
+    margin: 2% 0 ;
     text-align: center;
     color: white;
 }
@@ -43,10 +43,12 @@
     padding: 8px 20px;
     color: white;
     font-size: larger;
+    margin: 4rem auto;
+    transform:  scale(1.10);
   }
   
  .nth-home .hunt-button:hover,
  .nth-home .hunt-button:focus {
     box-shadow: 0 0.5em 1em -0.4em #E9B171;
-    transform: translateY(-0.25em);
+    transform: translateY(-0.25em)  scale(1.10);
   }

@@ -6,18 +6,18 @@ const Question4 = (props) => {
             <Container>
             <Row>
                 <Col lg={6} sm={12}>
-                    <img src={props.image_1}/>
+                    <img src={props.image_1} width='180px'/>
                 </Col>
                 <Col lg={6} sm={12}>
-                    <img src={props.image_2}/>
+                    <img src={props.image_2} width='180px' />
                 </Col>
             </Row>
             <Row>
                 <Col lg={6} sm={12}>
-                    <img src={props.image_3}/>
+                    <img src={props.image_3} width='180px'/>
                 </Col>
                 <Col lg={6} sm={12}>
-                    <img src={props.image_4}/>
+                    <img src={props.image_4} width='180px'/>
                 </Col>
             </Row>
         </Container>

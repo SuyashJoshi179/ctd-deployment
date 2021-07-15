@@ -16,7 +16,7 @@ const Question2 = () => {
   const user_ans = 'level1'
   const [question, setQuestion] = useState({
     question: 'Sample Question?',
-    level: 1,
+    level: 0,
     image1: 'localpath_to_rings',
     image2: 'localpath_to_rings',
     image3: 'localpath_to_rings',

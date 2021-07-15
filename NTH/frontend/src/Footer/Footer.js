@@ -20,7 +20,7 @@ const Footer = () => {
               </p>
             </Col>
             <Col lg={4} md={12} sm={12}>
-              <a href="https://www.instagram.com/pisbcredenz/" target="_blank">
+              <a href="https://instagram.com/nth__live?utm_medium=copy_link" target="_blank">
                 <i className="fab fa-instagram  instagram"></i>
               </a>
               <a
@@ -29,7 +29,7 @@ const Footer = () => {
               >
                 <i className="fab fa-linkedin-in  linkedin"></i>
               </a>
-              <a href="https://www.facebook.com/pictieee/" target="_blank">
+              <a href="https://www.facebook.com/NTHCredenz/" target="_blank">
                 <i className="fab fa-facebook-f  facebook"></i>
               </a>
             </Col>

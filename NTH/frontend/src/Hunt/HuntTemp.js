@@ -1,6 +1,7 @@
 import "./Hunt.css";
 import Login from "../Login/Login";
 import Timer from "../Timer/Timer";
+import nthlogo from '../Home/nth-logo.png'
 
 const HuntTemp = ({eventDate}) => {
   
@@ -8,7 +9,9 @@ const HuntTemp = ({eventDate}) => {
     <div>
       {eventDate - new Date().getTime() > 0 ? (
         <div className="huntTemp-page">
-          <h2>Network Tresure Hunt starts after</h2>
+          {/* <h2>Network Tresure Hunt starts after</h2> */}
+          <img src={nthlogo} width='300px' />
+          {/* <h2>You can login from here after</h2> */}
           <Timer eventDate={eventDate}></Timer>
         </div>
       ) : (

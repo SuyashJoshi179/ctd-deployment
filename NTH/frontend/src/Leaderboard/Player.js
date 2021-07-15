@@ -3,30 +3,31 @@ import {Container, Row, Col} from 'react-bootstrap'
 const Player = (props) => {
   return (
     <div>
-      <Container className='player'>
+      {/* <Container className='player'>
         <Row>
-          <Col sm={2} >
-            <h4>{props.position}</h4>
+          <Col >
+            <h4 className='position'>{props.position}</h4>
           </Col>
-          <Col sm={6}>{props.player}</Col>
-          <Col sm={4}>Level {props.level}</Col>
+          <Col className='name'>{props.player}</Col>
+          <Col className='level' >Level {props.level}</Col>
         </Row>
-      </Container>
+      </Container> */}
+      <table className='player'>
+          <tr>
+            <td className='position'>
+            {props.position}
+            </td>
+            <td >
+            {props.player}
+            </td>
+            <td >
+            Level {props.level}
+            </td>
+          </tr>
+      </table>
     </div>
   );
 };
 
 export default Player;
 
-
-{/* <Row>
-        <Col sm={2}>
-          <h4>&nbsp;{props.position}</h4>
-        </Col>
-        <Col sm={6}>
-          <h4></h4>
-        </Col>
-        <Col sm={4}>
-          <h4>&nbsp;&nbsp;{props.level}</h4>
-        </Col>
-      </Row> */}

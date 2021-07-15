@@ -42,6 +42,7 @@ const Timer = ({ eventDate }) => {
 
   return (
     <div>
+      <p>Hunt begins in</p>
       <div>
         <div className="timer days">
           {days} <br />
