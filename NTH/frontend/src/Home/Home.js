@@ -9,7 +9,7 @@ const Home = ({eventDate}) => {
       <img src={nthlogo} alt="nth-logo" />
       <h3>Network Treasure Hunt</h3>
       <h5>Decrypt the Encrypted</h5>
-      
+      <p>begins in</p>
       {eventDate - new Date().getTime() > 0 ? (
         <Timer eventDate={eventDate}></Timer>
       ) : (

@@ -1,6 +1,6 @@
 .contact-page{
     color: white;
-    margin-bottom: 9%;
+    margin: 3% auto;
 }
 
 .contact-page .contactus-card{
@@ -11,6 +11,9 @@
      background-color: rgb(19, 19, 19);
      border-radius: 5px;
 
+}
+.contact-page .contactus-card:hover{
+    transform: scale(1.05);
 }
 
 
@@ -57,5 +60,5 @@
     border: 2px solid #E9B171;
 }
 .contact-page .contactus-card h4{
-    margin: 2% 0;
+    margin: 3% 0;
 }

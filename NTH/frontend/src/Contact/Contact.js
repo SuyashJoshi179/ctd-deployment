@@ -1,8 +1,9 @@
 import "./Contact.css";
 import ContactCard from "./ContactCard";
 import { Row, Container, Col } from "react-bootstrap";
-import Bora from './bora.jpeg';
-import Suyash from './more11.jpeg';
+import Bora from "./bora.jpeg";
+import Suyash from "./more11.jpeg";
+import Zirape from "./zirape.jpeg";
 
 const Contact = () => {
   return (
@@ -10,13 +11,28 @@ const Contact = () => {
       <Container>
         <Row>
           <Col lg={4} sm={12}>
-            <ContactCard name="Siddharth Bora" image={Bora} email='karan.lakhwani23@gmail.com' />
+            <ContactCard
+              name="Siddharth Bora"
+              image={Bora}
+              phone="+91 94033 04652"
+              linkedin="https://www.linkedin.com/in/siddharth-bora-a7a174132/"
+            />
           </Col>
           <Col lg={4} sm={12}>
-            <ContactCard name="Suyash More" image={Suyash} />
+            <ContactCard
+              name="Suyash More"
+              image={Suyash}
+              phone="+91 95950 55056"
+              linkedin="https://www.linkedin.com/in/suyashmore789/"
+            />
           </Col>
           <Col lg={4} sm={12}>
-            <ContactCard name="Shrikrushna Zirape" image={Bora} email='karan.lakhwani23@gmail.com' />
+            <ContactCard
+              name="Shrikrushna Zirape"
+              image={Zirape}
+              phone="+91 98349 21293"
+              linkedin="https://www.linkedin.com/in/shrikrushnazirape/"
+            />
           </Col>
         </Row>
       </Container>

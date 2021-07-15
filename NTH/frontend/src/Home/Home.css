@@ -1,5 +1,5 @@
 .nth-home {
-    margin: 0.5% 0 ;
+    margin: 1% 0 ;
     text-align: center;
     color: white;
 }
@@ -9,17 +9,31 @@
     
 }
 
+.nth-home p{
+    color: #E9B171;
+    font-size: 140%;
+}
+
 .nth-home img {
     display: block;
     margin: auto;
-    width: 375px;
+    width: 300px;
+    margin-bottom: 1%;
 }
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 650px) {
+    .nth-home img{
+        width: 70%;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
     .nth-home img{
         width: 90%;
     }
 }
+
 
 
 .nth-home .hunt-button {

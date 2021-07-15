@@ -47,13 +47,13 @@ const NavbarComp = () => {
               Leaderboard
             </NavLink>
           </Nav>
-          <NavLink to=
+          {/* <NavLink to=
           {
             isLogin()?"question/put_your_answer_here":"hunt/"
           }
           >
             <button className="mr-3 ml-2 mt-2 mb-2 hunt-button">Hunt</button>
-          </NavLink>
+          </NavLink> */}
           <Navbar.Brand className='pisb-logo' href="https://www.pictieee.in/">
             <img src={pisblogo} width="110px" alt="PISB-logo" />
           </Navbar.Brand>
@@ -96,13 +96,13 @@ const NavbarComp = () => {
               Contact
             </NavLink>
           </Nav>
-          <NavLink to=
+          {/* <NavLink to=
           {
             isLogin()?"question/put_your_answer_here":"hunt/"
           }
           >
             <button className="mr-3 ml-2 mt-2 mb-2 hunt-button">Hunt</button>
-          </NavLink>
+          </NavLink> */}
           <Navbar.Brand className='pisb-logo' href="https://www.pictieee.in/">
             <img src={pisblogo} width="110px" alt="PISB-logo" />
           </Navbar.Brand>

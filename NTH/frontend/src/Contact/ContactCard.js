@@ -9,12 +9,9 @@ const ContactCard = (props) => {
           {/* <br /> */}
           {/* &nbsp;&nbsp;&nbsp;&nbsp; */}
           <a href="tel:+918329049174">
-            <i class="fas fa-phone-alt"></i> +91 83290 49174
+            <i class="fas fa-phone-alt"></i> {props.phone}
           </a>
-          <br />
-          <a href="">
-          <i class="fab fa-linkedin "></i>
-          </a>
+          
         </h5>
       </div>
     </div>
