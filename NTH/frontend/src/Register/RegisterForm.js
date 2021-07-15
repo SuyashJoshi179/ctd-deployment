@@ -16,12 +16,7 @@ const RegisterForm = () => {
   function handleSubmit(e) {
     e.preventDefault();
     let pass = document.getElementById("password").value;
-    let confirmPassword = document.getElementById(
-      "formBasicConfirmPassword"
-    ).value;
-    if (pass !== confirmPassword && pass.length !== 0) {
-      alert("Passwords do not match!");
-    }
+    
     axiosInstance
       .post("/", formData)
       .then((res) => {
@@ -62,7 +57,8 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="text"
           placeholder="type your username"
-          required
+          required='true'
+          pattern="[A-Za-z0-9]"
         />
       </div>
 
@@ -76,7 +72,7 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="text"
           placeholder="type your mobile number"
-          required
+          required='true'
           pattern="[0123456789][0-9]{7, 14}"
         />
       </div>
@@ -91,7 +87,7 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="text"
           placeholder="type your college name"
-          required
+          required='true'
         />
       </div>
       <div className="field">
@@ -102,9 +98,10 @@ const RegisterForm = () => {
           name="email"
           className="register-form-input"
           onChange={handleChange}
-          type="text"
+          type="email"
           placeholder="type your email"
-          required
+          required='true'
+          pattern='/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/'
         />
       </div>
       <div className="field">
@@ -117,7 +114,8 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="password"
           placeholder="type your password"
-          required
+          required='true'
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"
         />
       </div>
       <button onClick={handleSubmit} className="register-button" type="submit">
