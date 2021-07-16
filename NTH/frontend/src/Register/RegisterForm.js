@@ -22,7 +22,7 @@ const schema = yup.object().shape({
 const RegisterForm = () => {
   const {
     register,
-    handleSubmit:handleRequired,
+    handleSubmit,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(schema),
@@ -38,9 +38,8 @@ const RegisterForm = () => {
       [e.target.name]: e.target.value.trim(),
     });
   };
-  function handleSubmit(e) {
+  function handleRegisterSubmit(e) {
     e.preventDefault();
-    handleRequired();
     let username = document.getElementById("username").value;
     let fullname = document.getElementById("fullname").value;
     let pass = document.getElementById("password").value;
@@ -97,7 +96,6 @@ const RegisterForm = () => {
           onChange={handleChange}
           type="username"
           placeholder="type your username"
-          pattern="[A-Za-z0-9]"
           required
           {...register("username")}
         />
@@ -167,7 +165,7 @@ const RegisterForm = () => {
         />
         <p className="error-text">{errors.password?.message}</p>
       </div>
-      <button onClick={handleSubmit} className="register-button" type="submit">
+      <button onClick={handleSubmit(handleRegisterSubmit)} className="register-button" type="submit">
         Register
       </button>
     </form>
