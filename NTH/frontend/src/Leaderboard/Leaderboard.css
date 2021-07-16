@@ -91,6 +91,8 @@
     padding: 1rem;
     font-size: 150%;
 }
-.leaderboard .player td{
-    text-align: center;
+
+
+.leaderboard .table-of-ranks{
+    color: white;
 }

@@ -3,10 +3,10 @@ import { Container, Row, Col, Modal } from "react-bootstrap";
 const Question1 = (props) => {
   return (
     <div>
-        <Container>
+        <Container className='question-1'>
             <Row>
                 <Col>
-                    <img src={props.image} width='400px'/>
+                    <img src={props.image} />
                 </Col>
             </Row>
         </Container>

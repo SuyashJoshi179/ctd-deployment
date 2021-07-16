@@ -5,10 +5,10 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(40.114.67.178)
+domains=(nth.pictieee.in www.nth.pictieee.in)
 rsa_key_size=4096
 data_path="./docker/nginx/certbot"
-email="naphade21@gmail.com" # Adding a valid address is strongly recommended
+email="naphade21@gail.com" # Adding a valid address is strongly recommended
 staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then
