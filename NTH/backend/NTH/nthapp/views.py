@@ -28,6 +28,14 @@ error_report = {
 }
 
 
+def checkFullname(fullName):
+    setbool = True
+    for name in fullName.split():
+        if(not name.isalpha()):
+            setbool = False
+            break
+    return setbool
+
 class UserView(APIView):
     permission_classes = [IsAuthenticated, ]
     authentication_classes = [TokenAuthentication]
@@ -42,7 +50,6 @@ class UserView(APIView):
             'hints': question.tips,
         }
         return Response(returnDict)
-
 
 class RegisterView(APIView):
     permission_classes = [AllowAny]
@@ -60,7 +67,7 @@ class RegisterView(APIView):
         formData = request.data
         if(not formData['username'] or not re.search(regexusername, formData['username'])):
             return Response(error_report.get('username'))
-        if(not formData['fullname'] or not str(formData['fullname']).isalpha()):
+        if(not formData['fullname'] or not checkFullname(str(formData['fullname']))):
              return Response(error_report.get('fullname'))
         if(not formData['email'] or not re.search(regexemail, formData['email'])):
              return Response(error_report.get('email'))
@@ -74,7 +81,7 @@ class RegisterView(APIView):
         if serializer.is_valid():
             serializer.save()
             status_report = {
-                'status': "information received is valid and user is registered",
+                'status': "Information Received is Valid and User is Registered Successfully",
                 'registered': True
             }
             return Response(status_report, status=200)

@@ -15,10 +15,19 @@ const RegisterForm = () => {
   };
   function handleSubmit(e) {
     e.preventDefault();
+    let username = document.getElementById("username").value;
+    let fullname = document.getElementById("fullname").value;
     let pass = document.getElementById("password").value;
+    let college = document.getElementById("college").value;
+    let mobile_number = document.getElementById("mobile_number").value;
+    let email = document.getElementById("email").value;
+    if(username=="" || fullname=="" || pass=="" || college=="" || mobile_number=="" || email==""){
+      alert("Please Fill all the Fields..!!");
+    }else{
     axiosInstance
       .post("/", formData)
       .then((res) => {
+        console.log(formData);
         if (res.status === 200) {
           alert(res.data.status);
           if(res.data.registered){
@@ -31,6 +40,7 @@ const RegisterForm = () => {
       .catch((err) => {
         alert("Server Error");
       });
+    }
   }
   return (
     <form className="register-page">
