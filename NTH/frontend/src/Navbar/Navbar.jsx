@@ -34,7 +34,17 @@ const NavbarComp = ({ eventDate }) => {
               >
                 Home
               </NavLink>
-
+              {( ! isLogin() )? (
+                <NavLink
+                activeClassName="active"
+                className="mr-3 ml-3 mt-2 mb-2 na-link"
+                id="register"
+                to="/register"
+              >
+                Register
+              </NavLink>
+              ):null
+              }
               <NavLink
                 activeClassName="active"
                 className="mr-3 ml-3 mt-2 mb-2 na-link"
@@ -51,6 +61,7 @@ const NavbarComp = ({ eventDate }) => {
               >
                 Contact
               </NavLink>
+              
               <NavLink
                 activeClassName="active"
                 to="/leaderboard"

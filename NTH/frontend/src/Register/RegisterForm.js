@@ -40,6 +40,7 @@ const RegisterForm = () => {
   };
   function handleSubmit(e) {
     e.preventDefault();
+    handleRequired();
     let username = document.getElementById("username").value;
     let fullname = document.getElementById("fullname").value;
     let pass = document.getElementById("password").value;
@@ -166,7 +167,7 @@ const RegisterForm = () => {
         />
         <p className="error-text">{errors.password?.message}</p>
       </div>
-      <button onClick={handleRequired(handleSubmit)} className="register-button" type="submit">
+      <button onClick={handleSubmit} className="register-button" type="submit">
         Register
       </button>
     </form>
