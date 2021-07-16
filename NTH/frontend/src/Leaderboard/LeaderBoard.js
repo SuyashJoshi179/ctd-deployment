@@ -83,6 +83,7 @@ const Leaderboard = () => {
             ></Top>
           </Col>
         </Row>
+        
         {newlist.map((user) => {
           counter = counter + 1;
           return (
