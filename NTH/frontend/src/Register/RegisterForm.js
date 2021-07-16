@@ -39,7 +39,8 @@ const RegisterForm = () => {
     });
   };
   function handleRegisterSubmit(e) {
-    e.preventDefault();
+    console.log("I am Karan");
+    // e.preventDefault();
     let username = document.getElementById("username").value;
     let fullname = document.getElementById("fullname").value;
     let pass = document.getElementById("password").value;
