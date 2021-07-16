@@ -1,5 +1,5 @@
 .register-page {
-  margin: 0.75rem auto 1rem;
+  margin: 0.75rem auto 2.5rem;
   width: 33%;
   padding: .75% 2%;
   background: #2c2c2c34;
@@ -92,4 +92,12 @@
 
 .register-page button:hover {
   background-color: #444444;
+  
+}
+
+.error-text {
+  color: #E9B171;
+  text-align: left;
+  margin-left: 0 !important;
+  margin-bottom: 0 !important;
 }

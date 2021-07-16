@@ -3,8 +3,33 @@ import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axiosInstance from "../axios";
 import login from "../";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import * as yup from "yup";
+
+
+const schema = yup.object().shape({
+  username: yup.string().required("Username is required"),
+  fullname: yup.string().required("Name is required"),
+  email: yup.string().email().required("Email is required"),
+  mobile_number: yup.string().min(10).max(10).required("Contact is required"),
+  college:yup.string().required("College name is required"),
+  password: yup.string().min(6).max(20).required("Password is required"),
+  
+})
+
 
 const RegisterForm = () => {
+  const {
+    register,
+    handleSubmit:handleRequired,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(schema),
+  })
+
+
+
   const [formData, setFormData] = useState(0);
   const history = useHistory();
   const handleChange = (e) => {
@@ -55,7 +80,10 @@ const RegisterForm = () => {
           type="text"
           placeholder="type your name"
           required
+          {...register("fullname")}
         />
+        <p className="error-text">{errors.fullname?.message}</p>
+        
       </div>
 
       <div className="field">
@@ -70,7 +98,9 @@ const RegisterForm = () => {
           placeholder="type your username"
           pattern="[A-Za-z0-9]"
           required
+          {...register("username")}
         />
+        <p className="error-text">{errors.username?.message}</p>
       </div>
 
       <div className="field">
@@ -85,7 +115,9 @@ const RegisterForm = () => {
           placeholder="type your mobile number"
           // pattern="[0123456789][0-9]{7, 14}"
           required
+          {...register("mobile_number")}
         />
+        <p className="error-text">{errors.mobile_number?.message}</p>
       </div>
 
       <div className="field">
@@ -99,7 +131,9 @@ const RegisterForm = () => {
           type="text"
           placeholder="type your college name"
           required
+          {...register("college")}
           />
+          <p className="error-text">{errors.college?.message}</p>
       </div>
       <div className="field">
         <label>Email</label>
@@ -112,7 +146,9 @@ const RegisterForm = () => {
           type="email"
           placeholder="type your email"
           required
+          {...register("email")}
         />
+        <p className="error-text">{errors.email?.message}</p>
       </div>
       <div className="field">
         <label>Password</label>
@@ -126,9 +162,11 @@ const RegisterForm = () => {
           placeholder="type your password"
           // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 3}$"
           required
+          {...register("password")}
         />
+        <p className="error-text">{errors.password?.message}</p>
       </div>
-      <button onClick={handleSubmit} className="register-button" type="submit">
+      <button onClick={handleRequired(handleSubmit)} className="register-button" type="submit">
         Register
       </button>
     </form>
