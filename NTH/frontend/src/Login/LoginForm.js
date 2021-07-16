@@ -35,6 +35,9 @@ const LoginForm = () => {
           "Token " + localStorage.getItem("token");
         window.location.pathname = "question/";
         console.log(res.status);
+      })
+      .catch((err) =>{
+        alert("Wrong Credentials Entered..!!");
       });
   };
   return (

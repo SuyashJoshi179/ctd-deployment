@@ -14,7 +14,7 @@ function ContactModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Karan Lakhwani : +91-8329049174 <br/> Karan Lakhwani : +91-8329049174</p>
+          <p>Siddharth Bora : +91-9403304652 <br/> Shrikrushna Zirape : +91-9834921293</p>
         </Modal.Body>
       </Modal>
     );
