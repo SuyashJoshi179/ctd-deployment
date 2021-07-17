@@ -55,6 +55,13 @@ const NavbarComp = ({ eventDate }) => {
               </NavLink>
               <NavLink
                 activeClassName="active"
+                to="/leaderboard"
+                className="mr-3 ml-3 mt-2 mb-2 na-link"
+              >
+                Leaderboard
+              </NavLink>
+              <NavLink
+                activeClassName="active"
                 className="mr-3 ml-3 mt-2 mb-2 na-link"
                 id="contact"
                 to="/contact"
@@ -62,13 +69,7 @@ const NavbarComp = ({ eventDate }) => {
                 Contact
               </NavLink>
               
-              <NavLink
-                activeClassName="active"
-                to="/leaderboard"
-                className="mr-3 ml-3 mt-2 mb-2 na-link"
-              >
-                Leaderboard
-              </NavLink>
+              
             </Nav>
             {true ? (
               <NavLink
