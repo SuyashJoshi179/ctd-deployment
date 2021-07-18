@@ -55,6 +55,8 @@
 .web-team .team-member .fa-linkedin-in:hover{
     transition: 0.4s;
     transform: rotateZ(360deg);
+    color: rgb(65, 65, 65);
+    background-color: #E9B171;
 }
 
 .fa-github{
@@ -69,4 +71,6 @@
 .fa-github:hover{
     transition: 0.4s;
     transform: rotateZ(360deg);
+    color: rgb(65, 65, 65);
+    background-color: #E9B171;
 }
