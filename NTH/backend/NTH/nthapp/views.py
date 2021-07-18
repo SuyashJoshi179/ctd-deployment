@@ -65,17 +65,17 @@ class RegisterView(APIView):
         regexusername = "^[[A-Z]|[a-z]][[A-Z]|[a-z]|\\d|[_]]{7,29}$"
         regexemail = "^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$"
         formData = request.data
-        if(not formData['username'] or not re.search(regexusername, formData['username'])):
+        if(not formData['username'] or not re.search(regexusername, formData.get('username'))):
             return Response(error_report.get('username'))
-        if(not formData['fullname'] or not checkFullname(str(formData['fullname']))):
+        if(not formData.get('fullname') or not checkFullname(str(formData.get('fullname')))):
              return Response(error_report.get('fullname'))
-        if(not formData['email'] or not re.search(regexemail, formData['email'])):
+        if(not formData.get('email') or not re.search(regexemail, formData.get('email'))):
              return Response(error_report.get('email'))
-        if(not formData['mobile_number'] or not str(formData['mobile_number']).isnumeric()):
+        if(not formData.get('mobile_number') or not str(formData.get('mobile_number')).isnumeric()):
              return Response(error_report.get('mobile_number'))
-        if(not formData['college']):
+        if(not formData.get('college')):
              return Response(error_report.get('college')) 
-        if(not formData['password']):
+        if(not formData.get('password')):
              return Response(error_report.get('password'))
         serializer = PlayMeSetSerializer(data=request.data)
         if serializer.is_valid():

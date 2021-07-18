@@ -23,7 +23,6 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(loginFormData);
     axiosInstance
       .post("get_token/", {
         username: loginFormData.username,

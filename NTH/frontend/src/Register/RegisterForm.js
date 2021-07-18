@@ -2,12 +2,6 @@ import { Form } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import axiosInstance from "../axios";
-import login from "../";
-import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-
-
 
 
 const RegisterForm = () => {
@@ -34,7 +28,6 @@ const RegisterForm = () => {
     axiosInstance
       .post("/", formData)
       .then((res) => {
-        console.log(formData);
         if (res.status === 200) {
           alert(res.data.status);
           if(res.data.registered){

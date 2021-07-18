@@ -33,10 +33,8 @@ function App() {
           <PublicRoute exact path="/hunt">
             <HuntTemp eventDate={eventDate}></HuntTemp>
           </PublicRoute>
-          {/* <PrivateRoute exact path="/question/:user_ans" component={Question} /> */}
-          <Route exact path="/question/:user_ans" component={Question} />
-          {/* <PrivateRoute exact path="/question" component={Question2} /> */}
-          <Route exact path="/question" component={Question2} />
+          <PrivateRoute exact path="/question/:user_ans" component={Question} />
+          <PrivateRoute exact path="/question" component={Question2} />
           <PublicRoute exact path="/leaderboard" component={LeaderBoard} />
           <PublicRoute path='*' component={ErrorPage}></PublicRoute>
         </Switch>

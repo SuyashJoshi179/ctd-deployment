@@ -32,7 +32,7 @@ const Logout = () => {
            Are you sure you want to Log out?
           </Modal.Body>
             <Modal.Footer>
-            <Button variant="default"onClick={handleYes} className="mybtn">Yes</Button>
+            <Button variant="default" onClick={handleYes} className="mybtn">Yes</Button>
             <Button variant="default" className="mybtn" onClick={handleClose}>
               No
             </Button>
