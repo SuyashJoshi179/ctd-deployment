@@ -17,7 +17,7 @@ const Home = ({ eventDate }) => {
           width: "300px",}
         ):
         {marginBottom:"1%",
-        width: "280px"}
+        width: "250px"}
       } src={nthlogo} alt="nth-logo" />
       <h3>Network Treasure Hunt</h3>
       <h5>Decrypt the Encrypted</h5>

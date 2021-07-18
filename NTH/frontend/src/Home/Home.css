@@ -5,12 +5,14 @@
 }
 
 .nth-home h3{
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     margin-top: 1.5%;
+    font-weight: 600;
 }
 
 .nth-home h5{
     margin: 0  0 1.5%;
+    font-size: 1.5rem;
     
 }
 
@@ -53,4 +55,5 @@
   
  .nth-home .hunt-button:hover {
     font-weight: bold;
+    
   }

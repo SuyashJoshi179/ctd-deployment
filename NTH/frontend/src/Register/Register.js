@@ -8,10 +8,10 @@ const Register = () => {
     <div className="register">
       <Container fluid>
         <Row>
-          <Col lg={6}>
+          <Col lg={5}>
             <img src={Vector} width='370px' />
           </Col>
-          <Col lg={6} sm={12}>
+          <Col lg={7} sm={12}>
           <RegisterForm></RegisterForm>
           </Col>
         </Row>

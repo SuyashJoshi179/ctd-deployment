@@ -1,10 +1,11 @@
 .register{
-  width: 85%;
+  width: 90%;
   margin: auto;
 }
 .register img{
+  opacity: .90;
   display: block;
-  margin: 14% auto;
+  margin: 20% 5% 0 4%;
 }
 
 
@@ -115,7 +116,8 @@
 
 
 .register-page button:hover {
-  background-color: #444444;
+  background-color: #E9B171;
+  color: #141414;
   
 }
 

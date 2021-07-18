@@ -89,7 +89,8 @@
     transition: 0.5s ease-in;
 }
 .login-page button:hover{
-    background-color: #444444;
+    background-color: #E9B171;
+    color: #141414;
 }
 .login-page .register{
     width: 100%;
