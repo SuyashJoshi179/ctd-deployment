@@ -2,22 +2,22 @@ import {Container, Row, Col} from 'react-bootstrap'
 
 const Question4 = (props) => {
     return ( 
-        <div>
-            <Container>
+        <div >
+            <Container className='question-4'>
             <Row>
                 <Col lg={6} sm={12}>
-                    <img src={props.image_1} width='220px'/>
+                    <img src={props.image_1} />
                 </Col>
                 <Col lg={6} sm={12}>
-                    <img src={props.image_2} width='220px' />
+                    <img src={props.image_2}  />
                 </Col>
             </Row>
             <Row>
                 <Col lg={6} sm={12}>
-                    <img src={props.image_3} width='220px'/>
+                    <img src={props.image_3} />
                 </Col>
                 <Col lg={6} sm={12}>
-                    <img src={props.image_4} width='220px'/>
+                    <img src={props.image_4} />
                 </Col>
             </Row>
         </Container>

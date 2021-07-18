@@ -24,7 +24,7 @@ const Question = () => {
     image1: preloader,
     image2: preloader,
     image3: preloader,
-    image4: preloader  
+    image4: preloader
   })
 
   const [data, setData] = useState(0);
