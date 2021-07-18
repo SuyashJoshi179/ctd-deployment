@@ -23,7 +23,6 @@ SECRET_KEY = 'SECRET_KEY'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', '40.114.67.178', '*']
-APPEND_SLASH = False
 # Application definition
 
 INSTALLED_APPS = [

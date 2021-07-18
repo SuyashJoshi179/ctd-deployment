@@ -18,7 +18,7 @@ from django.urls import path, include
 from rest_framework.authtoken import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('thisnthadmin/', admin.site.urls),
     path("api/", include("nthapp.urls")),
     path('get_token/', views.obtain_auth_token)
 ]
