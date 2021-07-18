@@ -7,44 +7,44 @@ import Top from "./Top";
 const Leaderboard = () => {
   const [leaderboard, setleaderBoard] = useState([
     {
-      username: "admin",
-      level: 3,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "suyash",
-      level: 3,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "Karan",
-      level: 5,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "Atharva",
-      level: 7,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "admin",
-      level: 3,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "suyash",
-      level: 3,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "Karan",
-      level: 5,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "Atharva",
-      level: 7,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "admin",
-      level: 3,
+      username: "Dummy" ,
+      level: 0,
     },
     {
-      username: "suyash",
-      level: 3,
+      username: "Dummy" ,
+      level: 0,
     },
   ]);
   useEffect(() => {
