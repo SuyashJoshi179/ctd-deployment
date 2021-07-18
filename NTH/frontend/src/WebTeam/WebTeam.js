@@ -22,9 +22,9 @@ const WebTeam = () => {
       
       <Container className='team-members'>
         <Row>
-          <TeamMemberCard linkedin='https://www.linkedin.com/in/atharva-naphade-540236148/' name='Atharva Naphade' image={Atharva} />
-          <TeamMemberCard linkedin='https://www.linkedin.com/in/karan-lakhwani' name='Karan Lakhwani' image={Karan} />
-          <TeamMemberCard linkedin='https://www.linkedin.com/in/suyashmore789/' name='Suyash More' image={More} />
+          <TeamMemberCard github="https://github.com/atharvanaphade" linkedin='https://www.linkedin.com/in/atharva-naphade-540236148/' name='Atharva Naphade' image={Atharva} />
+          <TeamMemberCard github="https://github.com/karanlakhwani910" linkedin='https://www.linkedin.com/in/karan-lakhwani' name='Karan Lakhwani' image={Karan} />
+          <TeamMemberCard github='https://github.com/suyash-more' linkedin='https://www.linkedin.com/in/suyashmore789/' name='Suyash More' image={More} />
         </Row>
       </Container>
     </div>

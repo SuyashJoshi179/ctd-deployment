@@ -10,6 +10,8 @@ const TeamMemberCard = (props) => {
             {props.name}
             <br />
             <a href={props.linkedin} target='_blank'><i class="fab fa-linkedin-in"></i></a>
+            &nbsp;
+            <a href={props.github} target='_blank'><i class="fab fa-github"></i></a>
           </h2>
         </div>
       </Col>

@@ -51,7 +51,7 @@ const RegisterForm = () => {
   }
   return (
     <form className="register-page">
-      <h4>Registration Form</h4>
+      <h4>Register</h4>
       <div className="field">
         <label>Name</label>
         <input
