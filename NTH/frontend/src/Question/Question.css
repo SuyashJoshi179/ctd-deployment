@@ -5,7 +5,9 @@
 
 .question-page .nav-bar-question-page{
     position: sticky;
+    background-color: #181818;
     top:0;
+    z-index: 50;
 }
 
 .question-page h1{
@@ -41,18 +43,18 @@
 }
 
 .question-page .fa-trophy{
-    transform: translateY(50px);
-}
-
-.question-page  .fa-address-card{
-    transform: translateY(100px);
-}
-.question-page .fa-user-alt{
     transform: translateY(150px);
 }
 
-.question-page .fa-lightbulb-on{
+.question-page  .fa-address-card{
     transform: translateY(200px);
+}
+.question-page .fa-user-alt{
+    transform: translateY(50px);
+}
+
+.question-page .fa-lightbulb-on{
+    transform: translateY(100px);
 }
 .question-footer{
     
@@ -126,4 +128,25 @@
         width: 250px;
     }
     
+}
+
+.modal-content {
+    color: white;
+    background-color: rgb(43, 43, 43);
+
+}
+.modal-content a{
+    text-decoration: none;
+    color: white;
+}
+.close {
+    color: #fff; 
+    opacity: 1;
+}
+.close:hover{
+    color: rgb(204, 204, 204);
+}
+
+.modal-header {
+    border-bottom: 0 none;
 }

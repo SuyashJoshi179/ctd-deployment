@@ -113,6 +113,12 @@
     color: #E9B171;
 }
 
+.instructions .answer-1{
+    margin-top: 1rem;
+    color: #181818;
+    cursor: default;
+}
+
 .instructions-content{
     margin: 2% 7%; 
     color: white;

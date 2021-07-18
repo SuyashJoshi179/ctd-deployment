@@ -62,7 +62,7 @@ const Question = () => {
       <UserProfileModal data={data} show={modalShow2} onHide={() => setModalShow2(false)} />
       
       <a onClick={() => setModalShow1(true)}  href="#">
-        <i className="fal fa-lightbulb-on fa-2x side-icons"></i>
+        <i className="fas fa-lightbulb-on fa-2x side-icons"></i>
       </a>
       <HintsModal data={question} show={modalShow1} onHide={() => setModalShow1(false)} />
       <QuestionTemplate images={[question.image1,question.image2,question.image3,question.image4]}></QuestionTemplate>

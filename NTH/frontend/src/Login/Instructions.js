@@ -21,6 +21,11 @@ const Instructions = () => {
         </h4>
       </div>
       <h4>&lt;/instructions&gt;</h4>
+      <div className='answer-1'>
+        <h2>
+        We have nothing to give you for the third question.
+        </h2>
+      </div>
     </div>
   );
 };

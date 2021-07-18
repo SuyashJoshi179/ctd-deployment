@@ -42,10 +42,6 @@
 }
 
 
-.web-team .team-member:hover img{
-    transform: scale(1.02);
-  opacity: 80%;
-}
 
 .web-team .team-member .fab{
     color: white;

@@ -3,7 +3,7 @@ import {Modal} from 'react-bootstrap';
 
 function ContactModal(props) {
     return (
-      <Modal
+      <Modal 
         {...props}
         aria-labelledby="contained-modal-title-vcenter"
         centered
@@ -14,7 +14,7 @@ function ContactModal(props) {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p>Siddharth Bora : +91-9403304652 <br/> Shrikrushna Zirape : +91-9834921293</p>
+          <p>Siddharth Bora : <span><a href="tel:+919403304652">+91 94033 04652 </a></span><br/> Shrikrushna Zirape : <span><a href="tel:+919834921293">+91 98349 21293</a></span></p>
         </Modal.Body>
       </Modal>
     );
