@@ -79,12 +79,12 @@
     border: 0;
     margin-top: 2%;
 }
-
+/* 
 
 tr:hover {
     transform: scale(1.10);
     border: 0;
-}
+} */
 
 td:first-child {
     border-left-style: solid;

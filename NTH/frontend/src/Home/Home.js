@@ -14,10 +14,10 @@ const Home = ({ eventDate }) => {
       <img style={
         diff ? (
           {marginTop:"4%",
-          width: "320px",}
+          width: "300px",}
         ):
         {marginBottom:"1%",
-        width: "300px"}
+        width: "280px"}
       } src={nthlogo} alt="nth-logo" />
       <h3>Network Treasure Hunt</h3>
       <h5>Decrypt the Encrypted</h5>
