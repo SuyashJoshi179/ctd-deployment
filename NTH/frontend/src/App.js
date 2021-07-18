@@ -17,7 +17,7 @@ import ErrorPage from "./404page/ErrorPage";
 import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
-  const eventDate = new Date("July 14, 2021 21:00:00").getTime();
+  const eventDate = new Date("July 24, 2021 21:00:00").getTime();
   return (
     <div>
       <Router>
@@ -33,8 +33,10 @@ function App() {
           <PublicRoute exact path="/hunt">
             <HuntTemp eventDate={eventDate}></HuntTemp>
           </PublicRoute>
-          <PrivateRoute exact path="/question/:user_ans" component={Question} />
-          <PrivateRoute exact path="/question" component={Question2} />
+          {/* <PrivateRoute exact path="/question/:user_ans" component={Question} /> */}
+          <Route exact path="/question/:user_ans" component={Question} />
+          {/* <PrivateRoute exact path="/question" component={Question2} /> */}
+          <Route exact path="/question" component={Question2} />
           <PublicRoute exact path="/leaderboard" component={LeaderBoard} />
           <PublicRoute path='*' component={ErrorPage}></PublicRoute>
         </Switch>

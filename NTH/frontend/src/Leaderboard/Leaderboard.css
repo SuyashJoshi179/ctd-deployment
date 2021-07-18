@@ -1,18 +1,21 @@
 .leaderboard {
-    margin: 1% 0 5rem ;
+    margin: 1% 0 5rem;
 }
+
 @media screen and (max-width:1140px) {
-    .leaderboard{
+    .leaderboard {
         margin: 1% 0 7rem;
     }
 }
+
 @media screen and (max-width:990px) {
-    .leaderboard{
+    .leaderboard {
         margin: 1% 0 11rem;
     }
 }
+
 .leaderboard .top #rank {
-    
+
     width: 150px;
     height: 150px;
     border-radius: 100%;
@@ -46,6 +49,7 @@
         padding-top: 25px;
     }
 }
+
 @media screen and (max-width:390px) {
     .leaderboard .top #rank {
         width: 75px;
@@ -65,6 +69,57 @@
 }
 
 
+.leaderboard .leaderboard-table {
+    width: 95%;
+    border-collapse: separate;
+    border-spacing: 0 1.2rem;
+    border-radius: 2rem;
+    color: white;
+    text-align: center;
+    border: 0;
+    margin-top: 2%;
+}
+
+
+tr:hover {
+    transform: scale(1.10);
+    border: 0;
+}
+
+td:first-child {
+    border-left-style: solid;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+th:last-child {
+    padding-left: 2%;
+}
+
+td:last-child {
+    border-right-style: solid;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-left: 2%;
+}
+
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    font-size: 1.35rem;
+}
+
+.leaderboard .leaderboard-table td,
+.leaderboard.leaderboard-table th {
+    border: 0;
+    font-size: 1.25rem;
+    border-bottom: 0;
+    border-top: 0;
+
+}
+
 
 
 .leaderboard .top .level {
@@ -82,7 +137,7 @@
 
 }
 
-.leaderboard .player{
+.leaderboard .player {
     width: 80%;
     margin: 3% auto 0;
     color: white;
@@ -93,6 +148,6 @@
 }
 
 
-.leaderboard .table-of-ranks{
+.leaderboard .table-of-ranks {
     color: white;
 }

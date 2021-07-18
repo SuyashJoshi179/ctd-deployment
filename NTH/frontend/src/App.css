@@ -18,13 +18,12 @@
   border-radius: 10px;
   border: none;
   padding: 8px 20px;
-  color: white;
+  color: rgb(20, 20, 20);
   font-size: larger;
 }
 
 
-.hunt-button:hover,
-.hunt-button:focus {
+.hunt-button:hover{
   box-shadow: 0 0.5em 1em -0.4em #E9B171;
   transform: translateY(-0.25em);
 }
