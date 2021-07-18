@@ -1,11 +1,15 @@
 .nth-home {
-    margin: 2% 0 ;
+    margin: 1% 0  ;
     text-align: center;
     color: white;
 }
 
+.nth-home h3{
+    margin-top: 1.5%;
+}
+
 .nth-home h5{
-    margin: 0  0 1%;
+    margin: 0  0 1.5%;
     
 }
 
@@ -17,7 +21,6 @@
 .nth-home img {
     display: block;
     margin: auto;
-    width: 300px;
     margin-bottom: 1%;
 }
 
@@ -41,14 +44,16 @@
     border-radius: 10px;
     border: none;
     padding: 8px 20px;
-    color: white;
+    color: rgb(20, 20, 20);
     font-size: larger;
-    margin: 4rem auto;
+    margin: 2rem auto;
+    box-shadow: 17px 35px 54px -20px rgba(233,177,113,0.63);
+-webkit-box-shadow: 17px 35px 54px -20px rgba(233,177,113,0.63);
+-moz-box-shadow: 17px 35px 54px -20px rgba(233,177,113,0.63);
     transform:  scale(1.10);
   }
   
- .nth-home .hunt-button:hover,
- .nth-home .hunt-button:focus {
-    box-shadow: 0 0.5em 1em -0.4em #E9B171;
-    transform: translateY(-0.25em)  scale(1.10);
+ .nth-home .hunt-button:hover {
+    
+    transform: translateY(-0.15em)  scale(1.10);
   }

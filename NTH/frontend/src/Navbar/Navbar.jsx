@@ -2,7 +2,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import pisblogo from "./pisb-logo.png";
 import ctdlogo from "./ctd.png";
 import Logout from "../logout/logout";
-import { NavLink, useLocation, useHistory } from "react-router-dom";
+import { Link, NavLink, useLocation, useHistory } from "react-router-dom";
 import { isLogin } from "../utils/index";
 import "../App.css";
 
@@ -72,13 +72,13 @@ const NavbarComp = ({ eventDate }) => {
               
             </Nav>
             {true ? (
-              <NavLink
-                to={isLogin() ? "question/put_your_answer_here" : "hunt/"}
+              <Link
+                to={isLogin() ? "question/put_your_answer_here" : "/hunt"}
               >
                 <button className="mr-3 ml-2 mt-2 mb-2 hunt-button">
                   Hunt
                 </button>
-              </NavLink>
+              </Link>
             ) : null}
             <Navbar.Brand className="pisb-logo" href="https://www.pictieee.in/">
               <img src={pisblogo} width="110px" alt="PISB-logo" />
