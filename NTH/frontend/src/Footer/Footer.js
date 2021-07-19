@@ -12,7 +12,7 @@ const Footer = () => {
         <Container fluid>
           <Row>
             <Col lg={4} md={12} sm={12}>
-              <p>Network Treasure Hunt</p>
+              <p>© PICT IEEE Student Branch</p>
             </Col>
             <Col lg={4} md={12} sm={12}>
               <p className="web-team-link">
