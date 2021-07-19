@@ -12,8 +12,9 @@ services:
         volumes:
             - static_volume:/app/backend/NTH/django_static
             - ./docker/nginx/production:/etc/nginx/conf.d
-            - ./docker/nginx/certbot/conf:/etc/letsencrypt
             - ./docker/nginx/certbot/www:/var/www/certbot
+            - ./docker/nginx/certbot/conf:/etc/letsencrypt
+            - ./docker/nginx/certificate:/etc/letsencrypt/live/nth.pictieee.in/
         depends_on: 
             - backend
     certbot:
