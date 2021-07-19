@@ -9,7 +9,14 @@
 }
 @media screen and (max-width:1400px) {
     .footer{
-        margin-top: 6rem;
+        margin-top: 3.5rem;
+        position: relative;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .footer{
+        margin-top: 2.5rem;
         position: relative;
     }
 }

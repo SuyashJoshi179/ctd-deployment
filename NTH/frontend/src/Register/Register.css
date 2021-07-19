@@ -10,7 +10,7 @@
 
 
 .register-page {
-  margin: 0.75rem auto 2.5rem;
+  margin: 1rem auto 2.5rem;
   width: 70%;
   padding: .75% 2%;
   background: #2c2c2c34;
@@ -27,6 +27,7 @@
 @media screen and (max-width:1200px) {
   .register-page {
     width: 80%;
+    
   }
 }
 
@@ -34,6 +35,7 @@
 @media screen and (max-width:991px) {
   .register-page {
     width: 60%;
+    margin: 2.5rem auto 2.5rem;
   }
 }
 
@@ -61,7 +63,7 @@
   width: 100%;
   position: relative;
   font-size: 18px;
-  padding: 5px 30px;
+  padding: 3px 30px;
   white-space: no-wrap;
   margin-bottom: 3%;
 }

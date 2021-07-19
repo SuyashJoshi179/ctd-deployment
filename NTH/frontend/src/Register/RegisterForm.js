@@ -53,7 +53,7 @@ const RegisterForm = () => {
           className="register-form-input"
           onChange={handleChange}
           type="text"
-          placeholder="type your name"
+          placeholder="Type your name"
           required
         />
         
@@ -68,7 +68,7 @@ const RegisterForm = () => {
           className="register-form-input"
           onChange={handleChange}
           type="username"
-          placeholder="type your username"
+          placeholder="Type your username"
           required
         />
       </div>
@@ -82,7 +82,7 @@ const RegisterForm = () => {
           className="register-form-input"
           onChange={handleChange}
           type="text"
-          placeholder="type your mobile number"
+          placeholder="Type your mobile number"
           required
         />
       </div>
@@ -96,7 +96,7 @@ const RegisterForm = () => {
           className="register-form-input"
           onChange={handleChange}
           type="text"
-          placeholder="type your college name"
+          placeholder="Type your college name"
           required
           />
       </div>
@@ -109,7 +109,7 @@ const RegisterForm = () => {
           className="register-form-input"
           onChange={handleChange}
           type="email"
-          placeholder="type your email"
+          placeholder="Type your email"
           required
         />
       </div>
@@ -122,7 +122,7 @@ const RegisterForm = () => {
           className="register-form-input"
           onChange={handleChange}
           type="password"
-          placeholder="type your password"
+          placeholder="Type your password"
           required
         />
       </div>
