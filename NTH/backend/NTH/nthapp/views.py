@@ -9,6 +9,7 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 from rest_framework.views import APIView
 from rest_framework.authentication import TokenAuthentication
+from rest_framework import renderers
 
 ErrorDictionary = {
     'status': 'Kindly Login to Play the Game'
@@ -37,6 +38,7 @@ def checkFullname(fullName):
     return setbool
 
 class UserView(APIView):
+    renderer_classes = [renderers.JSONRenderer]
     permission_classes = [IsAuthenticated, ]
     authentication_classes = [TokenAuthentication]
 
@@ -52,6 +54,7 @@ class UserView(APIView):
         return Response(returnDict)
 
 class RegisterView(APIView):
+    renderer_classes = [renderers.JSONRenderer]
     permission_classes = [AllowAny]
 
     def get(self, request, *args, **kwargs):
@@ -99,6 +102,7 @@ class RegisterView(APIView):
 
 
 class QuestionView(APIView):
+    renderer_classes = [renderers.JSONRenderer]
     permission_classes = [IsAuthenticated, ]
     authentication_classes = [TokenAuthentication, ]
 
@@ -131,6 +135,7 @@ class QuestionView(APIView):
 
 
 class QuestionAdminSetterView(APIView):
+    renderer_classes = [renderers.JSONRenderer]
     permission_classes = [IsAuthenticated, ]
     authentication_classes = [TokenAuthentication, ]
 
