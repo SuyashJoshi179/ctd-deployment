@@ -24,7 +24,7 @@ const LoginForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axiosInstance
-      .post("get_token/", {
+      .post("obtain_the_token_asap/", {
         username: loginFormData.username,
         password: loginFormData.password,
       })
