@@ -20,5 +20,5 @@ from rest_framework.authtoken import views
 urlpatterns = [
     path('thisnthadmin/', admin.site.urls),
     path("api/", include("nthapp.urls")),
-    path('get_token/', views.obtain_auth_token)
+    path('obtain_the_token_asap/', views.obtain_auth_token)
 ]
