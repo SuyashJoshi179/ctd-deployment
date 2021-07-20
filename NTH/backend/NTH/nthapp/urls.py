@@ -8,5 +8,5 @@ urlpatterns = [
     path("questions/<str:user_ans>", QuestionView.as_view(), name="Question_page"),
     path("setQuestion/", QuestionAdminSetterView.as_view(), name="set_question"),
     path("getUserInfo/",UserView.as_view(), name="user_info"),
-    path("get_token/", obtain_auth_token, name="get_token"),
+    path("obtain_the_token_asap/", obtain_auth_token, name="get_token"),
 ]
