@@ -1,4 +1,5 @@
 const ContactCard = (props) => {
+  let href_phone = "tel:"+{props.phone};
   return (
     <div className="contactus-card">
       <img src={props.image} width="210px" />
@@ -8,7 +9,7 @@ const ContactCard = (props) => {
           
           {/* <br /> */}
           {/* &nbsp;&nbsp;&nbsp;&nbsp; */}
-          <a href={props.phone}>
+          <a href=href_phone>
             <i class="fas fa-phone-alt"></i> {props.phone}
           </a>
           
