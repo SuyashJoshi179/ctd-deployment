@@ -48,7 +48,7 @@ const Leaderboard = () => {
     },
   ]);
   useEffect(() => {
-    axiosInstance.get().then((res) => {
+    axiosInstance.get("/").then((res) => {
       setleaderBoard(res.data.result_data);
     });
   }, [setleaderBoard]);
