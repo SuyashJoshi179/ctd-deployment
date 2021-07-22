@@ -2,7 +2,7 @@ import "./Register.css";
 import { Col, Row, Container } from "react-bootstrap";
 import RegisterForm from "./RegisterForm";
 import Vector from './vector.png'
-import Vectorsvg from './vector.svg'
+import Vectorsvg from './vec.svg'
 
 const Register = () => {
   return (
@@ -10,7 +10,7 @@ const Register = () => {
       <Container fluid>
         <Row>
           <Col lg={5}>
-            <img src={Vector} width='370px' />
+            <img src={Vectorsvg} width='370px' />
           </Col>
           <Col lg={7} sm={12}>
           <RegisterForm></RegisterForm>
