@@ -67,6 +67,26 @@
         padding-top: 15.5px;
     }
 }
+@media screen and (max-width:338px) {
+    .leaderboard .top #rank {
+        width: 65px;
+        height: 65px;
+        border-radius: 100%;
+        margin: auto;
+        color: #E9B171;
+        font-size: 2rem;
+        font-weight: bolder;
+        background-color: black;
+        text-align: center;
+    }
+
+    .leaderboard .top #rank .rank-text {
+        padding-top: 13px;
+    }
+    .other-players .col{
+        padding: 0;
+    }
+}
 
 
 .leaderboard .leaderboard-table {
