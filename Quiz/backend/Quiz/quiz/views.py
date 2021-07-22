@@ -63,7 +63,7 @@ class Question(APIView):
             ques_attempted = profile.question_attempted.split(" ")
             """print("Time remaining :: "+str(30 - ((datetime.now().hour*3600 + datetime.now().minute*60 + datetime.now().second) -
                     (profile.latest_que_time.hour*3600 + profile.latest_que_time.minute*60 + profile.latest_que_time.second))))"""
-            if len(ques_attempted)-1 >= 10 and profile.last_attempted == 1:
+            if len(ques_attempted)-1 >= 30 and profile.last_attempted == 1:
                 return HttpResponse('logout')
             if (profile.last_attempted == 0 and len(ques_attempted) >= 1) and ((datetime.now().hour*3600 + datetime.now().minute*60 + datetime.now().second) -
                     (profile.latest_que_time.hour*3600 + profile.latest_que_time.minute*60 + profile.latest_que_time.second)) < 30:
@@ -78,7 +78,7 @@ class Question(APIView):
                 different = 0
                 que_id = 0
                 while different == 0:
-                    que_id = random.randint(1, 10)
+                    que_id = random.randint(1, 95)
                     if str(que_id) not in ques_attempted:
                         different = 1
                 ques_attempted.append(que_id)
