@@ -2,6 +2,7 @@ import "./Register.css";
 import { Col, Row, Container } from "react-bootstrap";
 import RegisterForm from "./RegisterForm";
 import Vector from './vector.png'
+import Vectorsvg from './vector.svg'
 
 const Register = () => {
   return (

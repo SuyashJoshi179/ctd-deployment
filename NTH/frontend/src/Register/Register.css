@@ -10,7 +10,7 @@
 
 
 .register-page {
-  margin: 1rem auto 2.5rem;
+  margin: 1rem auto 0;
   width: 70%;
   padding: .75% 2%;
   background: #2c2c2c34;
@@ -48,7 +48,8 @@
 
 @media screen and (max-width:550px) {
   .register-page {
-    width: 90%;
+    width: 98%;
+    padding: .75% 0.5%;
   }
 }
 
