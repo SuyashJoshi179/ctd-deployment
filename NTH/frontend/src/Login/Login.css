@@ -111,18 +111,20 @@
 
 
 .instructions{
-    margin: 15% 10% ;
+    margin: 3% 10% ;
     color: #E9B171;
 }
 
-.instructions .answer-1{
+.answer-1{
     margin-top: 1rem;
     color: #181818;
     cursor: default;
+    text-align: center;
 }
 
 .instructions-content{
     margin: 2% 7%; 
+    font-size: 1.05rem;
     color: white;
 }
 @media screen and (max-width : 480px) {
