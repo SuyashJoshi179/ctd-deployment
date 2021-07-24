@@ -14,6 +14,7 @@ services:
             - ./docker/nginx/production:/etc/nginx/conf.d
             - ./docker/nginx/certbot/conf:/etc/letsencrypt
             - ./docker/nginx/certbot/www:/var/www/certbot
+            - ./docker/nginx/certificate:/etc/letsencrypt/live/quiz.pictieee.in/
         depends_on: 
             - backend
     certbot:
@@ -31,6 +32,7 @@ services:
         entrypoint: /app/docker/backend/wsgi-entrypoint.sh
         volumes:
             - static_volume:/app/backend/Quiz/django_static
+            - ./backend/Quiz/db.sqlite3:/app/backend/Quiz/db.sqlite3
         expose:
             - 8000        
 
