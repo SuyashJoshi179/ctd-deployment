@@ -78,7 +78,7 @@ class Question(APIView):
                 different = 0
                 que_id = 0
                 while different == 0:
-                    que_id = random.randint(1, 95)
+                    que_id = random.randint(11, 105)
                     if str(que_id) not in ques_attempted:
                         different = 1
                 ques_attempted.append(que_id)
