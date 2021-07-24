@@ -22,7 +22,7 @@ SECRET_KEY = 'SECRET_KEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', '40.114.67.178', '*']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'nth.pictieee.in', 'www.nth.pictieee.in']
 # Application definition
 
 INSTALLED_APPS = [
@@ -62,11 +62,8 @@ REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.authentication.TokenAuthentication',
     ],
-
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',
-        'rest_framework.renderers.BrowsableAPIRenderer',
-    )
+    
+    
 }
 
 ROOT_URLCONF = 'NTH.urls'

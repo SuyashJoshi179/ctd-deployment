@@ -18,7 +18,7 @@ from django.urls import path, include
 from rest_framework.authtoken import views
 
 urlpatterns = [
-    path('thisnthadmin/', admin.site.urls),
+    path('admin/', admin.site.urls),
     path("api/", include("nthapp.urls")),
     path('obtain_the_token_asap/', views.obtain_auth_token)
 ]
