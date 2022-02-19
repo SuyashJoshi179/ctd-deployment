@@ -10,7 +10,7 @@ const Contact = () => {
     <div className="contact-page">
       <Container>
         <Row>
-          <Col lg={4} sm={12}>
+          <Col lg={6} sm={12}>
             <ContactCard
               name="Siddharth Bora"
               image={Bora}
@@ -18,15 +18,7 @@ const Contact = () => {
               linkedin="https://www.linkedin.com/in/siddharth-bora-a7a174132/"
             />
           </Col>
-          <Col lg={4} sm={12}>
-            <ContactCard
-              name="Suyash More"
-              image={Suyash}
-              phone="+91 95950 55056"
-              linkedin="https://www.linkedin.com/in/suyashmore789/"
-            />
-          </Col>
-          <Col lg={4} sm={12}>
+          <Col lg={6} sm={12}>
             <ContactCard
               name="Shrikrushna Zirape"
               image={Zirape}

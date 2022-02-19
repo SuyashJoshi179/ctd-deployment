@@ -1,6 +1,6 @@
 import { Navbar, Nav } from "react-bootstrap";
 import pisblogo from "./pisb-logo.png";
-import ctdlogo from "./ctd.png";
+import ieeelogo from "./ieee.png";
 import Logout from "../logout/logout";
 import { Link, NavLink, useLocation, useHistory } from "react-router-dom";
 import { isLogin } from "../utils/index";
@@ -18,8 +18,8 @@ const NavbarComp = ({ eventDate }) => {
           variant="dark"
           expand="lg"
         >
-          <Navbar.Brand href="/">
-            <img src={ctdlogo} width="110px" alt="PISB-logo" />
+          <Navbar.Brand href="https://pictieee.in/">
+            <img src={pisblogo} width="110px" alt="PISB-logo" />
           </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -80,8 +80,8 @@ const NavbarComp = ({ eventDate }) => {
                 </button>
               </Link>
             ) : null}
-            <Navbar.Brand className="pisb-logo" href="https://www.pictieee.in/">
-              <img src={pisblogo} width="110px" alt="PISB-logo" />
+            <Navbar.Brand className="pisb-logo" href="https://www.ieee.org/">
+              <img src={ieeelogo} width="110px" alt="IEEE-logo" />
             </Navbar.Brand>
           </Navbar.Collapse>
         </Navbar>
@@ -93,8 +93,8 @@ const NavbarComp = ({ eventDate }) => {
         variant="dark"
         expand="lg"
       >
-        <Navbar.Brand href="/">
-          <img src={ctdlogo} width="110px" alt="PISB-logo" />
+        <Navbar.Brand href="/https://pictieee.in/">
+          <img src={pisblogo} width="110px" alt="PISB-logo" />
         </Navbar.Brand>
 
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -142,8 +142,8 @@ const NavbarComp = ({ eventDate }) => {
           >
             <button className="mr-3 ml-2 mt-2 mb-2 hunt-button">Hunt</button>
           </NavLink> */}
-          <Navbar.Brand className="pisb-logo" href="https://www.pictieee.in/">
-            <img src={pisblogo} width="110px" alt="PISB-logo" />
+          <Navbar.Brand className="pisb-logo" href="https://www.ieee.org/">
+            <img src={ieeelogo} width="110px" alt="IEEE-logo" />
           </Navbar.Brand>
         </Navbar.Collapse>
       </Navbar>

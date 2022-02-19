@@ -15,7 +15,7 @@
 }
 .web-team .team-members{
     margin-top: 2rem;
-}
+} 
 
 @media screen and(max-width:650px) {
     .team-members{
@@ -25,6 +25,7 @@
 
 .web-team .team-member img{
  width: 260px;
+ height: 350px;
  border-radius: 2px;
  
 }

@@ -16,6 +16,6 @@ const TeamMemberCard = (props) => {
         </div>
       </Col>
   );
-};
+}; 
 
 export default TeamMemberCard;
