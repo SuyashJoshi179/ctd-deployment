@@ -22,7 +22,7 @@ SECRET_KEY = 'SECRET_KEY'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'nth.pictieee.in', 'www.nth.pictieee.in']
+ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0', 'nth.pictieee.in', 'www.nth.pictieee.in','nth.credenz.in', 'www.nth.credenz.in']
 # Application definition
 
 INSTALLED_APPS = [
