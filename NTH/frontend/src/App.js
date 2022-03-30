@@ -17,7 +17,7 @@ import ErrorPage from "./404page/ErrorPage";
 import PrivateRoute from "./utils/PrivateRoute";
 
 function App() {
-  const eventDate = new Date("July 24, 2021 21:00:00").getTime();
+  const eventDate = new Date("April 9, 2022 21:00:00").getTime();
   return (
     <div>
       <Router>
