@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: nginx
+    env: docker
+    region: singapore
+    rootDir: Quiz
+    dockerfilePath: ./docker/nginx/Dockerfile
+    envVars:
+      - key: PORT
+        value: 80
+
+  - type: web
+    name: backend
+    env: docker
+    region: singapore
+    rootDir: Quiz
+    dockerfilePath: ./docker/backend/Dockerfile
+    envVars:
+      - key: PORT
+        value: 8000
