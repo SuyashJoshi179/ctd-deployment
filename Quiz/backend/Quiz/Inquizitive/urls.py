@@ -15,11 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from knox import views as knox_views
-from django.urls import path
+from django.urls import path, re_path
 from quiz.views import LoginAPI
 from django.conf.urls import include, url
+from django.shortcuts import render
 
-
+def render_react(request):
+    return render(request, "index.html")
 
 
 urlpatterns = [
@@ -29,6 +31,7 @@ urlpatterns = [
     path('apiv1/api/login/', LoginAPI.as_view(), name='login'),
     path('apiv1/api/logout/', knox_views.LogoutView.as_view(), name='logout'),
     #path('api/logoutall/', knox_views.LogoutAllView.as_view(), name='logoutall'),
-
+    re_path(r"^$", render_react),
+    re_path(r"^(?:.*)/?$", render_react),
 
 ]
